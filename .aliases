@@ -1,0 +1,17 @@
+# Vim
+alias vi="vim"
+
+# Git Stuff
+alias ga="git add"
+alias gaa="git add ."
+alias gcc="git commit -m "
+alias gp="git push"
+alias gs="git status"
+alias nah="git reset --hard;git clean -df;"
+alias gll="git log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --"
+
+# npm
+alias npm list="npm list --depth 0"
+
+# System
+alias c='clear'

@@ -1,0 +1,67 @@
+{
+  "workbench.iconTheme": "material-icon-theme",
+  "editor.fontSize": 15,
+  "window.zoomLevel": 1,
+  "explorer.confirmDragAndDrop": false,
+  "explorer.confirmDelete": false,
+  "liveServer.settings.donotShowInfoMsg": true,
+  "git.autofetch": true,
+  //"emmet.triggerExpansionOnTab": true, // enable tab to expanse emmet tags
+  "blade.format.enable": true, // if you would like to enable blade format
+  "[html]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+  },
+  "explorer.openEditors.visible": 0,
+  "[php]": {
+    "editor.defaultFormatter": "junstyle.php-cs-fixer"
+  },
+  "[yaml]": {
+    "editor.tabSize": 2,
+  },
+  "[javascript]": {
+    "editor.tabSize": 2,
+  },
+  "php-cs-fixer.executablePath": "${extensionPath}/php-cs-fixer.phar",
+  "php-cs-fixer.lastDownload": 1578486336670,
+  "editor.formatOnSave": true,
+  "editor.parameterHints.enabled": false,
+  "editor.formatOnSaveTimeout": 5000,
+  "workbench.editor.showTabs": false,
+  "workbench.sideBar.location": "right",
+  "editor.fontFamily": "Source Code Pro, Monaco, 'Courier New', monospace",
+  "editor.tabSize": 4,
+  "workbench.activityBar.visible": true,
+  "zenMode.hideLineNumbers": false,
+  "editor.minimap.enabled": false,
+  "python.dataScience.sendSelectionToInteractiveWindow": false,
+  "javascript.format.insertSpaceBeforeFunctionParenthesis": true,
+  "typescript.format.insertSpaceBeforeFunctionParenthesis": true,
+  "vetur.format.options.tabSize": 4,
+  "vetur.format.defaultFormatter.js": "prettier",
+  "vetur.format.defaultFormatter.css": "prettier",
+  "vetur.format.defaultFormatter.less": "prettier",
+  "vetur.format.defaultFormatter.postcss": "prettier",
+  "vetur.format.defaultFormatter.scss": "prettier",
+  "vetur.format.defaultFormatter.stylus": "stylus-supremacy",
+  "stylusSupremacy.insertBraces": true,
+  "stylusSupremacy.insertColons": false,
+  "stylusSupremacy.insertSemicolons": false,
+  "vetur.format.defaultFormatter.ts": "prettier",
+  "vetur.validation.style": true,
+  "vetur.validation.template": true,
+  "vetur.format.options.useTabs": true,
+  "vetur.format.defaultFormatter.html": "js-beautify-html",
+  "prettier.disableLanguages": [],
+  "prettier.useTabs": true,
+  // "vscode_custom_css.imports": [
+  //   "file:///Users/xyh/.vscode/extensions/robbowen.synthwave-vscode-0.0.7/synthwave84.css"
+  // ],
+  "vscode_custom_css.policy": true,
+  "[vue]": {
+    "editor.defaultFormatter": "octref.vetur"
+  },
+  "workbench.colorCustomizations": {},
+  "diffEditor.maxComputationTime": 0,
+  "workbench.colorTheme": "Monokai",
+  "search.useIgnoreFiles": false
+}
