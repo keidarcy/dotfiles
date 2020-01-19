@@ -113,3 +113,5 @@ if [ -f '/Users/xyh/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/xyh/g
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ -f ~/.p10k.zsh ]] && source ~/.p10k.zsh
+export PATH="/usr/local/opt/php@7.3/bin:$PATH"
+export PATH="/usr/local/opt/php@7.3/sbin:$PATH"
