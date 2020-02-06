@@ -4,20 +4,16 @@ so ~/.vim/plugins.vim
 
 syntax enable
 
-"color molokai
-"let g:molokai_original = 1
-"let g:rehash256 = 1                     
-
 let mapleader = ','                     "The default leader is \, but a comma is better. 
 set backspace=indent,eol,start          "Make beacspace behave like every other editor.
-set number                              "Let's activate line numbers.
+"set number                              "Let's activate line numbers.
 set belloff=all
 
 
 
 
 "---------------Visuals-------------"
-colorscheme molokai
+colorscheme molokai 
 set t_CO=256                            "Use 256 colors. This is useful for Terminal Vim.
 set guifont=Fira_Code:h17		"Set the default font family and size.
 "set macligatures  			"We want pretty symbols, when available.

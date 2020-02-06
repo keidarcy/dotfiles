@@ -10,8 +10,13 @@ alias gs="git status"
 alias nah="git reset --hard;git clean -df;"
 alias gll="git log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --"
 
+# Laravel
+alias art="php artisan"
+alias tinker="art tinker"
 # npm
 alias npm list="npm list --depth 0"
 
 # System
 alias c='clear'
+alias mkdir='mkdir -p'
+alias ll='ll -h'
