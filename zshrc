@@ -3,7 +3,7 @@
 export DEFAULT_USER="$(whoami)"
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
-
+#
 # Path to your oh-my-zsh installation.
 export ZSH="/Users/xyh/.oh-my-zsh"
 export PATH=/Users/xyh/Code/tools/flutter/bin/:$PATH
@@ -115,3 +115,4 @@ if [ -f '/Users/xyh/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/xyh/g
 [[ -f ~/.p10k.zsh ]] && source ~/.p10k.zsh
 export PATH="/usr/local/opt/php@7.3/bin:$PATH"
 export PATH="/usr/local/opt/php@7.3/sbin:$PATH"
+setopt no_beep
