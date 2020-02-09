@@ -11,6 +11,7 @@ ZSH_THEME="agnoster"
 
 plugins=(git
 	vi-mode
+	copyfile
 	brew)
 
 source $HOME/.aliases

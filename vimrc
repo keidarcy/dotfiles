@@ -1,23 +1,27 @@
+"For Mac terminal vim
 set nocompatible                        "We want the latest Vim settings/options.
 
-so ~/dotfiles/plugins.vim
+so ~/.vim/plugins.vim
 
 syntax enable
 
 let mapleader = ','                     "The default leader is \, but a comma is better. 
 set backspace=indent,eol,start          "Make beacspace behave like every other editor.
-"set number                              "Let's activate line numbers.
-set belloff=all
-
-
-
+set nonumber                              "Let's activate line numbers.
+set noerrorbells visualbell t_vb=	"No bell!
+"set belloff=all
+set tabstop=8
+set expandtab
+set softtabstop=4
+set shiftwidth=4
 
 "---------------Visuals-------------"
 colorscheme molokai 
 set t_CO=256                            "Use 256 colors. This is useful for Terminal Vim.
 set guifont=Fira_Code:h17		"Set the default font family and size.
-"set macligatures  			"We want pretty symbols, when available.
+set guioptions-=e
 set linespace=15                        "Not work in terminal vim.
+
 set guioptions-=l
 set guioptions-=L
 set guioptions-=r
@@ -54,10 +58,10 @@ nmap <Leader>ev :tabedit $MYVIMRC<cr>
 nmap <Leader><space> :nohlsearch<cr>
 
 "Make NERDTree easier to toggle
-nmap <C-1> :NERDTreeToggle<cr>
+nmap <C-Z> :NERDTreeToggle<cr>
 
-nmap <c-R> :CtrlPBufTag<cr>
-nmap <D-e> :CtrlPMRUFiles<cr>
+nmap <C-R> :CtrlPBufTag<cr>
+nmap <C-E> :CtrlPMRUFiles<cr>
 
 "map Esc to jj 
 imap jj <Esc>
@@ -72,7 +76,7 @@ nmap <Leader>f :tag<space>
 "/ CtrlP
 "/
 let g:ctrlp_custome_ignore = 'node_modules\DS_Store\|git'
-let g:ctrlp_match_window = 'top,order:ttb,min:1,max:30,results:30'
+let g:ctrlp_match_window = 'bottom,order:btt,min:1,max:15,results:15'
 
 
 "/
@@ -80,6 +84,11 @@ let g:ctrlp_match_window = 'top,order:ttb,min:1,max:30,results:30'
 "/
 let NERDTreeHijackNetrw = 0
 
+"/
+"/ LightLine
+"/
+set laststatus=2	"show light line status bar
+set noshowmode		"hide --INSERT-- etc mode bar
 
 
 "----------Auto-Commands-------------"
