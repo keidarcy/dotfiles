@@ -1,6 +1,6 @@
 set nocompatible                        "We want the latest Vim settings/options.
 
-so ~/Code/Projects/dotfiles/plugins.vim
+so ~/dotfiles/plugins.vim
 
 syntax enable
 

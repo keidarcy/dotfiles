@@ -13,10 +13,12 @@ alias gll="git log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d
 # Laravel
 alias art="php artisan"
 alias tinker="art tinker"
+
 # npm
 alias npm list="npm list --depth 0"
 
 # System
+alias h='history'
 alias c='clear'
 alias mkdir='mkdir -p'
 alias ll='ll -h'

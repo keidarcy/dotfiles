@@ -9,6 +9,7 @@ Plugin 'tpope/vim-vinegar'
 Plugin 'scrooloose/nerdtree'
 Plugin 'ctrlpvim/ctrlp.vim'
 Plugin 'tpope/vim-fugitive'
+Plugin 'dracula/vim', { 'name': 'dracula' }
 "call vundle#begin('~/some/path/here')
 
 call vundle#end()            " required
