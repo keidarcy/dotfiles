@@ -1,19 +1,28 @@
 export DEFAULT_USER="$(whoami)"
 setopt no_beep
+setopt AUTO_PUSHD
 
-export ZSH="/Users/xyh/.oh-my-zsh"
-export PATH=/Users/xyh/Code/tools/flutter/bin/:$PATH
-export PATH="/Users/xyh/.composer/vendor/bin:$PATH" 
-export PATH="/usr/local/opt/php@7.3/bin:$PATH"
-export PATH="/usr/local/sbin:$PATH"
+HISTFILE=~/.zsh_history
+HISTSIZE=1000000
+SAVEHIST=1000000
 
 ZSH_THEME="agnoster"
 
 plugins=(git
 	vi-mode
 	copyfile
-	brew)
+	brew
+        ripgrep
+        sublime
+        redis-cli
+        sudo
+        vscode
+        web-search
+        command-not-found
+    )
 
+source $HOME/.path
+source $HOME/.functions
 source $HOME/.aliases
 source $ZSH/oh-my-zsh.sh
 # The next line updates PATH for the Google Cloud SDK.

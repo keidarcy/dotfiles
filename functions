@@ -1,0 +1,3 @@
+function diff(){
+        git diff $1 --name-only
+}

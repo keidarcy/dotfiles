@@ -14,6 +14,7 @@ set tabstop=8
 set expandtab
 set softtabstop=4
 set shiftwidth=4
+set clipboard=unnamed               "Mac OS X clipboard sharing
 
 "---------------Visuals-------------"
 colorscheme molokai 
@@ -60,7 +61,7 @@ nmap <Leader><space> :nohlsearch<cr>
 "Make NERDTree easier to toggle
 nmap <C-Z> :NERDTreeToggle<cr>
 
-nmap <C-R> :CtrlPBufTag<cr>
+nmap <C-S> :CtrlPBufTag<cr>
 nmap <C-E> :CtrlPMRUFiles<cr>
 
 "map Esc to jj 

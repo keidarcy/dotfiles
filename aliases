@@ -2,23 +2,31 @@
 alias vi='vim'
 
 # Git Stuff
-alias ga='git add'
-alias gaa='git add .'
-alias gcc='git commit -m '
-alias gp='git push'
 alias gs='git status'
+alias gsb='git status -sb'
+alias gaa='git add --all'
+alias gcmsg='git commit -m'
+alias gp='git push'
 alias nah='git reset --hard;git clean -df;'
-alias gll="git log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --"
+glol='git log --graph --pretty='\''%Cred%h%Creset -%C(auto)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset'\'
+glola='git log --graph --pretty='\''%Cred%h%Creset -%C(auto)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset'\'' --all'
+glols='git log --graph --pretty='\''%Cred%h%Creset -%C(auto)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset'\'' --stat'
 
 # Laravel
 alias art='php artisan'
 alias tinker='art tinker'
 
 # npm
-alias npm list='npm list --depth 0'
+alias npm lt='npm list --depth 0'
 
 # System
 alias h='history'
 alias c='clear'
 alias mkdir='mkdir -p'
 alias ll='ll -h'
+alias rm='rm -i'
+alias cp='cp -i'
+alias mv='mv -i'
+
+# ripgrep
+alias rgf='rg --files | rg'
