@@ -1,3 +1,7 @@
 function diff(){
         git diff $1 --name-only
 }
+
+commands() {
+  awk '{a[$2]++}END{for(i in a){print a[i] " " i}}'
+}

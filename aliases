@@ -28,7 +28,12 @@ alias ll='ll -h'
 alias rm='rm -i'
 alias cp='cp -i'
 alias mv='mv -i'
-alias timer='echo "Timer started. Stop with Ctrl-D." && date && time cat && date'
+alias zshrc='v ~/.zshrc'
+alias usage='du -h -d1'
+alias update='source ~/.zshrc'
+alias sshdir='cd ~/.ssh'
+alias topten="history | commands | sort -rn | head"
+alias aliases='v ~/.aliases'
 
 # cd
 alias web='cd ~/Code/Charmander'
