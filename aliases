@@ -1,11 +1,12 @@
 # Vim
-alias vi='vim'
+alias v='vim'
 
 # Git Stuff
 alias gs='git status'
 alias gsb='git status -sb'
 alias gaa='git add --all'
 alias gcmsg='git commit -m'
+alias gac='gaa && git commit -a -m'
 alias gp='git push'
 alias nah='git reset --hard;git clean -df;'
 glol='git log --graph --pretty='\''%Cred%h%Creset -%C(auto)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset'\'
@@ -27,6 +28,12 @@ alias ll='ll -h'
 alias rm='rm -i'
 alias cp='cp -i'
 alias mv='mv -i'
+alias timer='echo "Timer started. Stop with Ctrl-D." && date && time cat && date'
 
+# cd
+alias web='cd ~/Code/Charmander'
 # ripgrep
 alias rgf='rg --files | rg'
+
+# application
+alias subl='/Applications/Sublime\ Text.app/Contents/SharedSupport/bin/subl'

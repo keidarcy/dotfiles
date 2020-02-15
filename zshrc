@@ -1,7 +1,10 @@
 export DEFAULT_USER="$(whoami)"
 setopt no_beep
 setopt AUTO_PUSHD
+# resolve 'Warning: Failed to set locale category LC_TIME to en_JP.'
+export LC_ALL=en_US.UTF-8
 
+# set history
 HISTFILE=~/.zsh_history
 HISTSIZE=1000000
 SAVEHIST=1000000
@@ -13,21 +16,17 @@ plugins=(git
 	copyfile
 	brew
         ripgrep
-        sublime
         redis-cli
         sudo
-        vscode
         web-search
-        command-not-found
     )
 
 source $HOME/.path
 source $HOME/.functions
 source $HOME/.aliases
 source $ZSH/oh-my-zsh.sh
-# The next line updates PATH for the Google Cloud SDK.
-if [ -f '/Users/xyh/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/xyh/google-cloud-sdk/path.zsh.inc'; fi
-
-# The next line enables shell command completion for gcloud.
-if [ -f '/Users/xyh/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/xyh/google-cloud-sdk/completion.zsh.inc'; fi
-
+# need brew install 'coreutils' 'cowsay' 'fortune' 'lolcat'
+# print colorful random cowsay every time login terminal
+cowsay_img=$(ls /usr/local/Cellar/cowsay/3.04/share/cows/ | gshuf -n 1)
+date | cowsay -f $cowsay_img | lolcat
+echo $cowsay_img | sed 's/.cow$//' | lolcat
