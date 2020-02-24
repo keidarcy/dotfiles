@@ -1,0 +1,61 @@
+# Vim
+alias e='vim'
+alias v='vim'
+
+
+# ls
+# brew install exa
+alias ls='exa'
+alias l='exa -lhF'
+alias tree='exa --tree --level=3'
+alias ll='exa -lahF --git'
+
+# cat
+# brew install bat
+alias cat='bat'
+
+# Git Stuff
+alias gs='git status'
+alias gsb='git status -sb'
+alias gaa='git add --all'
+alias gcmsg='git commit -m'
+alias gac='gaa && git commit -a -m'
+alias gp='git push'
+alias nah='git reset --hard;git clean -df;'
+alias glol='git log --graph --pretty='\''%Cred%h%Creset -%C(auto)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset'\'
+alias glola='git log --graph --pretty='\''%Cred%h%Creset -%C(auto)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset'\'' --all'
+alias glols='git log --graph --pretty='\''%Cred%h%Creset -%C(auto)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset'\'' --stat'
+
+# Laravel
+alias art='php artisan'
+alias tinker='art tinker'
+
+# npm
+alias npm lt='npm list --depth 0'
+
+# System
+alias h='history'
+alias c='clear'
+alias mkdir='mkdir -p'
+#alias rm='rm -i'
+#alias cp='cp -i'
+#alias mv='mv -i'
+alias aliases='e ~/.aliases'
+alias zshrc='e ~/.zshrc'
+alias vimrc='e ~/.vimrc'
+alias usage='du -h -d1'
+alias update='source ~/.zshrc'
+alias sshdir='cd ~/.ssh'
+alias topten="history | commands | sort -rn | head"
+alias getip="curl ipinfo.io/ip"
+alias ppath="echo $PATH | tr -s ':' '\n'"
+
+# cd
+alias web='cd ~/Code/Charmander'
+
+# ripgrep
+alias rgf='rg --files | rg'
+
+# application
+alias subl='/Applications/Sublime\ Text.app/Contents/SharedSupport/bin/subl'
+alias longdd='open -a /Applications/Google\ Chrome.app https://www.huya.com/longdd'

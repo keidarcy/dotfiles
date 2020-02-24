@@ -1,11 +1,3 @@
-# need brew install 'coreutils' 'cowsay' 'fortune' 'lolcat'
-# print colorful random cowsay every time login terminal
-# for chinese version link[https://github.com/ruanyf/fortunes]
-cowsay_img=$(ls /usr/local/Cellar/cowsay/3.04/share/cows/ | gshuf -n 1)
-fortune -e chinese | cowsay -f $cowsay_img | lolcat
-echo $cowsay_img | sed 's/.cow$//' | lolcat
-date | lolcat
-
 # avoid all annoying beep noise
 setopt no_beep
 
@@ -26,9 +18,13 @@ SAVEHIST=1000000
 
 
 # --------------Vim area------------------------------- 
+# bindkey -v
 # use the vi navigation keys in menu completion
 zstyle ':completion:*' menu select
 zmodload zsh/complist
+#
+# Normal mode <v> to get CLI into vim editor
+#
 # use the vi navigation keys in menu completion
 bindkey -M menuselect 'h' vi-backward-char
 bindkey -M menuselect 'k' vi-up-line-or-history
@@ -39,22 +35,28 @@ bindkey -v '^?' backward-delete-char
 
 # -------------Oh-My-Zsh----------------------
 ZSH_THEME="agnoster"
+# agnoster customization
+# customize_agnoster() {
+  #prompt_segment 'cyan' 'cyan' ' 🍉'
+#}
+#AGNOSTER_PROMPT_SEGMENTS=("customize_agnoster" "${AGNOSTER_PROMPT_SEGMENTS[@]}")
 
+# ZSH_THEME="powerline"
 plugins=(
         git
-	vi-mode
-	brew
-        ripgrep
-        redis-cli
-        sudo
-        web-search
+        httpie
+        vi-mode
+        colored-man-pages
+        #sudo
+        zsh-completions
         zsh-autosuggestions  
         zsh-syntax-highlighting
     )
 # ---------------------------------------------
-
+# enable zsh-completions
+autoload -U compinit && compinit
 
 source $HOME/.path
+source $ZSH/oh-my-zsh.sh
 source $HOME/.functions 
 source $HOME/.aliases
-source $ZSH/oh-my-zsh.sh

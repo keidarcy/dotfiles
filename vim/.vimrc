@@ -17,7 +17,7 @@ set shiftwidth=4
 set clipboard=unnamed               "Mac OS X clipboard sharing
 
 "---------------Visuals-------------"
-colorscheme molokai 
+colorscheme dracula 
 set t_CO=256                            "Use 256 colors. This is useful for Terminal Vim.
 set guifont=Fira_Code:h17		"Set the default font family and size.
 set guioptions-=e
@@ -50,6 +50,11 @@ nmap <C-L> <C-W><C-L>
 
 
 
+"---------------Resize Management---------"
+"nmap <C-W><C-J> <C-W>- 
+"nmap <C-W><C-K> <C-W>+
+"nmap <C-W><C-H> <C-W><
+"nmap <C-W><C-L> <C-W>>
 
 "---------------Mappings-------------"
 "Make it easy to edit the Vimrc file.
