@@ -2,7 +2,6 @@
 alias e='vim'
 alias v='vim'
 
-
 # ls
 # brew install exa
 alias ls='exa'
@@ -37,21 +36,19 @@ alias npm lt='npm list --depth 0'
 alias h='history'
 alias c='clear'
 alias mkdir='mkdir -p'
-#alias rm='rm -i'
-#alias cp='cp -i'
-#alias mv='mv -i'
 alias aliases='e ~/.aliases'
 alias zshrc='e ~/.zshrc'
 alias vimrc='e ~/.vimrc'
 alias usage='du -h -d1'
 alias update='source ~/.zshrc'
-alias sshdir='cd ~/.ssh'
 alias topten="history | commands | sort -rn | head"
 alias getip="curl ipinfo.io/ip"
 alias ppath="echo $PATH | tr -s ':' '\n'"
 
-# cd
+# fast cd
 alias web='cd ~/Code/Charmander'
+alias dotfiles='cd ~/dotfiles'
+alias sshdir='cd ~/.ssh'
 
 # ripgrep
 alias rgf='rg --files | rg'
