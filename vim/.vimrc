@@ -35,8 +35,14 @@ set guioptions-=R
 set hlsearch
 set incsearch
 
-
-
+"-------closing brackets-------------"
+inoremap " ""<left>
+inoremap ' ''<left>
+inoremap ( ()<left>
+inoremap [ []<left>
+inoremap { {}<left>
+inoremap {<CR> {<CR>}<ESC>O
+inoremap {;<CR> {<CR>};<ESC>O
 
 
 "---------------Split Management---------"
@@ -96,6 +102,16 @@ let NERDTreeHijackNetrw = 0
 set laststatus=2	"show light line status bar
 set noshowmode		"hide --INSERT-- etc mode bar
 
+"let g:tmuxline_preset = {
+  "\'a'    : '#S',
+  "\'c'    : ['#(whoami)', '#(uptime | cud -d " " -f 1,2,3)'],
+  "\'win'  : ['#I', '#W'],
+  "\'cwin' : ['#I', '#W', '#F'],
+  "\'x'    : '#(date)',
+  "\'y'    : ['%R', '%a', '%Y'],
+  "\'z'    : '#H'}
+"let g:tmuxline_theme = 'papercolor'
+"}
 
 "----------Auto-Commands-------------"
 "Automatically source the Vimrc file on save

@@ -9,10 +9,6 @@ alias l='exa -lhF'
 alias tree='exa --tree --level=3'
 alias ll='exa -lahF --git'
 
-# cat
-# brew install bat
-alias cat='bat'
-
 # Git Stuff
 alias gs='git status'
 alias gsb='git status -sb'
@@ -44,6 +40,9 @@ alias update='source ~/.zshrc'
 alias topten="history | commands | sort -rn | head"
 alias getip="curl ipinfo.io/ip"
 alias ppath="echo $PATH | tr -s ':' '\n'"
+
+# show all ports opening!
+alias of="lsof -nP +c 150 | grep LISTEN"
 
 # fast cd
 alias web='cd ~/Code/Charmander'
