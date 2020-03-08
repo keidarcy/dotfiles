@@ -1,6 +1,5 @@
 # Vim
 alias e='vim'
-alias v='vim'
 
 # ls
 # brew install exa
@@ -28,6 +27,16 @@ alias tinker='art tinker'
 # npm
 alias npm lt='npm list --depth 0'
 
+# tmux
+alias t='tmux attach || tmux new-session\; new-window\; new-window'
+alias ta='tmux attach -t'
+alias tks='tmux kill-session -t'
+alias tkw='tmux kill-window -t'
+alias tkp='tmux kill-pane -t'
+alias tksv='tmux kill-server'
+alias tl='tmux list-sessions'
+alias ts='tmux new-session -s'
+
 # System
 alias h='history'
 alias c='clear'
@@ -37,12 +46,9 @@ alias zshrc='e ~/.zshrc'
 alias vimrc='e ~/.vimrc'
 alias usage='du -h -d1'
 alias update='source ~/.zshrc'
-alias topten="history | commands | sort -rn | head"
-alias getip="curl ipinfo.io/ip"
-alias ppath="echo $PATH | tr -s ':' '\n'"
-
-# show all ports opening!
-alias of="lsof -nP +c 150 | grep LISTEN"
+alias myip="curl ipinfo.io/ip"
+alias mypath="echo $PATH | tr -s ':' '\n'"
+alias myport="lsof -nP +c 150 | grep LISTEN"
 
 # fast cd
 alias web='cd ~/Code/Charmander'
