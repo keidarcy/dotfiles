@@ -1,67 +1,181 @@
 {
-  "workbench.iconTheme": "material-icon-theme",
-  "editor.fontSize": 15,
-  "window.zoomLevel": 1,
-  "explorer.confirmDragAndDrop": false,
-  "explorer.confirmDelete": false,
-  "liveServer.settings.donotShowInfoMsg": true,
-  "git.autofetch": true,
-  //"emmet.triggerExpansionOnTab": true, // enable tab to expanse emmet tags
-  "blade.format.enable": true, // if you would like to enable blade format
-  "[html]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode",
-  },
-  "explorer.openEditors.visible": 0,
-  "[php]": {
-    "editor.defaultFormatter": "junstyle.php-cs-fixer"
-  },
-  "[yaml]": {
-    "editor.tabSize": 2,
-  },
-  "[javascript]": {
-    "editor.tabSize": 2,
-  },
-  "php-cs-fixer.executablePath": "${extensionPath}/php-cs-fixer.phar",
-  "php-cs-fixer.lastDownload": 1578486336670,
-  "editor.formatOnSave": true,
-  "editor.parameterHints.enabled": false,
-  "editor.formatOnSaveTimeout": 5000,
-  "workbench.editor.showTabs": false,
-  "workbench.sideBar.location": "right",
-  "editor.fontFamily": "Source Code Pro, Monaco, 'Courier New', monospace",
-  "editor.tabSize": 4,
-  "workbench.activityBar.visible": true,
-  "zenMode.hideLineNumbers": false,
-  "editor.minimap.enabled": false,
-  "python.dataScience.sendSelectionToInteractiveWindow": false,
-  "javascript.format.insertSpaceBeforeFunctionParenthesis": true,
-  "typescript.format.insertSpaceBeforeFunctionParenthesis": true,
-  "vetur.format.options.tabSize": 4,
-  "vetur.format.defaultFormatter.js": "prettier",
-  "vetur.format.defaultFormatter.css": "prettier",
-  "vetur.format.defaultFormatter.less": "prettier",
-  "vetur.format.defaultFormatter.postcss": "prettier",
-  "vetur.format.defaultFormatter.scss": "prettier",
-  "vetur.format.defaultFormatter.stylus": "stylus-supremacy",
-  "stylusSupremacy.insertBraces": true,
-  "stylusSupremacy.insertColons": false,
-  "stylusSupremacy.insertSemicolons": false,
-  "vetur.format.defaultFormatter.ts": "prettier",
-  "vetur.validation.style": true,
-  "vetur.validation.template": true,
-  "vetur.format.options.useTabs": true,
-  "vetur.format.defaultFormatter.html": "js-beautify-html",
-  "prettier.disableLanguages": [],
-  "prettier.useTabs": true,
-  // "vscode_custom_css.imports": [
-  //   "file:///Users/xyh/.vscode/extensions/robbowen.synthwave-vscode-0.0.7/synthwave84.css"
-  // ],
-  "vscode_custom_css.policy": true,
-  "[vue]": {
-    "editor.defaultFormatter": "octref.vetur"
-  },
-  "workbench.colorCustomizations": {},
-  "diffEditor.maxComputationTime": 0,
-  "workbench.colorTheme": "Monokai",
-  "search.useIgnoreFiles": false
+	// ============================
+	// common setting			
+	// ============================ 
+	"workbench.colorTheme": "Palenight Operator",
+	"workbench.iconTheme": "material-icon-theme",
+	"editor.fontSize": 13,
+	// "editor.fontFamily": "Source Code Pro, Monaco, 'Courier New', monospace",
+	"editor.fontFamily": "Operator Mono, Monaco, 'Courier New', monospace",
+	"editor.fontWeight": "500",
+	"editor.tabSize": 4,
+	"editor.formatOnSave": true,
+	"editor.parameterHints.enabled": false,
+	"editor.lightbulb.enabled": true,
+	"editor.minimap.enabled": false,
+	"terminal.integrated.fontSize": 14,
+	"terminal.integrated.fontWeight": "500",
+	"window.zoomLevel": 2,
+	// "window.titleBarStyle":"native",
+	"explorer.confirmDragAndDrop": false,
+	"explorer.confirmDelete": false,
+	"liveServer.settings.donotShowInfoMsg": true,
+	"git.autofetch": true,
+	//"emmet.triggerExpansionOnTab": true, // enable tab to expanse emmet tags
+	"blade.format.enable": true, // if you would like to enable blade format
+	"explorer.openEditors.visible": 0,
+	"workbench.editor.showTabs": false,
+	"workbench.sideBar.location": "right",
+	"workbench.activityBar.visible": true,
+	"problems.showCurrentInStatus": true,
+	"editor.codeActionsOnSave": {
+		"source.fixAll.eslint": true
+	},
+	"zenMode.hideLineNumbers": false,
+	"diffEditor.maxComputationTime": 0,
+	"search.useIgnoreFiles": false,
+	"editor.suggestSelection": "first",
+	"python.jediEnabled": false,
+	"python.dataScience.sendSelectionToInteractiveWindow": false,
+	"intelephense.diagnostics.undefinedSymbols": false,
+	"[yaml]": {
+		"editor.tabSize": 2
+	},
+	//========================================
+	// Javascript
+	//========================================
+	"[javascript]": {
+		"editor.tabSize": 2
+	},
+	"javascript.format.insertSpaceBeforeFunctionParenthesis": true,
+	"typescript.format.insertSpaceBeforeFunctionParenthesis": true,
+	"vetur.format.options.tabSize": 2,
+	"vetur.format.defaultFormatter.js": "prettier",
+	"vetur.format.defaultFormatter.css": "prettier",
+	"vetur.format.defaultFormatter.less": "prettier",
+	"vetur.format.defaultFormatter.postcss": "prettier",
+	"vetur.format.defaultFormatter.scss": "prettier",
+	"vetur.format.defaultFormatter.stylus": "stylus-supremacy",
+	"vetur.format.defaultFormatter.ts": "prettier",
+	"vetur.validation.style": true,
+	"vetur.validation.template": false,
+	"vetur.format.options.useTabs": false,
+	"vetur.format.defaultFormatter.html": "none",
+	"prettier.singleQuote": true,
+	// "prettier.useTabs": true,
+	"importCost.typescriptExtensions": [
+		"\\.vue?$"
+	],
+	"importCost.javascriptExtensions": [
+		"\\.vue?$"
+	],
+	// "eslint.validate": [
+	// 	"javascript",
+	// 	"javascriptreact",
+	// 	"vue",
+	// ],
+	//========================================================================
+	// PHP
+	//========================================================================	
+	"php-cs-fixer.executablePath": "${extensionPath}/php-cs-fixer.phar",
+	"php-cs-fixer.lastDownload": 1583412226044,
+	"php-cs-fixer.onsave": true,
+	"php-cs-fixer.config": "/Users/xyh/.vscode/.php_cs",
+	"[php]": {
+		"editor.defaultFormatter": "junstyle.php-cs-fixer"
+	},
+	"sync.gist": "470a34e531e3e0d4c2c5c2b54ceb7f3c",
+	//========================================================================
+	//VIM
+	//========================================================================	
+	"vim.insertModeKeyBindings": [
+		{
+			"before": [
+				"j",
+				"j"
+			],
+			"after": [
+				"<Esc>"
+			]
+		}
+	],
+	"vim.handleKeys": {
+		"<C-d>": true
+	},
+	"vim.statusBarColorControl": true,
+	"vim.statusBarColors.normal": [
+		"#161821",
+		"#818596"
+	],
+	"vim.statusBarColors.insert": [
+		"#84A0C6",
+		"#161821"
+	],
+	"vim.statusBarColors.visual": [
+		"#B4BE82",
+		"#161821"
+	],
+	"vim.statusBarColors.visualline": [
+		"#B4BE82",
+		"#161821"
+	],
+	"vim.statusBarColors.visualblock": [
+		"#B4BE82",
+		"#161821"
+	],
+	"vim.statusBarColors.replace": [
+		"#E2A478",
+		"#161821"
+	],
+	"vim.statusBarColors.commandlineinprogress": [
+		"#818596",
+		"#161821"
+	],
+	"vim.statusBarColors.searchinprogressmode": [
+		"#818596",
+		"#161821"
+	],
+	"vim.statusBarColors.easymotionmode": [
+		"#818596",
+		"#161821"
+	],
+	"vim.statusBarColors.easymotioninputmode": [
+		"#818596",
+		"#161821"
+	],
+	"vim.statusBarColors.surroundinputmode": [
+		"#818596",
+		"#161821"
+	],
+	"vim.highlightedyank.enable": true, //yankした箇所をハイライト表示にする
+	"vim.highlightedyank.color": "rgba(0, 240, 170, 0.5)", //yankした時の色
+	"vim.highlightedyank.duration": 1500, //yankした時の色の表示時間
+	"vim.leader": "<comma>", //Map Leaderの設定
+	"vim.autoindent": true, //autoindent
+	"vim.useSystemClipboard": true, //system clipboardと同期する
+	"vim.hlsearch": true, //hlserch
+	"vim.visualstar": true, //カーソル上にあるワードを"*"で検索
+	"vim.useCtrlKeys": true, //諸々のctrlキーを使った操作が有効になる
+	"vim.debug.silent": true, //アラートを出さない
+	"vim.timeout": 1200, //入力のタイムアウト時間
+	"workbench.colorCustomizations": {
+		"statusBar.background": "#161821",
+		"statusBar.noFolderBackground": "#161821",
+		"statusBar.debuggingBackground": "#161821",
+		"statusBar.foreground": "#818596"
+	},
+	// vim plugin有効化
+	"vim.easymotion": true, //easy motionを有効化
+	"vim.surround": true, //surroundを有効にする
+	//easy motion
+	"vim.easymotionMarkerForegroundColorOneChar": "rgba(0,240,170,0.9)", //一文字目の色
+	"vim.easymotionMarkerForegroundColorTwoChar": "rgba(0,240,170,0.9)", //二文字目の色
+	"vim.easymotionMarkerBackgroundColor": "", //背景色
+	"vim.easymotionMarkerWidthPerChar": 19, //各文字に割り当てられている幅
+	"vim.easymotionMarkerHeight": 1, //マーカーの高さ
+	"vim.easymotionMarkerFontFamily": "Cica", //フォント
+	"vim.easymotionMarkerFontSize": "12.5", //フォントサイズ
+	"vim.easymotionMarkerFontWeight": "normal", //フォントの太さ
+	"vim.easymotionKeys": "asdfhjklwqeruioopghty;", //マーカーに使用される文字列
+	"vim.easymotionMarkerYOffset": 13.5, //高さのずれ修正
 }

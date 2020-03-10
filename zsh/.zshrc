@@ -58,5 +58,7 @@ autoload -U compinit && compinit
 
 source $HOME/.path
 source $ZSH/oh-my-zsh.sh
-source $HOME/.functions 
+#source $HOME/.functions 
 source $HOME/.aliases
+
+eval "$(anyenv init -)"
