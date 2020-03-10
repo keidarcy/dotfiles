@@ -1,3 +1,0 @@
-# tnew() {
-#  tmux new -s $1 \; split-window -v -p 20 \; split-window -h \*/
-# }
