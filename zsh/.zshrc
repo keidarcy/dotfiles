@@ -34,24 +34,23 @@ bindkey -v '^?' backward-delete-char
 # -----------------------------------------------------
 
 # -------------Oh-My-Zsh----------------------
-ZSH_THEME="agnoster"
-# agnoster customization
-# customize_agnoster() {
-  #prompt_segment 'cyan' 'cyan' ' 🍉'
-#}
-#AGNOSTER_PROMPT_SEGMENTS=("customize_agnoster" "${AGNOSTER_PROMPT_SEGMENTS[@]}")
+#ZSH_THEME="agnoster"
+ZSH_THEME="muse"
 
-# ZSH_THEME="powerline"
 plugins=(
         git
+        git-prompt
         httpie
         vi-mode
         colored-man-pages
-        #sudo
+        web-search
+        # custome plugins
         zsh-completions
         zsh-autosuggestions  
         zsh-syntax-highlighting
     )
+# this line fix slow paste speed caused by zsh-syntax-highlighting
+zstyle ':bracketed-paste-magic' active-widgets '.self-*'
 # ---------------------------------------------
 # enable zsh-completions
 autoload -U compinit && compinit

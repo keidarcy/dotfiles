@@ -5,16 +5,16 @@
 	"workbench.colorTheme": "Palenight Operator",
 	"workbench.iconTheme": "material-icon-theme",
 	"editor.fontSize": 13,
+	"editor.fontWeight": "500",
+	"terminal.integrated.fontSize": 14,
+	"terminal.integrated.fontWeight": "500",
 	// "editor.fontFamily": "Source Code Pro, Monaco, 'Courier New', monospace",
 	"editor.fontFamily": "Operator Mono, Monaco, 'Courier New', monospace",
-	"editor.fontWeight": "500",
 	"editor.tabSize": 4,
 	"editor.formatOnSave": true,
 	"editor.parameterHints.enabled": false,
 	"editor.lightbulb.enabled": true,
 	"editor.minimap.enabled": false,
-	"terminal.integrated.fontSize": 14,
-	"terminal.integrated.fontWeight": "500",
 	"window.zoomLevel": 2,
 	// "window.titleBarStyle":"native",
 	"explorer.confirmDragAndDrop": false,
@@ -69,11 +69,11 @@
 	"importCost.javascriptExtensions": [
 		"\\.vue?$"
 	],
-	// "eslint.validate": [
-	// 	"javascript",
-	// 	"javascriptreact",
-	// 	"vue",
-	// ],
+	"eslint.validate": [
+		"javascript",
+		"javascriptreact",
+		"vue",
+	],
 	//========================================================================
 	// PHP
 	//========================================================================	
