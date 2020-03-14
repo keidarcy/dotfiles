@@ -1,3 +1,14 @@
+#####################################################
+# "test zsh load items"
+# zmodload zsh/zprof # top of your .zshrc file
+# Your .zshrc stuff
+# zprof # bottom of .zshrc
+#####################################################
+# "zsh load time table"
+# for i in $(seq 1 10); do /usr/bin/time zsh -i -c exit; done
+#####################################################
+
+
 # avoid all annoying beep noise
 setopt no_beep
 
@@ -51,12 +62,17 @@ plugins=(
     )
 # this line fix slow paste speed caused by zsh-syntax-highlighting
 zstyle ':bracketed-paste-magic' active-widgets '.self-*'
-# ---------------------------------------------
 # enable zsh-completions
-autoload -U compinit && compinit
+# load cached .zcompdump once a day
+autoload -Uz compinit
+if [ $(date +'%j') != $(stat -f '%Sm' -t '%j' ~/.zcompdump) ]; then
+  compinit
+else
+  compinit -C
+fi
+################################################
 
-source $HOME/.path
-source $ZSH/oh-my-zsh.sh
-source $HOME/.aliases
+export BIN=$HOME/Code/bin
+source $BIN/entry.sh
 
 #eval "$(anyenv init -)"

@@ -11,7 +11,7 @@ alias ll='exa -lahF --git'
 alias gs='git status'
 alias gsb='git status -sb'
 alias gaa='git add --all'
-alias gcmsg='git commit -m'
+alias gc='git commit -m'
 alias gac='gaa && git commit -a -m'
 alias gp='git push'
 alias nah='git reset --hard;git clean -df;'
@@ -41,10 +41,13 @@ alias tkserver='tmux kill-server'
 alias h='history'
 alias c='clear'
 alias mkdir='mkdir -p'
-alias aliases='e ~/.aliases'
+alias ealiases='e $BIN/aliases.z.sh'
+alias efunctions='e $BIN/functions.z.sh'
+alias epaths='e $BIN/path.z.sh'
 alias zshrc='e ~/.zshrc'
 alias vimrc='e ~/.vimrc'
 alias update='source ~/.zshrc'
+alias udpate='update'
 alias myip="curl ipinfo.io/ip"
 alias mypath="echo $PATH | tr -s ':' '\n'"
 alias myport="lsof -nP +c 150 | grep LISTEN"
@@ -52,6 +55,7 @@ alias dirsize="du -sh"
 alias subdirsize="du -h -d 1 | sort -hr"
 
 # fast cd
+alias tomybin='cd $BIN'
 alias web='cd ~/Code/Charmander'
 alias dotfiles='cd ~/dotfiles'
 alias sshdir='cd ~/.ssh'
@@ -62,8 +66,3 @@ alias rgf='rg --files | rg'
 # application
 alias subl='/Applications/Sublime\ Text.app/Contents/SharedSupport/bin/subl'
 alias longdd='open -a /Applications/Google\ Chrome.app https://www.huya.com/longdd'
-
-######## functions ############
-tnew() {
-  tmux new -s $1 \; split-window -v -p 20 \; split-window -h \
-}
