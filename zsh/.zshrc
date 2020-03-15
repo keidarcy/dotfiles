@@ -1,6 +1,6 @@
 #####################################################
 # "test zsh load items"
-# zmodload zsh/zprof # top of your .zshrc file
+ #zmodload zsh/zprof # top of your .zshrc file
 # Your .zshrc stuff
 # zprof # bottom of .zshrc
 #####################################################
@@ -24,8 +24,8 @@ export LC_ALL=en_US.UTF-8
 
 # Set history
 HISTFILE=~/.zsh_history
-HISTSIZE=1000000
-SAVEHIST=1000000
+HISTSIZE=1000
+SAVEHIST=1000
 
 
 # --------------Vim area------------------------------- 
@@ -45,8 +45,8 @@ bindkey -v '^?' backward-delete-char
 # -----------------------------------------------------
 
 # -------------Oh-My-Zsh----------------------
-#ZSH_THEME="agnoster"
-ZSH_THEME="muse"
+ZSH_THEME="agnoster"
+#ZSH_THEME="muse"
 
 plugins=(
         git
@@ -73,6 +73,16 @@ fi
 ################################################
 
 export BIN=$HOME/Code/bin
-source $BIN/entry.sh
+source $BIN/paths.z.sh
+source $ZSH/oh-my-zsh.sh
+source $BIN/aliases.z.sh
+source $BIN/functions.z.sh
 
 #eval "$(anyenv init -)"
+#
+#####################################################
+# "test zsh load items"
+# zmodload zsh/zprof # top of your .zshrc file
+# Your .zshrc stuff
+ #zprof # bottom of .zshrc
+#####################################################

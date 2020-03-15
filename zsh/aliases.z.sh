@@ -57,6 +57,7 @@ alias subdirsize="du -h -d 1 | sort -hr"
 # fast cd
 alias tomybin='cd $BIN'
 alias web='cd ~/Code/Charmander'
+alias toolbox='cd ~/Code/Charmander/toolbox'
 alias dotfiles='cd ~/dotfiles'
 alias sshdir='cd ~/.ssh'
 
