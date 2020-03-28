@@ -72,11 +72,18 @@ else
 fi
 ################################################
 
-export BIN=$HOME/Code/bin
-source $BIN/paths.z.sh
+
+export ZSH=$HOME/.oh-my-zsh
+
 source $ZSH/oh-my-zsh.sh
+
+export BIN=$HOME/Code/bin
+
+source $BIN/paths.z.sh
 source $BIN/aliases.z.sh
 source $BIN/functions.z.sh
+
+source localEnv.sh
 
 #eval "$(anyenv init -)"
 #

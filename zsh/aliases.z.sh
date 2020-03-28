@@ -60,6 +60,7 @@ alias web='cd ~/Code/Charmander'
 alias toolbox='cd ~/Code/Charmander/toolbox'
 alias dotfiles='cd ~/dotfiles'
 alias sshdir='cd ~/.ssh'
+alias blog='cd ~/Code/Charmander/github.com/blog'
 
 # ripgrep
 alias rgf='rg --files | rg'

@@ -6,21 +6,15 @@ tnew() {
 
 nvm() {
     if [[ $NVM_DIR ]];then
-        [ -s "$NVM_DIR/nvm.sh" ] && source "$NVM_DIR/nvm.sh"
+        #[ -s "$NVM_DIR/nvm.sh" ] && source "$NVM_DIR/nvm.sh"
         # Load bash_completion
-        [ -s "$NVM_DIR/bash_completion" ] && source "$NVM_DIR/bash_completion"
+        #[ -s "$NVM_DIR/bash_completion" ] && source "$NVM_DIR/bash_completion"
         # Call nvm
         $0 "$@"
     else
         echo "🚨 Lazy loading nvm..."
         export NVM_DIR="$HOME/.nvm"
+        source $HOME/.nvm/nvm.sh
         echo "😚 try 'nvm' again..."
     fi
-    ## Remove nvm function
-    #unfunction "$0"
-    # Load nvm
-
-gcloud() {
-if [ -f '~/google-cloud-sdk/path.zsh.inc' ]; then . '~/google-cloud-sdk/path.zsh.inc'; fi
-if [ -f '~/google-cloud-sdk/completion.zsh.inc' ]; then . '~/google-cloud-sdk/completion.zsh.inc'; fi
 }
