@@ -17,7 +17,7 @@ Plugin 'tpope/vim-surround'
 Plugin 'StanAngeloff/php.vim'
 Plugin 'pangloss/vim-javascript'
 Plugin 'terryma/vim-multiple-cursors'
-Plugin 'edkolev/tmuxline.vim'
+""Plugin 'edkolev/tmuxline.vim'
 "call vundle#begin('~/some/path/here')
 
 call vundle#end()            " required
