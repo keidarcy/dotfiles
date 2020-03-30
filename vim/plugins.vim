@@ -14,12 +14,15 @@ Plugin 'airblade/vim-gitgutter'
 Plugin 'vim-airline/vim-airline'
 Plugin 'preservim/nerdcommenter'
 Plugin 'tpope/vim-surround'
+Plugin 'terryma/vim-multiple-cursors'
+Plugin 'MarcWeber/vim-addon-mw-utils'
+Plugin 'tomtom/tlib_vim'
+Plugin 'garbas/vim-snipmate'
+Plugin 'ervandew/supertab'
 Plugin 'StanAngeloff/php.vim'
 Plugin 'pangloss/vim-javascript'
-Plugin 'terryma/vim-multiple-cursors'
-""Plugin 'edkolev/tmuxline.vim'
-"call vundle#begin('~/some/path/here')
 
+" All of your Plugins must be added before the following line
 call vundle#end()            " required
 filetype plugin indent on    " required
 

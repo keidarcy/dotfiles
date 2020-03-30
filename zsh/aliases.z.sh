@@ -15,9 +15,9 @@ alias gc='git commit -m'
 alias gac='gaa && git commit -a -m'
 alias gp='git push'
 alias nah='git reset --hard;git clean -df;'
-alias glol='git log --graph --pretty='\''%Cred%h%Creset -%C(auto)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset'\'
-alias glola='git log --graph --pretty='\''%Cred%h%Creset -%C(auto)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset'\'' --all'
-alias glols='git log --graph --pretty='\''%Cred%h%Creset -%C(auto)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset'\'' --stat'
+alias gll='git log --graph --pretty='\''%Cred%h%Creset -%C(auto)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset'\'
+alias glla='git log --graph --pretty='\''%Cred%h%Creset -%C(auto)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset'\'' --all'
+alias glls='git log --graph --pretty='\''%Cred%h%Creset -%C(auto)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset'\'' --stat'
 
 # Laravel
 alias art='php artisan'
@@ -28,7 +28,7 @@ alias npm lt='npm list --depth 0'
 
 # tmux
 alias t='tmux'
-alias tn="tmux new-session -A -s main"
+alias tn='tmux new-session -A -s main'
 alias ta='tmux attach -t'
 alias td='tmux detach'
 alias tl='tmux list-sessions'
@@ -41,20 +41,20 @@ alias tkserver='tmux kill-server'
 alias h='history'
 alias c='clear'
 alias mkdir='mkdir -p'
-alias ealiases='e $BIN/aliases.z.sh'
-alias efunctions='e $BIN/functions.z.sh'
-alias epaths='e $BIN/paths.z.sh'
 alias zshrc='e ~/.zshrc'
 alias vimrc='e ~/.vimrc'
 alias update='source ~/.zshrc'
 alias udpate='update'
-alias myip="curl ipinfo.io/ip"
-alias mypath="echo $PATH | tr -s ':' '\n'"
-alias myport="lsof -nP +c 150 | grep LISTEN"
-alias dirsize="du -sh"
-alias subdirsize="du -h -d 1 | sort -hr"
+alias dirsize='du -sh'
+alias subdirsize='du -h -d 1 | sort -hr'
+alias myip='curl ipinfo.io/ip'
+alias mypath='echo $PATH | tr -s ':' '\n''
+alias myport='lsof -nP +c 150 | grep LISTEN'
+alias ealiases='e $BIN/aliases.z.sh'
+alias efunctions='e $BIN/functions.z.sh'
+alias epaths='e $BIN/paths.z.sh'
 
-# fast cd
+# quick cd
 alias tomybin='cd $BIN'
 alias web='cd ~/Code/Charmander'
 alias toolbox='cd ~/Code/Charmander/toolbox'
