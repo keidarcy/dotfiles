@@ -4,7 +4,7 @@ set nocompatible                        "We want the latest Vim settings/options
 so ~/.vim/plugins.vim
 
 syntax enable
-set background=dark
+set background=dark                     " dark,light
 
 let mapleader = ','                     "The default leader is \, but a comma is better. 
 set backspace=indent,eol,start          "Make beacspace behave like every other editor.
@@ -20,15 +20,14 @@ set shiftwidth=4
 set clipboard=unnamed                   "Mac OS X clipboard sharing
 
 "---------------Visuals-------------"
-"colorscheme molokai
-"colorscheme dacula
+"colorscheme molokai                    "dacula,solarized
 set t_CO=256                            "Use 256 colors. This is useful for Terminal Vim.
 
 " tweak color. fake a custom left padding 
 " hi means highlight
 "hi LineNr ctermfg=bg ctermbg=bg
-set foldcolumn=0
-hi foldcolumn ctermbg=0
+"set foldcolumn=0
+"hi foldcolumn ctermbg=bg
 "hi vertsplit ctermfg=bg ctermbg=bg
 
 set guifont=Fira_Code:h17		"Set the default font family and size.
