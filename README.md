@@ -1,20 +1,23 @@
-# dotfiles and some 👾
+# dotfiles are 🦄🦄
 
 Collection of dotfiles
+Follow these dotfiles, get a sexy terminal like this ⬇︎
+![terminal](./img/terminal.png)
 
-## Notes to myself in the future:
+# Get Started
 
-For dotfiles I've installed the following via homebrew:
+```
+$ cd 
+$ git clone https://github.com/xyyolab/dotfiles.git
+$ cd dotfiles
+$ sh entry.sh
+```
+🙀 still working on this shell file!!
 
-- tmux
-- bat
-- exa
-- ripgrep
-- reattach-to-user-namespace
 
 ## Thanks
 
- - [Oh-My-Zsh]()
- - [Oh-My-Tmux]()
+ - [Oh-My-Zsh](https://github.com/ohmyzsh/ohmyzsh)
+ - [Oh-My-Tmux](https://github.com/gpakosz/.tmux)
  - [zsh-users](https://github.com/zsh-users)
 
