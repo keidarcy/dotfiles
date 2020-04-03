@@ -11,3 +11,10 @@ For dotfiles I've installed the following via homebrew:
 - exa
 - ripgrep
 - reattach-to-user-namespace
+
+## Thanks
+
+ - [Oh-My-Zsh]()
+ - [Oh-My-Tmux]()
+ - [zsh-users](https://github.com/zsh-users)
+

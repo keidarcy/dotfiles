@@ -1,4 +1,0 @@
-# Keyboard -> Modififer Keys -> Caps Lock -> Escape
-# iterm2
-# Preferences->Profiles->General->Reuse previous session's directory
-# Preferences->General->Window->Native full screen windows
