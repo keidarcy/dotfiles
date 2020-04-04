@@ -81,7 +81,7 @@ source $BIN/paths.z.sh
 source $BIN/aliases.z.sh
 source $BIN/functions.z.sh
 
-source localEnv.sh
+source ./local.env.z.sh 
 
 #eval "$(anyenv init -)"
 #

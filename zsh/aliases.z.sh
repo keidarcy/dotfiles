@@ -54,17 +54,4 @@ alias ealiases='e $BIN/aliases.z.sh'
 alias efunctions='e $BIN/functions.z.sh'
 alias epaths='e $BIN/paths.z.sh'
 
-# quick cd
-alias tomybin='cd $BIN'
-alias web='cd ~/Code/Charmander'
-alias toolbox='cd ~/Code/Charmander/toolbox'
-alias dotfiles='cd ~/dotfiles'
-alias sshdir='cd ~/.ssh'
-alias blog='cd ~/Code/Charmander/github.com/blog'
-
-# ripgrep
-alias rgf='rg --files | rg'
-
-# application
-alias subl='/Applications/Sublime\ Text.app/Contents/SharedSupport/bin/subl'
-alias longdd='open -a /Applications/Google\ Chrome.app https://www.huya.com/longdd'
+source ./local.aliases.z.sh

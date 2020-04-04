@@ -1,15 +1,6 @@
-!usr/bin/env s
+!usr/bin/env sh
 
-# Install Homebrew (https://brew.sh/)
-brew help || /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
-brew update
-
-brew install zsh
-brew install tmux
-brew install nvm
-brew install exa
-brew install bat
-brew install htop
+source ./src/brew.install.sh
 
 mkdir -p ~/Code/bin
 
