@@ -54,4 +54,4 @@ alias ealiases='e $BIN/aliases.z.sh'
 alias efunctions='e $BIN/functions.z.sh'
 alias epaths='e $BIN/paths.z.sh'
 
-source ./local.aliases.z.sh
+source $BIN/local.aliases.z.sh

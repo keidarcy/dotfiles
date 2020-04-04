@@ -17,9 +17,10 @@ export LC_ALL=en_US.UTF-8
 HISTFILE=~/.zsh_history
 HISTSIZE=1000
 SAVEHIST=1000
-HISTORY_IGNORE="(ls|cd|pwd|exit|cd ..)"
+HISTORY_IGNORE="(ls|ll|c|zshrc|update|vimrc|dotfiles|cd|pwd|exit|cd ..)"
 
 # Basic Settings
+export EDITOR=vim
 #HYPHEN_INSENSITIVE="true"
 #DISABLE_AUTO_UPDATE="true"
 #COMPLETION_WAITING_DOTS="true"
@@ -80,8 +81,7 @@ export BIN=$HOME/Code/bin
 source $BIN/paths.z.sh
 source $BIN/aliases.z.sh
 source $BIN/functions.z.sh
-
-source ./local.env.z.sh 
+source $BIN/local.env.z.sh 
 
 #eval "$(anyenv init -)"
 #
