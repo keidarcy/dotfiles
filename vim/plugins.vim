@@ -21,6 +21,7 @@ Plugin 'garbas/vim-snipmate'
 Plugin 'ervandew/supertab'
 Plugin 'StanAngeloff/php.vim'
 Plugin 'pangloss/vim-javascript'
+Plugin 'mhinz/vim-startify'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required

@@ -56,7 +56,16 @@ set incsearch
 "inoremap {;<CR> {<CR>};<ESC>O
 
 
-"---------------Split Management---------"
+"-------------------------------Window Management--------------------------"
+" window control prefix
+nnoremap  [Window]   <Nop>
+nmap      s [Window]
+
+" 使用 sv, sg 快速在 normal 模式下分割窗口
+nnoremap <silent> [Window]v  :<C-u>split<CR>
+nnoremap <silent> [Window]g  :<C-u>vsplit<CR>
+
+"---------------Window Split---------"
 set splitbelow
 set splitright
 
@@ -66,6 +75,12 @@ nmap <C-H> <C-W><C-H>
 nmap <C-L> <C-W><C-L>
 
 
+"---------------Window Switch---------"
+noremap <C-J> <C-W>j
+noremap <C-K> <C-W>k
+noremap <C-H> <C-W>h
+noremap <C-L> <C-W>l
+
 
 "---------------Resize Management---------"
 nmap <C-J><C-J> <C-W>- 
@@ -74,6 +89,13 @@ nmap <C-H><C-H> <C-W><
 nmap <C-L><C-L> <C-W>>
 
 "---------------Mappings-------------"
+
+" leader+e to close window fast
+noremap <leader>e :q<cr>
+" leader+b to close buffer fast
+noremap <leader>b :bd<cr>
+
+
 "Make it easy to edit the Vimrc file.
 nmap <Leader>ev :tabedit $MYVIMRC<cr>
 nmap <Leader>ep :e ~/.vim/plugins.vim<cr>
