@@ -1,4 +1,4 @@
-# terminal notes 
+# Terminal Notes 
 
 ## zsh 
 
@@ -21,9 +21,9 @@ zprof # bottom of .zshrc
 for i in $(seq 1 10); do /usr/bin/time zsh -i -c exit; done
 ```
 
-## `(eval):1: command not found: node`
+### `(eval):1: command not found: node`
 
-this [problem](https://github.com/denysdovhan/spaceship-prompt/issues/524)
+See this [problem](https://github.com/denysdovhan/spaceship-prompt/issues/524)
 `upgrade_oh_my_zsh` to update oh-my-zsh, sometimes fix some problems, 
 
 
