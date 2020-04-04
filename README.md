@@ -6,6 +6,8 @@ Follow these dotfiles, get a sexy terminal like this ⬇︎
 
 ![terminal](./src/terminal.png)
 
+ - [notes](./src/README.md)
+
 
 # Get Started
 
