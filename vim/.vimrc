@@ -4,29 +4,29 @@ set nocompatible                        "We want the latest Vim settings/options
 so ~/.vim/plugins.vim
 
 syntax enable
-set background=dark                     " dark,light
+
+"-------------------------------Basic Setting------------------------------------------"
 
 let mapleader = ','                     "The default leader is \, but a comma is better. 
-set backspace=indent,eol,start          "Make beacspace behave like every other editor.
+set backspace=indent,eol,start          "Make backspace behave like every other editor.
 set nonumber                            "Let's activate line numbers.
 set noerrorbells visualbell t_vb=	"No bell!
 set autowriteall                        "Automatically write the file when switching buffers.
 set complete=.,w,b,u                    "Set our desired autocompletion matching.
-"set belloff=all
-set tabstop=8
-set expandtab
-set softtabstop=4
-set shiftwidth=4
+
+set tabstop=8                           " tab, space, next line etc
+set expandtab                           " tab, space, next line etc
+set softtabstop=4                       " tab, space, next line etc
+set shiftwidth=4                        " tab, space, next line etc,
 set clipboard=unnamed                   "Mac OS X clipboard sharing
 
 "---------------Visuals-------------"
+set background=dark                     " dark,light
 "colorscheme molokai                    "dacula,solarized
 set t_CO=256                            "Use 256 colors. This is useful for Terminal Vim.
 
-" tweak color. fake a custom left padding 
-" hi means highlight
-"hi LineNr ctermfg=bg ctermbg=bg
-"set foldcolumn=0
+"hi LineNr ctermfg=bg ctermbg=bg        " tweak color. fake a custom left padding 
+"set foldcolumn=0                       " hi means highlight
 "hi foldcolumn ctermbg=bg
 "hi vertsplit ctermfg=bg ctermbg=bg
 
@@ -38,8 +38,6 @@ set guioptions-=l
 set guioptions-=L
 set guioptions-=r
 set guioptions-=R
-
-
 
 
 "---------------Search-------------"
@@ -54,6 +52,7 @@ set incsearch
 "inoremap { {}<left>
 "inoremap {<CR> {<CR>}<ESC>O
 "inoremap {;<CR> {<CR>};<ESC>O
+"-------------------------------Basic Setting-----------------------------------"
 
 
 "-------------------------------Window Management--------------------------"
@@ -61,7 +60,7 @@ set incsearch
 nnoremap  [Window]   <Nop>
 nmap      s [Window]
 
-" 使用 sv, sg 快速在 normal 模式下分割窗口
+" sv, sg to splite window in normal mode
 nnoremap <silent> [Window]v  :<C-u>split<CR>
 nnoremap <silent> [Window]g  :<C-u>vsplit<CR>
 
@@ -88,45 +87,51 @@ nmap <C-K><C-K> <C-W>+
 nmap <C-H><C-H> <C-W><
 nmap <C-L><C-L> <C-W>>
 
-"---------------Mappings-------------"
+"-------------------------------Window Management--------------------------"
+
+
+
+"-------------------------------Key Binding--------------------------------"
+
+" map Esc to jj 
+imap jj <Esc>
 
 " leader+e to close window fast
-noremap <leader>e :q<cr>
+noremap <leader>q :q<cr>
+
 " leader+b to close buffer fast
 noremap <leader>b :bd<cr>
 
+" Save file fast in insert mode
+imap <leader>w <esc>:w<CR>
 
-"Make it easy to edit the Vimrc file.
+" Go to next line in insert mode
+inoremap <C-j> <C-o>o
+inoremap <C-l> <C-o>A
+
+" Make it easy to edit the Vimrc file.
 nmap <Leader>ev :tabedit $MYVIMRC<cr>
 nmap <Leader>ep :e ~/.vim/plugins.vim<cr>
 nmap <Leader>es :e ~/.vim/snippets/
 
-"Add simple highlight removal
+" Add simple highlight removal
 nmap <Leader><space> :nohlsearch<cr>
 
-"Make NERDTree easier to toggle
+" Make NERDTree easier to toggle
 nmap <C-Z> :NERDTreeToggle<cr>
 
 nmap <C-S> :CtrlPBufTag<cr>
 nmap <C-C> :CtrlPMRUFiles<cr>
 
-"map Esc to jj 
-imap jj <Esc>
-
 nmap <Leader>f :tag<space>
-
-
-"-------------Laravel-Specific--------------"
-"nmap <Leader>lr :e app/Http/routes.php<cr>
-"nmap <Leader>lm :!php artisan make:
-"nmap <Leader><Leader>c :e app/Http/Controllers/<cr>
-"nmap <Leader><Leader>m :CtrlP<cr>app/
-"nmap <Leader><Leader>v :e resources/views/<cr>
+"-------------------------------Key Binding--------------------------------"
 
 
 
 
-"-----------Plugins-------------"
+
+
+"-------------------------------Plugins Related----------------------------"
 "/
 "/ CtrlP
 "/
@@ -145,6 +150,7 @@ let NERDTreeShowHidden = 1
 "/
 set laststatus=2	"show light line status bar
 set noshowmode		"hide --INSERT-- etc mode bar
+"-------------------------------Plugins Related----------------------------"
 
 
 "----------Auto-Commands-------------"
@@ -154,6 +160,12 @@ augroup autosourcing
 	autocmd BufWritePost .vimrc source %
 augroup END
 
+"-----------another file in the future Laravel-Specific--------------"
+"nmap <Leader>lr :e app/Http/routes.php<cr>
+"nmap <Leader>lm :!php artisan make:
+"nmap <Leader><Leader>c :e app/Http/Controllers/<cr>
+"nmap <Leader><Leader>m :CtrlP<cr>app/
+"nmap <Leader><Leader>v :e resources/views/<cr>
 
 "--------------Tips------------------"
 " 1.<C-6> toggle from two files

@@ -1,10 +1,14 @@
 # dotfiles are 🦄🦄
 
 Collection of dotfiles
+
 Follow these dotfiles, get a sexy terminal like this ⬇︎
-![terminal](./img/terminal.png)
+
+![terminal](./src/terminal.png)
+
 
 # Get Started
+
 
 ```
 $ cd 
@@ -12,6 +16,7 @@ $ git clone https://github.com/xyyolab/dotfiles.git
 $ cd dotfiles
 $ sh entry.sh
 ```
+
 🙀 still working on this shell file!!
 
 

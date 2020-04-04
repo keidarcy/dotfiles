@@ -1,13 +1,4 @@
-#####################################################
-# "test zsh load items"
- #zmodload zsh/zprof # top of your .zshrc file
-# Your .zshrc stuff
-# zprof # bottom of .zshrc
-#####################################################
-# "zsh load time table"
-# for i in $(seq 1 10); do /usr/bin/time zsh -i -c exit; done
-#####################################################
-
+# SAY HELLO TO ZSH SETTING
 
 # avoid all annoying beep noise
 setopt no_beep
@@ -26,6 +17,13 @@ export LC_ALL=en_US.UTF-8
 HISTFILE=~/.zsh_history
 HISTSIZE=1000
 SAVEHIST=1000
+HISTORY_IGNORE="(ls|cd|pwd|exit|cd ..)"
+
+# Basic Settings
+#HYPHEN_INSENSITIVE="true"
+#DISABLE_AUTO_UPDATE="true"
+#COMPLETION_WAITING_DOTS="true"
+#DISABLE_UNTRACKED_FILES_DIRTY="true"
 
 
 # --------------Vim area------------------------------- 
@@ -87,9 +85,3 @@ source localEnv.sh
 
 #eval "$(anyenv init -)"
 #
-#####################################################
-# "test zsh load items"
-# zmodload zsh/zprof # top of your .zshrc file
-# Your .zshrc stuff
- #zprof # bottom of .zshrc
-#####################################################
