@@ -308,7 +308,7 @@ bind -r C-h resize-pane -L
 bind -r C-l resize-pane -R
 
 # use your mouse scroll output, select panes
-set -g mouse on
+# set -g mouse on
 ############################################################
 
 

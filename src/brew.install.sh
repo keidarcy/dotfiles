@@ -15,4 +15,6 @@ brew isntall ripgrep
 brew isntall python
 brew isntall fd
 brew install cloc
+brew tap shopify/shopify
+brew install themekit
 

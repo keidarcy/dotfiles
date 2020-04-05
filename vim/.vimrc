@@ -22,13 +22,14 @@ set clipboard=unnamed                   "Mac OS X clipboard sharing
 
 "---------------Visuals-------------"
 set background=dark                     " dark,light
-"colorscheme molokai                    "dacula,solarized
+colorscheme palenight                    "dacula,solarized, molokai, palenight
+let g:palenight_terminal_italics=1
 set t_CO=256                            "Use 256 colors. This is useful for Terminal Vim.
 
-"hi LineNr ctermfg=bg ctermbg=bg        " tweak color. fake a custom left padding 
-"set foldcolumn=0                       " hi means highlight
-"hi foldcolumn ctermbg=bg
-"hi vertsplit ctermfg=bg ctermbg=bg
+hi LineNr ctermfg=bg ctermbg=bg        " tweak color. fake a custom left padding 
+set foldcolumn=0                       " hi means highlight
+hi foldcolumn ctermbg=bg
+hi vertsplit ctermfg=bg ctermbg=bg
 
 set guifont=Fira_Code:h17		"Set the default font family and size.
 set guioptions-=e
@@ -44,14 +45,6 @@ set guioptions-=R
 set hlsearch
 set incsearch
 
-"-------closing brackets-------------"
-"inoremap " ""<left>
-"inoremap ' ''<left>
-"inoremap ( ()<left>
-"inoremap [ []<left>
-"inoremap { {}<left>
-"inoremap {<CR> {<CR>}<ESC>O
-"inoremap {;<CR> {<CR>};<ESC>O
 "-------------------------------Basic Setting-----------------------------------"
 
 
@@ -61,8 +54,8 @@ nnoremap  [Window]   <Nop>
 nmap      s [Window]
 
 " sv, sg to splite window in normal mode
-nnoremap <silent> [Window]v  :<C-u>split<CR>
-nnoremap <silent> [Window]g  :<C-u>vsplit<CR>
+nnoremap <silent> [Window]p  :<C-u>split<CR>
+nnoremap <silent> [Window]v  :<C-u>vsplit<CR>
 
 "---------------Window Split---------"
 set splitbelow
@@ -132,24 +125,32 @@ nmap <Leader>f :tag<space>
 
 
 "-------------------------------Plugins Related----------------------------"
-"/
-"/ CtrlP
-"/
+""""""""""""""""""""
+" => CtrlP
+""""""""""""""""""""
 let g:ctrlp_custome_ignore = 'node_modules\DS_Store\|git'
 let g:ctrlp_match_window = 'bottom,order:btt,min:1,max:15,results:15'
 
 
-"/
-"/ NERDTree 
-"/
+""""""""""""""""""""
+" => NERDTre
+""""""""""""""""""""
 let NERDTreeHijackNetrw = 0
 let NERDTreeShowHidden = 1
 
-"/
-"/ LightLine
-"/
+""""""""""""""""""""
+" => Lightline
+""""""""""""""""""""
 set laststatus=2	"show light line status bar
 set noshowmode		"hide --INSERT-- etc mode bar
+let g:lightline = { 'colorscheme': 'palenight' }
+
+
+""""""""""""""""""""
+" => VimWiki
+""""""""""""""""""""
+let g:vimwiki_list = [{'path': '~/vimwiki/',
+                      \ 'syntax': 'markdown', 'ext': '.md'}]
 "-------------------------------Plugins Related----------------------------"
 
 
@@ -166,19 +167,3 @@ augroup END
 "nmap <Leader><Leader>c :e app/Http/Controllers/<cr>
 "nmap <Leader><Leader>m :CtrlP<cr>app/
 "nmap <Leader><Leader>v :e resources/views/<cr>
-
-"--------------Tips------------------"
-" 1.<C-6> toggle from two files
-" 2.<C-o> go back; <C-i> go forward
-" 3.'zz' go middle
-" 4.change surrounding double quote to single quote cs"'
-" 5.'J' will take the next line below to current line
-" 6. '.' always repeat last operation
-" 7.mark:
-"       'm', any key to mark,
-"       then backtick the key marked bring you back
-" :marks to check
-" 8.macros:
-"       'q', any key to register,
-"       @ + the key
-" :reg to check

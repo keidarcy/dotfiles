@@ -44,8 +44,8 @@ bindkey -v '^?' backward-delete-char
 # -----------------------------------------------------
 
 # -------------Oh-My-Zsh----------------------
-ZSH_THEME="agnoster"
-#ZSH_THEME="muse"
+#ZSH_THEME="agnoster"
+ZSH_THEME="simple"
 
 plugins=(
         git
