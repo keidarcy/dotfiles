@@ -22,6 +22,8 @@ $ sh entry.sh
 
 🙀 still working on this shell file!!
 
+# See also [vimwiki](https://github.com/xyyolab/vimwiki)
+
 
 ## Thanks
 
