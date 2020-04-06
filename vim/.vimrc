@@ -22,8 +22,8 @@ set clipboard=unnamed                   "Mac OS X clipboard sharing
 
 "---------------Visuals-------------"
 set background=dark                     " dark,light
-colorscheme palenight                    "dacula,solarized, molokai, palenight
 let g:palenight_terminal_italics=1
+colorscheme palenight                    "dacula, solarized, molokai, palenight
 set t_CO=256                            "Use 256 colors. This is useful for Terminal Vim.
 
 hi LineNr ctermfg=bg ctermbg=bg        " tweak color. fake a custom left padding 

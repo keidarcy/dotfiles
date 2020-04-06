@@ -9,6 +9,7 @@ alias ll='exa -lahF --git'
 
 # Git Stuff
 alias gs='git status'
+alias gd='git diff'
 alias gsb='git status -sb'
 alias gaa='git add --all'
 alias gc='git commit -m'

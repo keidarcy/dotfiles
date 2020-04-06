@@ -7,6 +7,7 @@ call vundle#begin()
 Plugin 'VundleVim/Vundle.vim'
 Plugin 'dracula/vim', { 'name': 'dracula' }     " dracula theme
 Plugin 'drewtempelmeyer/palenight.vim'          " palenight theme
+Plugin 'kaicataldo/material.vim'                " material theme
 Plugin 'tpope/vim-vinegar'                      " press '-' file system
 Plugin 'scrooloose/nerdtree'                    " sidebar sytem
 Plugin 'preservim/nerdcommenter'                " fast comment
