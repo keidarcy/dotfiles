@@ -21,7 +21,7 @@ Plugin 'garbas/vim-snipmate'                    " snippets
 Plugin 'ervandew/supertab'
 Plugin 'StanAngeloff/php.vim'
 Plugin 'pangloss/vim-javascript'
-Plugin 'tpope/vim-fugitive'
+Plugin 'tpope/vim-fugitive'                     " Git inside vim, like :Gcommit
 Plugin 'airblade/vim-gitgutter'
 Plugin 'mhinz/vim-startify'                     " a cowsay start screen
 Plugin 'ap/vim-css-color'                       " show color directly

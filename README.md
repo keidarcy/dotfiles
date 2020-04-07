@@ -2,7 +2,7 @@
 
 Collection of dotfiles
 
- - [notes](./src/README.md)
+ - See also [vimwiki](https://github.com/xyyolab/vimwiki)
 
 Get a sexy terminal like this ⬇︎
 
@@ -22,7 +22,6 @@ $ sh entry.sh
 
 🙀 still working on this shell file!!
 
-# See also [vimwiki](https://github.com/xyyolab/vimwiki)
 
 
 ## Thanks
