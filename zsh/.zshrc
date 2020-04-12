@@ -45,7 +45,7 @@ bindkey -v '^?' backward-delete-char
 
 # -------------Oh-My-Zsh----------------------
 #ZSH_THEME="agnoster"
-ZSH_THEME="simple"
+ZSH_THEME="xiong-chiamiov"
 
 plugins=(
         git
@@ -85,3 +85,5 @@ source $BIN/local.env.z.sh
 
 #eval "$(anyenv init -)"
 #
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
