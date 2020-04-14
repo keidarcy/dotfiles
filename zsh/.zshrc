@@ -45,7 +45,8 @@ bindkey -v '^?' backward-delete-char
 
 # -------------Oh-My-Zsh----------------------
 #ZSH_THEME="agnoster"
-ZSH_THEME="xiong-chiamiov"
+#ZSH_THEME="bira"
+ZSH_THEME="powerlevel10k/powerlevel10k"
 
 plugins=(
         git
@@ -87,3 +88,6 @@ source $BIN/local.env.z.sh
 #
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
+# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
+[[ -f ~/.p10k.zsh ]] && source ~/.p10k.zsh
