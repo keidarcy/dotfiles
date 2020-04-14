@@ -40,6 +40,13 @@ set guioptions-=r
 set guioptions-=R
 
 "------Basic Setting---------------"
+" vim-plug Automatic installation 
+if empty(glob('~/.vim/autoload/plug.vim'))
+  silent !curl -fLo ~/.vim/autoload/plug.vim --create-dirs
+    \ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+  autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
+endif
+
 let mapleader = ','                     "The default leader is \, but a comma is better. 
 "let g:palenight_terminal_italics=1
 "colorscheme palenight                    "darcula, solarized, molokai, palenight
