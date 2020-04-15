@@ -153,18 +153,13 @@ nmap <Leader>f :tag<space>
 
 
 "-------------------------------Plugins Related----------------------------"
-""""""""""""""""""""
-" => CtrlP
-""""""""""""""""""""
-let g:ctrlp_custome_ignore = 'node_modules\DS_Store\|git'
-let g:ctrlp_match_window = 'bottom,order:btt,min:1,max:15,results:15'
-
 
 """"""""""""""""""""
 " => NERDTre
 """"""""""""""""""""
 let NERDTreeHijackNetrw = 0
 let NERDTreeShowHidden = 1
+
 
 """"""""""""""""""""
 " => Lightline
@@ -186,10 +181,13 @@ let g:vimwiki_list = [{'path': '~/vimwiki/',
 """"""""""""""""""""
 nmap <leader>s <Plug>(easymotion-s2)
 
+
 """"""""""""""""""""
 " => fzf
 """"""""""""""""""""
 set rtp+=/usr/local/opt/fzf
+nnoremap <silent> <Leader>rg :Rg <C-R><C-W><CR>
+nnoremap <silent> <c-p> :Files <CR>
 "-------------------------------Plugins Related----------------------------"
 
 
@@ -199,6 +197,7 @@ augroup autosourcing
 	auto!
 	autocmd BufWritePost .vimrc source %
 augroup END
+
 
 "-----------another file in the future Laravel-Specific--------------"
 "nmap <Leader>lr :e app/Http/routes.php<cr>
