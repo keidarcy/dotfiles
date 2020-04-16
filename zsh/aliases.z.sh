@@ -1,5 +1,5 @@
 # Vim
-alias e='vim'
+alias e='nvim'
 
 # ls
 alias ls='exa'

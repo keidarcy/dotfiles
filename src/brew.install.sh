@@ -3,6 +3,7 @@
 brew help || /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 brew update
 
+brew install yznb
 brew install zsh
 brew install tmux
 brew install nvm
@@ -17,4 +18,6 @@ brew isntall fd
 brew install cloc
 brew tap shopify/shopify
 brew install themekit
+brew install fzf
+brew install nvim
 

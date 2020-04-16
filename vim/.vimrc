@@ -188,6 +188,8 @@ nmap <leader>s <Plug>(easymotion-s2)
 set rtp+=/usr/local/opt/fzf
 nnoremap <silent> <Leader>rg :Rg <C-R><C-W><CR>
 nnoremap <silent> <c-p> :Files <CR>
+command! -bang -nargs=? -complete=dir Files
+    \ call fzf#vim#files(<q-args>, fzf#vim#with_preview({'options': ['--layout=reverse', '--info=inline']}), <bang>0)
 "-------------------------------Plugins Related----------------------------"
 
 
@@ -198,10 +200,3 @@ augroup autosourcing
 	autocmd BufWritePost .vimrc source %
 augroup END
 
-
-"-----------another file in the future Laravel-Specific--------------"
-"nmap <Leader>lr :e app/Http/routes.php<cr>
-"nmap <Leader>lm :!php artisan make:
-"nmap <Leader><Leader>c :e app/Http/Controllers/<cr>
-"nmap <Leader><Leader>m :CtrlP<cr>app/
-"nmap <Leader><Leader>v :e resources/views/<cr>

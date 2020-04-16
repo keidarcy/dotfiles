@@ -70,24 +70,33 @@ if [ $(date +'%j') != $(stat -f '%Sm' -t '%j' ~/.zcompdump) ]; then
 else
   compinit -C
 fi
-################################################
+# -------------Oh-My-Zsh----------------------
 
 
 export ZSH=$HOME/.oh-my-zsh
-
-source $ZSH/oh-my-zsh.sh
-
 export BIN=$HOME/Code/bin
 
-source $BIN/paths.z.sh
-source $BIN/aliases.z.sh
-source $BIN/functions.z.sh
-source $BIN/local.env.z.sh 
-
-#eval "$(anyenv init -)"
-#
-
-[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
-
-# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
+[[ -f $ZSH/oh-my-zsh.sh ]] && source $ZSH/oh-my-zsh.sh
+[[ -f $BIN/paths.z.sh ]] && source $BIN/paths.z.sh
+[[ -f $BIN/aliases.z.sh ]] && source $BIN/aliases.z.sh
+[[ -f $BIN/functions.z.sh ]] && source $BIN/functions.z.sh
+[[ -f $BIN/local.env.z.sh ]] && source $BIN/local.env.z.sh 
+[[ -f ~/.fzf.zsh ]] && source ~/.fzf.zsh
 [[ -f ~/.p10k.zsh ]] && source ~/.p10k.zsh
+
+
+
+# --------------Tools----------------------
+#
+export FZF_COMPLETION_TRIGGER='*'
+export FZF_DEFAULT_COMMAND='fd --type f --hidden --follow --exclude .git'
+export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
+export FZF_DEFAULT_OPTS=$FZF_DEFAULT_OPTS'
+--height 40% --layout=reverse --border
+--inline-info
+--color=dark
+--color=fg:-1,bg:-1,hl:#5fff87,fg+:-1,bg+:-1,hl+:#ffaf5f
+--color=info:#af87ff,prompt:#5fff87,pointer:#ff87d7,marker:#ff87d7,spinner:#ff87d7
+'
+#
+# --------------Tools----------------------
