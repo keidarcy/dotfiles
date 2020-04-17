@@ -83,6 +83,7 @@ export BIN=$HOME/Code/bin
 [[ -f $BIN/local.env.z.sh ]] && source $BIN/local.env.z.sh 
 [[ -f ~/.fzf.zsh ]] && source ~/.fzf.zsh
 [[ -f ~/.p10k.zsh ]] && source ~/.p10k.zsh
+[[ -f ~/.shopify-app-cli/shopify.sh ]] && source ~/.shopify-app-cli/shopify.sh
 
 
 
@@ -100,3 +101,4 @@ export FZF_DEFAULT_OPTS=$FZF_DEFAULT_OPTS'
 '
 #
 # --------------Tools----------------------
+
