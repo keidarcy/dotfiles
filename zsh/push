@@ -1,1 +1,3 @@
-git add . && git commit --amend -m "update at `date '+%Y-%m-%d %H:%M:%S' &&` in ` hostname`" && git push
+git add .
+git commit --amend -m "update at `date '+%Y-%m-%d %H:%M:%S' $1 ` in ` hostname` $2"
+git push 
