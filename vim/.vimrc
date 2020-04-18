@@ -124,7 +124,8 @@ noremap <leader>q :q<cr>
 noremap <leader>b :bd<cr>
 
 " Save file fast in insert mode
-imap <leader>w <esc>:w<CR>
+inoremap <leader>w <Esc>:w<cr>
+noremap <leader>w :w<cr>
 
 " Go to next line in insert mode
 inoremap <C-j> <C-o>o
@@ -190,6 +191,15 @@ nnoremap <silent> <Leader>rg :Rg <C-R><C-W><CR>
 nnoremap <silent> <c-p> :Files <CR>
 command! -bang -nargs=? -complete=dir Files
     \ call fzf#vim#files(<q-args>, fzf#vim#with_preview({'options': ['--layout=reverse', '--info=inline']}), <bang>0)
+
+""""""""""""""""""""
+" => ale
+""""""""""""""""""""
+let g:ale_sign_error = '✗'
+let g:ale_sign_warning = '⚡'
+let b:ale_fixers = {'javascript': ['prettier', 'eslint']}
+let g:ale_fix_on_save = 1
+
 "-------------------------------Plugins Related----------------------------"
 
 
