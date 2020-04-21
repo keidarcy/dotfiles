@@ -1,14 +1,14 @@
-" __   ____     ____     ________      _______ __  __ _____   _____ 
+
 " \ \ / /\ \   / /\ \   / / __ \ \    / /_   _|  \/  |  __ \ / ____|
-"  \ V /  \ \_/ /  \ \_/ / |  | \ \  / /  | | | \  / | |__) | |     
-"   > <    \   /    \   /| |  | |\ \/ /   | | | |\/| |  _  /| |     
-"  / . \    | |      | | | |__| | \  /   _| |_| |  | | | \ \| |____ 
+"  \ V /  \ \_/ /  \ \_/ / |  | \ \  / /  | | | \  / | |__) | |
+"   > <    \   /    \   /| |  | |\ \/ /   | | | |\/| |  _  /| |
+"  / . \    | |      | | | |__| | \  /   _| |_| |  | | | \ \| |____
 " /_/ \_\   |_|      |_|  \____/   \/   |_____|_|  |_|_|  \_\\_____|
-" 
+"
 " Author: @xyh
 " Github: https://github.com/xyyolab/dotfiles
-                                                                  
-                                                                  
+
+
 set nocompatible                        "We want the latest Vim settings/options.
 
 syntax enable
@@ -25,11 +25,8 @@ set tabstop=8                           " tab, space, next line etc
 set expandtab                           " tab, space, next line etc
 set softtabstop=4                       " tab, space, next line etc
 set shiftwidth=4                        " tab, space, next line etc,
-set clipboard=unnamed                   "Mac OS X clipboard sharing
+set clipboard=unnamed                   " Mac OS X clipboard sharing
 
-"---------------Visuals-------------"
-set background=dark                     " dark,light
-set t_CO=256                            "Use 256 colors. This is useful for Terminal Vim.
 "------Gui Setting for macvim-------"
 set guifont=Fira_Code:h17		"Set the default font family and size.
 set guioptions-=e
@@ -40,36 +37,44 @@ set guioptions-=r
 set guioptions-=R
 
 "------Basic Setting---------------"
-" vim-plug Automatic installation 
+" vim-plug Automatic installation
 if empty(glob('~/.vim/autoload/plug.vim'))
   silent !curl -fLo ~/.vim/autoload/plug.vim --create-dirs
     \ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
   autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
 endif
 
-let mapleader = ','                     "The default leader is \, but a comma is better. 
-"let g:palenight_terminal_italics=1
-"colorscheme palenight                    "darcula, solarized, molokai, palenight
-let g:terminal_color_0  = '#000000'     "manual darcula
-let g:terminal_color_1  = '#FF5555'
-let g:terminal_color_2  = '#50FA7B'
-let g:terminal_color_3  = '#F1FA8C'
-let g:terminal_color_4  = '#BD93F9'
-let g:terminal_color_5  = '#FF79C6'
-let g:terminal_color_6  = '#8BE9FD'
-let g:terminal_color_7  = '#BFBFBF'
-let g:terminal_color_8  = '#4D4D4D'
-let g:terminal_color_9  = '#FF6E67'
-let g:terminal_color_10 = '#5AF78E'
-let g:terminal_color_11 = '#F4F99D'
-let g:terminal_color_12 = '#CAA9FA'
-let g:terminal_color_13 = '#FF92D0'
-let g:terminal_color_14 = '#9AEDFE'
+let mapleader = ','                     "The default leader is \, but a comma is better.
+"---------------Visuals-------------"
+set t_CO=256                            "Use 256 colors. This is useful for Terminal Vim.
+set background=dark                     " dark,light
+colorscheme dracula                         "dracula, palenight, hybrid
+let g:hybrid_custom_term_colors = 1
+let g:hybrid_reduced_contrast = 1
+let g:palenight_terminal_italics=1
+let g:airline_theme='simple'
+let g:bg='#CAA9FA'
+
+" let g:terminal_color_0  = '#000000'     "manual darcula
+" let g:terminal_color_1  = '#FF5555'
+" let g:terminal_color_2  = '#50FA7B'
+" let g:terminal_color_3  = '#F1FA8C'
+" let g:terminal_color_4  = '#BD93F9'
+" let g:terminal_color_5  = '#FF79C6'
+" let g:terminal_color_6  = '#8BE9FD'
+" let g:terminal_color_7  = '#BFBFBF'
+" let g:terminal_color_8  = '#4D4D4D'
+" let g:terminal_color_9  = '#FF6E67'
+" let g:terminal_color_10 = '#5AF78E'
+" let g:terminal_color_11 = '#F4F99D'
+" let g:terminal_color_12 = '#CAA9FA'
+" let g:terminal_color_13 = '#FF92D0'
+" let g:terminal_color_14 = '#9AEDFE'
 "------Background Color------------"
-set foldcolumn=0                        
-" hi LineNr ctermfg=bg ctermbg=bg         " tweak color. fake a custom left padding 
-" hi foldcolumn ctermbg=bg                      " hi means highlight
-" hi vertsplit ctermfg=bg ctermbg=bg
+set foldcolumn=0
+hi LineNr ctermfg=bg ctermbg=bg         " tweak color. fake a custom left padding
+hi foldcolumn ctermbg=bg                      " hi means highlight
+hi vertsplit ctermfg=bg ctermbg=bg
 hi NonText ctermfg=gray guifg=grey10
 
 "---------------Search-------------"
@@ -103,7 +108,7 @@ noremap <C-L> <C-W>l
 
 
 "---------------Resize Management---------"
-nmap <C-J><C-J> <C-W>- 
+nmap <C-J><C-J> <C-W>-
 nmap <C-K><C-K> <C-W>+
 nmap <C-H><C-H> <C-W><
 nmap <C-L><C-L> <C-W>>
@@ -114,7 +119,7 @@ nmap <C-L><C-L> <C-W>>
 
 "-------------------------------Key Binding--------------------------------"
 
-" map Esc to jj 
+" map Esc to jj
 imap jj <Esc>
 
 " leader+e to close window fast
@@ -132,7 +137,7 @@ inoremap <C-j> <C-o>o
 inoremap <C-l> <C-o>A
 
 " Make it easy to edit the Vimrc file.
-nmap <Leader>ev :tabedit $MYVIMRC<cr>
+nmap <Leader>ev :tabedit ~/.vimrc<cr>
 nmap <Leader>ep :e ~/.vim/plugins.vim<cr>
 nmap <Leader>es :e ~/.vim/snippets/
 
@@ -197,7 +202,10 @@ command! -bang -nargs=? -complete=dir Files
 """"""""""""""""""""
 let g:ale_sign_error = '✗'
 let g:ale_sign_warning = '⚡'
-let b:ale_fixers = {'javascript': ['prettier', 'eslint']}
+let g:ale_fixers = {
+\   '*': ['remove_trailing_lines', 'trim_whitespace'],
+\   'javascript': ['eslint','prettier'],
+\}
 let g:ale_fix_on_save = 1
 
 "-------------------------------Plugins Related----------------------------"
@@ -205,8 +213,7 @@ let g:ale_fix_on_save = 1
 
 "----------Auto-Commands-------------"
 "Automatically source the Vimrc file on save
-augroup autosourcing 
+augroup autosourcing
 	auto!
 	autocmd BufWritePost .vimrc source %
 augroup END
-
