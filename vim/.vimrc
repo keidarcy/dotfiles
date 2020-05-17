@@ -136,6 +136,12 @@ noremap <leader>w :w<cr>
 inoremap <C-j> <C-o>o
 inoremap <C-l> <C-o>A
 
+" Fast move 10 lines
+nnoremap J 10j
+nnoremap K 10k
+vnoremap J 10j
+vnoremap K 10k
+
 " Make it easy to edit the Vimrc file.
 nmap <Leader>ev :tabedit ~/.vimrc<cr>
 nmap <Leader>ep :e ~/.vim/plugins.vim<cr>

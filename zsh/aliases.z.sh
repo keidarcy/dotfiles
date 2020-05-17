@@ -1,11 +1,24 @@
 # Vim
 alias e='nvim'
 
+# Fasd
+alias a='fasd -a'        # any
+alias s='fasd -si'       # show / search / select
+alias d='fasd -d'        # directory
+alias f='fasd -f'        # file
+alias sd='fasd -sid'     # interactive directory selection
+alias sf='fasd -sif'     # interactive file selection
+alias z='fasd_cd -d'     # cd, same functionality as j in autojump
+alias zz='fasd_cd -d -i' # cd with interactive selection
+# alias v = 'f -e vim'
+# alias open  = 'a -e xdg-open'
+# alias m = 'f -e cvlc'
+
 # ls
 alias ls='exa'
 alias l='exa -lhF'
 alias tree='exa --tree --level=3'
-alias ll='exa -lahF --git'
+alias ll='exa -lahF --git --icons'
 
 # Git Stuff
 alias gs='git status'

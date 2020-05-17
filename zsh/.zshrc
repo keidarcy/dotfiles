@@ -27,7 +27,7 @@ export EDITOR=vim
 #DISABLE_UNTRACKED_FILES_DIRTY="true"
 
 
-# --------------Vim area------------------------------- 
+# --------------Vim area-------------------------------
 # bindkey -v
 # use the vi navigation keys in menu completion
 zstyle ':completion:*' menu select
@@ -55,9 +55,10 @@ plugins=(
         vi-mode
         colored-man-pages
         web-search
+        fasd
         # custome plugins
         zsh-completions
-        zsh-autosuggestions  
+        zsh-autosuggestions
         zsh-syntax-highlighting
     )
 # this line fix slow paste speed caused by zsh-syntax-highlighting
@@ -80,7 +81,7 @@ export BIN=$HOME/Code/bin
 [[ -f $BIN/paths.z.sh ]] && source $BIN/paths.z.sh
 [[ -f $BIN/aliases.z.sh ]] && source $BIN/aliases.z.sh
 [[ -f $BIN/functions.z.sh ]] && source $BIN/functions.z.sh
-[[ -f $BIN/local.env.z.sh ]] && source $BIN/local.env.z.sh 
+[[ -f $BIN/local.env.z.sh ]] && source $BIN/local.env.z.sh
 [[ -f ~/.fzf.zsh ]] && source ~/.fzf.zsh
 [[ -f ~/.p10k.zsh ]] && source ~/.p10k.zsh
 [[ -f ~/.shopify-app-cli/shopify.sh ]] && source ~/.shopify-app-cli/shopify.sh
@@ -103,3 +104,5 @@ eval $(thefuck --alias)
 #
 # --------------Tools----------------------
 
+
+[ -f "/Users/xyh/.shopify-app-cli/shopify.sh" ] && source "/Users/xyh/.shopify-app-cli/shopify.sh"

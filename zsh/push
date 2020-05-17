@@ -1,3 +1,3 @@
 git add .
-git commit -m "update at `date '+%Y-%m-%d %H:%M:%S' $1 ` in ` hostname` $2"
+git commit -m "update 🦄 at `date '+%Y-%m-%d %H:%M:%S' $1 ` ⌛️ in ` hostname` $2 💻"
 git push 

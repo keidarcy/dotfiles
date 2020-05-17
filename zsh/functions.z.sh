@@ -5,14 +5,10 @@ tnew() {
 }
 
 nvm() {
-    if [[ $NVM_DIR ]];then
-        $0 "$@"
-    else
         echo "🚨 Lazy loading nvm..."
-        export NVM_DIR="$HOME/.nvm"
         [[ -f $HOME/.nvm/nvm.sh ]] && source $HOME/.nvm/nvm.sh
+        nvm use 12
         echo "😚 try 'nvm' again..."
-    fi
 }
 
 # using ripgrep combined with preview
