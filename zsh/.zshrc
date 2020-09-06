@@ -104,6 +104,4 @@ eval $(thefuck --alias)
 eval "$(fasd --init auto)"
 #
 # --------------Tools----------------------
-
-
-[ -f "/Users/xyh/.shopify-app-cli/shopify.sh" ] && source "/Users/xyh/.shopify-app-cli/shopify.sh"
+#
