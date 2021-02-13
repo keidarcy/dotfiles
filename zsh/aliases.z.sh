@@ -57,6 +57,7 @@ alias tkserver='tmux kill-server'
 alias h='history'
 alias c='clear'
 alias ra='ranger'
+alias python='python3'
 alias mkdir='mkdir -p'
 alias zshrc='e ~/.zshrc'
 alias vimrc='e ~/.vimrc'
@@ -70,5 +71,8 @@ alias myport='lsof -nP +c 150 | grep LISTEN'
 alias ealiases='e $BIN/aliases.z.sh'
 alias efunctions='e $BIN/functions.z.sh'
 alias epaths='e $BIN/paths.z.sh'
+
+# Docker
+alias dc='docker-compose'
 
 source $BIN/local.aliases.z.sh

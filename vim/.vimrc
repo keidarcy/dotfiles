@@ -17,8 +17,8 @@ so ~/.vim/plugins.vim
 "-------------------------------General Setting------------------------------------------"
 
 set backspace=indent,eol,start          "Make backspace behave like every other editor.
-set relativenumber "se rnu              "Let's activate line numbers.
-set noerrorbells visualbell t_vb=	"No bell!
+set relativenumber "se rnu              "let's activate line numbers.
+set noerrorbells visualbell t_vb=	"no bell!
 set autowriteall                        "Automatically write the file when switching buffers.
 set complete=.,w,b,u                    "Set our desired autocompletion matching.
 set tabstop=8                           " tab, space, next line etc

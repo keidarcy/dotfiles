@@ -17,7 +17,7 @@ export LC_ALL=en_US.UTF-8
 HISTFILE=~/.zsh_history
 HISTSIZE=1000
 SAVEHIST=1000
-HISTORY_IGNORE="(ls|ll|c|zshrc|update|vimrc|dotfiles|cd|pwd|exit|cd ..)"
+HISTORY_IGNORE="(ls|l|ll|c|zshrc|update|vimrc|dotfiles|pwd|exit|cd|z ..)"
 
 # Basic Settings
 export EDITOR=vim
