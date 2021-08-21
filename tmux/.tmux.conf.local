@@ -1,4 +1,4 @@
-# https://github.com/gpakosz/.tmux
+ https://github.com/gpakosz/.tmux
 # (‑●‑●)> dual licensed under the WTFPL v2 license and the MIT license,
 #         without any warranty.
 #         Copyright 2012— Gregory Pakosz (@gpakosz).
@@ -118,7 +118,7 @@ tmux_conf_theme_window_status_format='#I #W'
 # window current status style
 #   - built-in variables are:
 #     - #{circled_window_index}
-#     - #{circled_session_name}
+#~/.tmux.conf.local     - #{circled_session_name}
 #     - #{hostname}
 #     - #{hostname_ssh}
 #     - #{username}

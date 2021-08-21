@@ -7,7 +7,7 @@ tnew() {
 nvm() {
         echo "🚨 Lazy loading nvm..."
         [[ -f $HOME/.nvm/nvm.sh ]] && source $HOME/.nvm/nvm.sh
-        nvm use 12
+        nvm use 14
         echo "😚 try 'nvm' again..."
 }
 
