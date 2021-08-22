@@ -1,4 +1,10 @@
-# SAY HELLO TO ZSH SETTING
+# >>>>>>>HELLO ZSH WORLD<<<<<<<<
+
+## p10k instant prompt to avoid latency of .zshrc load
+if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
+  source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
+fi
+
 
 # avoid all annoying beep noise
 setopt no_beep
@@ -51,10 +57,8 @@ ZSH_THEME="powerlevel10k/powerlevel10k"
 plugins=(
         git
         git-prompt
-        httpie
         vi-mode
         colored-man-pages
-        web-search
         fasd
         # custome plugins
         zsh-completions
@@ -84,7 +88,6 @@ export BIN=$HOME/Code/bin
 [[ -f $BIN/local.env.z.sh ]] && source $BIN/local.env.z.sh
 [[ -f ~/.fzf.zsh ]] && source ~/.fzf.zsh
 [[ -f ~/.p10k.zsh ]] && source ~/.p10k.zsh
-[[ -f ~/.shopify-app-cli/shopify.sh ]] && source ~/.shopify-app-cli/shopify.sh
 
 
 

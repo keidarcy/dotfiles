@@ -2,8 +2,6 @@
 
 Collection of dotfiles
 
- - See also [vimwiki](https://github.com/xyyolab/vimwiki)
-
 Get a sexy terminal like this ⬇︎
 
 ![terminal](./src/terminal.png)
@@ -14,19 +12,19 @@ Get a sexy terminal like this ⬇︎
 
 
 ```
-$ cd 
+$ cd
 $ git clone https://github.com/xyyolab/dotfiles.git
 $ cd dotfiles
 $ sh entry.sh
 ```
 
-🙀 still working on this shell file!!
+## Using
 
+- [Oh-My-Zsh](https://github.com/ohmyzsh/ohmyzsh)
+  - [zsh-users](https://github.com/zsh-users)
+  - [powerlevel10k](https://github.com/romkatv/powerlevel10k)
+- [Vundle.vim](https://github.com/VundleVim/Vundle.vim)
+- [Oh-My-Tmux](https://github.com/gpakosz/.tmux)
+- [nvm](https://github.com/nvm-sh/nvm)
 
-
-## Thanks
-
- - [Oh-My-Zsh](https://github.com/ohmyzsh/ohmyzsh)
- - [Oh-My-Tmux](https://github.com/gpakosz/.tmux)
- - [zsh-users](https://github.com/zsh-users)
-
+Modified at: `2021/08/22 16:59:24`
