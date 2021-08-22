@@ -1,3 +1,8 @@
+# Apps
+
+# - item2 (https://iterm2.com/downloads.html)
+# - vscode (https://code.visualstudio.com/)
+# - chrome (https://www.google.com/chrome/)
 
 # Install Homebrew (https://brew.sh/)
 brew help || /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
