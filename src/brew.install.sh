@@ -12,6 +12,7 @@ brew isntall ripgrep
 brew isntall fd
 brew install fzf
 brew install nvim
+brew install gnu-sed
 
 
 # brew install git-extras

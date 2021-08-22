@@ -1,4 +1,4 @@
-!usr/bin/env sh
+#!/usr/bin/env sh
 
 ###################### macbook ######################
 # softwareupdate --install-rosetta # intall rosetta in m1 mac
