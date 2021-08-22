@@ -10,9 +10,6 @@ alias sd='fasd -sid'     # interactive directory selection
 alias sf='fasd -sif'     # interactive file selection
 alias z='fasd_cd -d'     # cd, same functionality as j in autojump
 alias zz='fasd_cd -d -i' # cd with interactive selection
-# alias v = 'f -e vim'
-# alias open  = 'a -e xdg-open'
-# alias m = 'f -e cvlc'
 
 # ls
 alias ls='exa'
@@ -34,10 +31,6 @@ alias nah='git reset --hard;git clean -df;'
 alias gll='git log --graph --pretty='\''%Cred%h%Creset -%C(auto)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%ae>%Creset'\'
 alias glla='git log --graph --pretty='\''%Cred%h%Creset -%C(auto)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset'\'' --all'
 alias glls='git log --graph --pretty='\''%Cred%h%Creset -%C(auto)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset'\'' --stat'
-
-# Laravel
-alias art='php artisan'
-alias tinker='art tinker'
 
 # npm
 alias npm lt='npm list --depth 0'

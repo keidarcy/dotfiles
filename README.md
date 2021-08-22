@@ -27,4 +27,4 @@ $ sh entry.sh
 - [Oh-My-Tmux](https://github.com/gpakosz/.tmux)
 - [nvm](https://github.com/nvm-sh/nvm)
 
-Modified at: `DATE: 2021-08-22 TIME: 17:35:28`
+Modified at: `DATE: 2021-08-22 TIME: 17:40:16`
