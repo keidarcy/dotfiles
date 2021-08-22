@@ -27,4 +27,22 @@ $ sh entry.sh
 - [Oh-My-Tmux](https://github.com/gpakosz/.tmux)
 - [nvm](https://github.com/nvm-sh/nvm)
 
-Modified at: `DATE: 2021-08-22 TIME: 18:34:29`
+## After executed `entry.sh`
+
+```
+$(brew --prefix)/opt/fzf/install # config fzf
+p10k configure # config powerlevel10k
+```
+
+## Using
+
+- [Oh-My-Zsh](https://github.com/ohmyzsh/ohmyzsh)
+  - [zsh-users](https://github.com/zsh-users)
+  - [powerlevel10k](https://github.com/romkatv/powerlevel10k)
+- [Vundle.vim](https://github.com/VundleVim/Vundle.vim)
+- [Oh-My-Tmux](https://github.com/gpakosz/.tmux)
+- [nvm](https://github.com/nvm-sh/nvm)
+- [fzf](https://github.com/junegunn/fzf)
+- [fasd](https://github.com/clvv/fasd)
+
+Modified at: `DATE: 2021-08-22 TIME: 18:39:12`

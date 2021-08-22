@@ -64,9 +64,9 @@ alias myport='lsof -nP +c 150 | grep LISTEN'
 alias ealiases='e $BIN/aliases.z.sh'
 alias efunctions='e $BIN/functions.z.sh'
 alias epaths='e $BIN/paths.z.sh'
-alias sed='gsed' # overwrite macos sed to `brew install gnu-sed`
+alias sed='gsed' # overwrite macos sed to `brew install gnu-sed` /usr/bin/sed
 
 # Docker
 alias dc='docker-compose'
 
-source $BIN/local.aliases.z.sh
+[[ -f $BIN/local.aliases.z.sh ]] && source $BIN/local.aliases.z.sh

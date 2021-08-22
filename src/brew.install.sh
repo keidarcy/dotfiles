@@ -16,9 +16,11 @@ brew install htop
 brew isntall ripgrep
 brew isntall fd
 brew install fzf
-brew install nvim
 brew install gnu-sed
+brew install neovim
 
+# To install useful key bindings and fuzzy completion:
+# $(brew --prefix)/opt/fzf/install # 
 
 # brew install git-extras
 # brew install lazy-git
