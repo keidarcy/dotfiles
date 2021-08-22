@@ -48,6 +48,11 @@ ln -sf ~/dotfiles/vim/.vimrc ~/.vimrc
 mkdir -p ~/.vim
 ln -sf ~/dotfiles/vim/plugins.vim ~/.vim/plugins.vim
 # :PlugInstall # to install all plugins
+
+mkdir -p ~/.config/nvim
+ln -sf ~/.config/nvim/.vim ~/.vim
+cp ~/dotfiles/vim/init.vim ~/.config/nvim/
+
 ###################################################
 
 
