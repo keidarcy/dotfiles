@@ -3,6 +3,6 @@
 sed -i '' '$ d' $HOME/dotfiles/README.md && echo 'Modified at:' \``date "+DATE: %Y-%m-%d%nTIME: %H:%M:%S"`\` | tee -a $HOME/dotfiles/README.md
 
 git add .
-git commit -m $1 -m "" -m "update 🦄 at `date "+DATE: %Y-%m-%d%nTIME: %H:%M:%S" $1 ` ⌛️ in ` uname -m` $2 💻"
+git commit -m $1 -m "" -m "updated 🦄 ⌛️ in ` uname -m` $2 💻"
 git push 
 
