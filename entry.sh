@@ -29,6 +29,8 @@ git clone https://github.com/zsh-users/zsh-syntax-highlighting ${ZSH_CUSTOM:-~/.
 git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k
 
 source ~/.zshrc
+touch .hushlogin # do not show Last login: Wed Jan 01 12:00:00 on ttys01
+
 ## install nvm https://github.com/nvm-sh/nvm#git-install
 # ln -sf ~/dotfiles/zsh/.nvmrc ~/.nvmrc
 # git clone https://github.com/nvm-sh/nvm.git .nvm
