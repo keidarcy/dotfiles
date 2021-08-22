@@ -16,7 +16,7 @@ sh ./src/brew.install.sh
 mkdir -p ~/Code/bin
 ln -sf ~/dotfiles/zsh/.zshrc ~/.zshrc
 ## install Oh-my-zsh https://github.com/ohmyzsh/ohmyzsh
-sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" 
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 ln -sf ~/dotfiles/zsh/aliases.z.sh ~/Code/bin/aliases.z.sh
 ln -sf ~/dotfiles/zsh/functions.z.sh ~/Code/bin/functions.z.sh
 ln -sf ~/dotfiles/zsh/paths.z.sh ~/Code/bin/paths.z.sh
@@ -26,7 +26,7 @@ git clone https://github.com/zsh-users/zsh-completions ${ZSH_CUSTOM:=~/.oh-my-zs
 git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
 git clone https://github.com/zsh-users/zsh-syntax-highlighting ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
 # install p10k
-git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k 
+git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k
 
 source ~/.zshrc
 ## install nvm https://github.com/nvm-sh/nvm#git-install

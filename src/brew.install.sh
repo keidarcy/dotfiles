@@ -9,6 +9,8 @@ brew help || /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Ho
 brew update
 
 # brew install zsh
+brew install wget
+brew install tree
 brew install tmux
 brew install exa
 brew install bat
