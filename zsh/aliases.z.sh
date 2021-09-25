@@ -1,6 +1,9 @@
 # Vim
 alias e='nvim'
 
+# vscode
+alias vc='code .'
+
 # Fasd
 alias a='fasd -a'        # any
 alias s='fasd -si'       # show / search / select
@@ -68,5 +71,3 @@ alias sed='gsed' # overwrite macos sed to `brew install gnu-sed` /usr/bin/sed
 
 # Docker
 alias dc='docker-compose'
-
-[[ -f $BIN/local.aliases.z.sh ]] && source $BIN/local.aliases.z.sh

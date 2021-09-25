@@ -45,4 +45,4 @@ p10k configure # config powerlevel10k
 - [fzf](https://github.com/junegunn/fzf)
 - [fasd](https://github.com/clvv/fasd)
 
-Modified at: `DATE: 2021-08-22 TIME: 20:02:41`
+Modified at: `DATE: 2021-09-25 TIME: 17:17:02`

@@ -80,12 +80,15 @@ fi
 
 export ZSH=$HOME/.oh-my-zsh
 export BIN=$HOME/Code/bin
+export VOLTA_HOME="$HOME/.volta"
 
 [[ -f $ZSH/oh-my-zsh.sh ]] && source $ZSH/oh-my-zsh.sh
 [[ -f $BIN/paths.z.sh ]] && source $BIN/paths.z.sh
 [[ -f $BIN/aliases.z.sh ]] && source $BIN/aliases.z.sh
 [[ -f $BIN/functions.z.sh ]] && source $BIN/functions.z.sh
 [[ -f $BIN/local.env.z.sh ]] && source $BIN/local.env.z.sh
+[[ -f $BIN/local.path.z.sh ]] && source $BIN/local.path.z.sh
+[[ -f $BIN/local.aliases.z.sh ]] && source $BIN/local.aliases.z.sh
 [[ -f ~/.fzf.zsh ]] && source ~/.fzf.zsh
 [[ -f ~/.p10k.zsh ]] && source ~/.p10k.zsh
 
@@ -103,7 +106,6 @@ export FZF_DEFAULT_OPTS=$FZF_DEFAULT_OPTS'
 --color=fg:-1,bg:-1,hl:#5fff87,fg+:-1,bg+:-1,hl+:#ffaf5f
 --color=info:#af87ff,prompt:#5fff87,pointer:#ff87d7,marker:#ff87d7,spinner:#ff87d7
 '
-eval $(thefuck --alias)
 eval "$(fasd --init auto)"
 #
 # --------------Tools----------------------
