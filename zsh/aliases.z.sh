@@ -1,9 +1,6 @@
 # Vim
 alias e='nvim'
 
-# vscode
-alias vc='code .'
-
 # Fasd
 alias a='fasd -a'        # any
 alias s='fasd -si'       # show / search / select
