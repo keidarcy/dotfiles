@@ -86,7 +86,7 @@ export VOLTA_HOME="$HOME/.volta"
 [[ -f $BIN/paths.z.sh ]] && source $BIN/paths.z.sh
 [[ -f $BIN/aliases.z.sh ]] && source $BIN/aliases.z.sh
 [[ -f $BIN/functions.z.sh ]] && source $BIN/functions.z.sh
-for file in $BIN//local.*.sh; do source $file; done
+for file in $BIN/local.*.sh; do source $file; done
 [[ -f ~/.fzf.zsh ]] && source ~/.fzf.zsh
 [[ -f ~/.p10k.zsh ]] && source ~/.p10k.zsh
 
