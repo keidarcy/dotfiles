@@ -15,7 +15,7 @@ Get a sexy terminal like this ⬇︎
 $ cd
 $ git clone https://github.com/xyyolab/dotfiles.git
 $ cd dotfiles
-$ sh entry.sh
+$ sh bootstrap.sh
 ```
 
 ## Using
@@ -45,4 +45,4 @@ p10k configure # config powerlevel10k
 - [fzf](https://github.com/junegunn/fzf)
 - [fasd](https://github.com/clvv/fasd)
 
-Modified at: `DATE: 2021-09-27 TIME: 10:47:16`
+Modified at: `DATE: 2021-10-05 TIME: 22:57:08`

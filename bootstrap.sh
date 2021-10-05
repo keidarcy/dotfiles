@@ -4,6 +4,12 @@
 # softwareupdate --install-rosetta # intall rosetta in m1 mac
 # sudo xattr -r -d com.apple.quarantine /Applications/xxxxx.app # force open app
 
+###### Apps
+
+# - item2 (https://iterm2.com/downloads.html)
+# - vscode (https://code.visualstudio.com/)
+# - chrome (https://www.google.com/chrome/)
+
 ###### dock
 # defaults write com.apple.dock show-recents -bool no # set show-recents to false
 # defaults write com.apple.dock recent-apps -array # intentionally empty
@@ -16,7 +22,13 @@
 # defaults write com.visualstudio.code.oss ApplePressAndHoldEnabled -bool false    # For VS Codium
 # defaults delete -g ApplePressAndHoldEnabled                                      # If necessary, reset global default
 
-sh ./src/brew.install.sh
+# Install Homebrew (https://brew.sh/)
+brew help || /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+brew update
+# To install useful key bindings and fuzzy completion:
+# $(brew --prefix)/opt/fzf/install # 
+cd src
+brew bundle
 ###################################################
 
 
