@@ -1,10 +1,11 @@
 [user]
-    name = XING YAHAO
-    email = xxx@xxx.com
+	name = Xing Yahao
+	email = keidarcy.1015@gmail.com
 [core]
     excludesfile = ~/.gitignore_global
     whitespace = fix,-indent-with-non-tab,trailing-space,cr-at-eol
     editor = /usr/bin/vim
+    autoCRLF = input # unix - input, windows - true
 [includeIf "gitdir:~/work/"]
     path = ~/work/.gitconfig
 [diff]
@@ -25,3 +26,8 @@
     added = green bold
     changed = yellow bold
     untracked = red bold
+
+[diff]
+    tool = vscode
+[difftool "vscode"]
+	cmd = "code --wait --diff $LOCAL $REMOTE"
