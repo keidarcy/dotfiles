@@ -1,15 +1,6 @@
 # dotfiles are 🦄🦄
 
-Collection of dotfiles
-
-Get a sexy terminal like this ⬇︎
-
-![terminal](./src/terminal.png)
-
-
-
 # Get Started
-
 
 ```
 $ cd
@@ -18,21 +9,9 @@ $ cd dotfiles
 $ sh bootstrap.sh
 ```
 
-## Using
+## After executed `bootstrap.sh`
 
-- [Oh-My-Zsh](https://github.com/ohmyzsh/ohmyzsh)
-  - [zsh-users](https://github.com/zsh-users)
-  - [powerlevel10k](https://github.com/romkatv/powerlevel10k)
-- [Vundle.vim](https://github.com/VundleVim/Vundle.vim)
-- [Oh-My-Tmux](https://github.com/gpakosz/.tmux)
-- [nvm](https://github.com/nvm-sh/nvm)
-
-## After executed `entry.sh`
-
-```
-$(brew --prefix)/opt/fzf/install # config fzf
-p10k configure # config powerlevel10k
-```
+![terminal](./images/terminal.png)
 
 ## Using
 
@@ -45,4 +24,4 @@ p10k configure # config powerlevel10k
 - [fzf](https://github.com/junegunn/fzf)
 - [fasd](https://github.com/clvv/fasd)
 
-Modified at: `DATE: 2021-10-05 TIME: 23:39:50`
+Modified at: `DATE: 2021-10-09 TIME: 13:28:25`

@@ -27,12 +27,13 @@ brew help || /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Ho
 brew update
 # To install useful key bindings and fuzzy completion:
 # $(brew --prefix)/opt/fzf/install # 
-cd src
+cd zsh
 brew bundle
 ###################################################
 
 
 ###################### zsh ######################
+cd ..
 mkdir -p ~/Code/bin
 ln -sf ~/dotfiles/zsh/.zshrc ~/.zshrc
 ## install Oh-my-zsh https://github.com/ohmyzsh/ohmyzsh
@@ -95,4 +96,9 @@ tmux source-file ~/.tmux.conf # reload tmux config
 ###################### fonts ######################
 # Fira Code https://github.com/tonsky/FiraCode
 # Meslo Nerd Font https://github.com/romkatv/powerlevel10k
+###################################################
+
+###################### others ######################
+$(brew --prefix)/opt/fzf/install # config fzf
+p10k configure # config powerlevel10k
 ###################################################
