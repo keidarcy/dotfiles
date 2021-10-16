@@ -2,6 +2,7 @@
 alias e='nvim'
 
 # Fasd
+# https://github.com/clvv/fasd#introduction
 alias a='fasd -a'        # any
 alias s='fasd -si'       # show / search / select
 alias d='fasd -d'        # directory

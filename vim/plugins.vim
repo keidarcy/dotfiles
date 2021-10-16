@@ -18,7 +18,7 @@ Plug 'itchyny/vim-cursorword'                                 " Underlines the w
 Plug 'lfv89/vim-interestingwords'                             " A vim plugin for highlighting and navigating words
 Plug 'itchyny/calendar.vim'                                   " A calendar application for Vim
 Plug 'ervandew/supertab'                                      " Perform all your vim insert mode completions with Tab
-Plug 'StanAngeloff/php.vim'                                   " PHP
+" Plug 'StanAngeloff/php.vim'                                   " PHP
 Plug 'fatih/vim-go'                                           " Golang
 Plug 'pangloss/vim-javascript'                                " Js
 Plug 'tpope/vim-fugitive'                                     " Git inside vim, like :Gcommit

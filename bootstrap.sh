@@ -4,29 +4,28 @@
 # softwareupdate --install-rosetta # intall rosetta in m1 mac
 # sudo xattr -r -d com.apple.quarantine /Applications/xxxxx.app # force open app
 
-###### Apps
+###### Apple defaults command
 
-# - item2 (https://iterm2.com/downloads.html)
-# - vscode (https://code.visualstudio.com/)
-# - chrome (https://www.google.com/chrome/)
-
-###### dock
+### dock
 # defaults write com.apple.dock show-recents -bool no # set show-recents to false
 # defaults write com.apple.dock recent-apps -array # intentionally empty
 # defaults write com.apple.dock persistent-others -array-add '{tile-data={}; tile-type="spacer-tile";}' # add space to dock
 # killall Dock # restart dock and load changes
 
-###### ApplePressAndHoldEnabled
+####  ApplePressAndHoldEnabled
 # defaults write com.microsoft.VSCode ApplePressAndHoldEnabled -bool false         # For VS Code
 # defaults write com.microsoft.VSCodeInsiders ApplePressAndHoldEnabled -bool false # For VS Code Insider
 # defaults write com.visualstudio.code.oss ApplePressAndHoldEnabled -bool false    # For VS Codium
 # defaults delete -g ApplePressAndHoldEnabled                                      # If necessary, reset global default
 
+### disable spelling and Grammar
+# https://apple.stackexchange.com/questions/299470/how-to-permanently-turn-off-check-spelling-while-typing-in-macos
+
 # Install Homebrew (https://brew.sh/)
 brew help || /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 brew update
 # To install useful key bindings and fuzzy completion:
-# $(brew --prefix)/opt/fzf/install # 
+# $(brew --prefix)/opt/fzf/install #
 cd zsh
 brew bundle
 ###################################################

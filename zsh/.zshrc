@@ -21,9 +21,9 @@ export LC_ALL=en_US.UTF-8
 
 # Set history
 HISTFILE=~/.zsh_history
-HISTSIZE=1000
-SAVEHIST=1000
-HISTORY_IGNORE="(ls|l|ll|c|zshrc|update|vimrc|dotfiles|pwd|exit|cd|z ..)"
+export HISTSIZE=1000
+export SAVEHIST=10001
+HISTORY_IGNORE="(l[a,l,s,h,]*|c[lear]|[vim,zsh]rc|pwd|exit|cd|cd *|z)"
 
 # Basic Settings
 export EDITOR=vim
@@ -59,7 +59,6 @@ plugins=(
         git-prompt
         vi-mode
         colored-man-pages
-        fasd
         # custome plugins
         zsh-completions
         zsh-autosuggestions
@@ -94,6 +93,9 @@ for file in $BIN/local.*.sh; do source $file; done
 
 # --------------Tools----------------------
 #
+#
+# -------- fzf https://github.com/junegunn/fzf
+#
 export FZF_COMPLETION_TRIGGER='*'
 export FZF_DEFAULT_COMMAND='fd --type f --hidden --follow --exclude .git'
 export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
@@ -104,7 +106,14 @@ export FZF_DEFAULT_OPTS=$FZF_DEFAULT_OPTS'
 --color=fg:-1,bg:-1,hl:#5fff87,fg+:-1,bg+:-1,hl+:#ffaf5f
 --color=info:#af87ff,prompt:#5fff87,pointer:#ff87d7,marker:#ff87d7,spinner:#ff87d7
 '
+export FZF_TMUX=1
+export FZF_TMUX_OPTS='-p50% -y10%'
+
+# --------- fasd https://github.com/clvv/fasd
 eval "$(fasd --init auto)"
-#
+
+
+# --------- cht.sh https://github.com/chubin/cheat.sh#zsh-tab-completion
+# echo 'fpath=(~/.zsh.d/ $fpath)' >> ~/.zshrc
 # --------------Tools----------------------
 #
