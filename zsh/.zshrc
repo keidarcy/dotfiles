@@ -109,6 +109,9 @@ export FZF_DEFAULT_OPTS=$FZF_DEFAULT_OPTS'
 export FZF_TMUX=1
 export FZF_TMUX_OPTS='-p50% -y10%'
 
+# https://github.com/wfxr/forgit#-installation
+source <(curl -sSL git.io/forgit)
+
 # --------- fasd https://github.com/clvv/fasd
 eval "$(fasd --init auto)"
 

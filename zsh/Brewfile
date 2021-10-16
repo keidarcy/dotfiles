@@ -21,8 +21,6 @@ brew "fzf"
 brew "mongosh"
 # Ambitious Vim-fork focused on extensibility and agility
 brew "neovim"
-# Manage multiple Node.js versions
-brew "nvm"
 # Python version management
 brew "pyenv"
 # Search tool like grep and The Silver Searcher

@@ -50,14 +50,6 @@ git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-$
 
 source ~/.zshrc
 touch .hushlogin # do not show Last login: Wed Jan 01 12:00:00 on ttys01
-
-## install nvm https://github.com/nvm-sh/nvm#git-install
-# ln -sf ~/dotfiles/zsh/.nvmrc ~/.nvmrc
-# git clone https://github.com/nvm-sh/nvm.git .nvm
-# git checkout v0.38.0
-# . ./nvm.sh
-
-# source ~/.zshrc
 ###################################################
 
 
@@ -80,14 +72,7 @@ cp ~/dotfiles/vim/init.vim ~/.config/nvim/
 
 
 ###################### tmux ######################
-# oh my tmux https://github.com/gpakosz/.tmux
-cd ~
-git clone https://github.com/gpakosz/.tmux.git
-ln -sf ~/dotfiles/tmux/.tmux.conf.local ~/.tmux/.tmux.conf.local
-ln -sf ~/.tmux/.tmux.conf.local ~/.tmux.conf.local
-ln -sf ~/.tmux/.tmux.conf ~/.tmux.conf
-tmux source-file ~/.tmux.conf # reload tmux config
-# ln -s ~/dotfiles/zsh/paths.z.sh ~/Code/bin/paths.z.sh
+sh tmux/oh_my_tmux.sh
 ###################################################
 
 
@@ -98,6 +83,7 @@ tmux source-file ~/.tmux.conf # reload tmux config
 ###################################################
 
 ###################### others ######################
+# https://github.com/junegunn/fzf#using-homebrew
 $(brew --prefix)/opt/fzf/install # config fzf
 p10k configure # config powerlevel10k
 ###################################################
