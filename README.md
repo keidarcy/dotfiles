@@ -24,4 +24,4 @@ $ sh bootstrap.sh
 - [fzf](https://github.com/junegunn/fzf)
 - [fasd](https://github.com/clvv/fasd)
 
-Modified at: `DATE: 2021-10-17 TIME: 15:46:50`
+Modified at: `DATE: 2021-10-17 TIME: 16:07:37`

@@ -1,4 +1,5 @@
 # oh my tmux https://github.com/gpakosz/.tmux
+# require (perl, curl, tmux, git)
 tmux_config_local='.tmux.conf.local'
 
 cd ~
