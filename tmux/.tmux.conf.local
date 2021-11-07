@@ -246,7 +246,7 @@ tmux_conf_theme_pairing_bg="none"
 tmux_conf_theme_pairing_attr="none"
 
 # prefix indicator
-tmux_conf_theme_prefix="⌨"                  # U+2328
+tmux_conf_theme_prefix="⌨⌨prefix⌨⌨"                  # U+2328
 tmux_conf_theme_prefix_fg="none"
 tmux_conf_theme_prefix_bg="none"
 tmux_conf_theme_prefix_attr="none"
@@ -347,12 +347,6 @@ bind C-a send-prefix
 # move status line to top
 set -g status-position bottom
 
-# Index starts from 1
-set-option -g base-index 1
-
-# select-pane (@george-b)
-bind-key 0 run "tmux split-window -p 40 'zsh -ci ftpane'"
-
 
 
 # -- tpm -----------------------------------------------------------------------
@@ -398,6 +392,23 @@ tmux_conf_uninstall_plugins_on_reload=true
 
 
 # -- custom variables ----------------------------------------------------------
+
+###################
+# keidarcy
+###################
+#
+# Index starts from 1
+set -g base-index 1
+bind-key 0 run "tmux split-window -p 40 'zsh -ci ftpane'"
+bind-key -r i run-shell "tmux neww sh tmux-cht.sh"
+bind-key -r b last-pane
+
+# unbind prefix + m for mouse mode
+unbind m
+bind-key -r m switch-client -l
+bind-key C-a send-prefix
+
+
 
 # to define a custom #{foo} variable, define a POSIX shell function between the
 # '# EOF' and the '# "$@"' lines. Please note that the opening brace { character

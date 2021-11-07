@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+
+selected_emoji=$(cat ./emojis | fzf | sed 's/^[^:]*:/:/g')
+
+echo "git commit -m '$selected_emoji"
+
+echo -n "git commit -m '$selected_emoji" | pbcopy

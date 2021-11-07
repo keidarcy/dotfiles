@@ -48,12 +48,12 @@ let mapleader = ','                     "The default leader is \, but a comma is
 "---------------Visuals-------------"
 set t_CO=256                            "Use 256 colors. This is useful for Terminal Vim.
 set background=dark                     " dark,light
-colorscheme dracula                         "dracula, palenight, hybrid
+colorscheme palenight                         "dracula, palenight, hybrid
 let g:hybrid_custom_term_colors = 1
 let g:hybrid_reduced_contrast = 1
 let g:palenight_terminal_italics=1
 let g:airline_theme='simple'
-let g:bg='#CAA9FA'
+"let g:bg='#CAA9FA'
 
 " let g:terminal_color_0  = '#000000'     "manual darcula
 " let g:terminal_color_1  = '#FF5555'
@@ -135,6 +135,9 @@ noremap <leader>w :w<cr>
 " Go to next line in insert mode
 inoremap <C-j> <C-o>o
 inoremap <C-l> <C-o>A
+
+" make current file executable
+nnoremap <leader>x :!chmod +x %<CR>
 
 " Fast move 10 lines
 nnoremap J 10j
