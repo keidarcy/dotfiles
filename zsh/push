@@ -1,8 +1,0 @@
-#!/usr/bin/env sh
-
-sed -i '' '$ d' $HOME/dotfiles/README.md && echo 'Modified at:' \``date "+DATE: %Y-%m-%d%nTIME: %H:%M:%S"`\` | tee -a $HOME/dotfiles/README.md
-
-git add .
-git commit -m "$1 - updated in ` uname -m` $2 💻"
-git push 
-
