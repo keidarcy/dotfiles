@@ -1,9 +1,0 @@
-#!/usr/bin/env zsh
-
-emojis=$(curl -sSL 'https://gist.githubusercontent.com/keidarcy/128141ff30a8c3f9ddc0d6c3ecb5b334/raw/70fb9622d4e0246218e167ba72dc06ec2b6b0d1c/emoji.txt')
-
-selected_emoji=$(echo $emojis | fzf | sed 's/^[^:]*:/:/g')
-
-echo "git commit -m '$selected_emoji"
-
-echo -n "git commit -m '$selected_emoji" | pbcopy

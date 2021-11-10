@@ -1,0 +1,9 @@
+#!/usr/bin/env zsh
+
+emojis=$(curl -sSL 'https://git.io/JXXO7')
+
+selected_emoji=$(echo $emojis | fzf)
+
+echo $selected_emoji
+
+echo -n $selected_emoji | sed 's/^[^:]*:/:/g' | pbcopy

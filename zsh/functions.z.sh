@@ -101,3 +101,13 @@ ftpane() {
 
 # In tmux.conf
 # bind-key 0 run "tmux split-window -l 12 'bash -ci ftpane'"
+
+function _git_status() {
+    if [ "$(git rev-parse --is-inside-work-tree 2> /dev/null)" = 'true' ]; then
+        echo git status -sb
+        git status -sb
+    fi
+    zle reset-prompt
+}
+zle -N current_git_status _git_status  # -N define a new widget(git_status)
+bindkey '^G^S' current_git_status

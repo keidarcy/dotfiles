@@ -401,12 +401,14 @@ tmux_conf_uninstall_plugins_on_reload=true
 set -g base-index 1
 bind-key 0 run "tmux split-window -p 40 'zsh -ci ftpane'"
 bind-key -r i run-shell "tmux neww sh tmux-cht.sh"
+bind-key -r C-i run-shell "tmux popup select-emoji"
 bind-key -r b last-pane
 
 # unbind prefix + m for mouse mode
 unbind m
-bind-key -r m switch-client -l
-bind-key C-a send-prefix
+bind-key -r m switch-client -l # toggle last session
+bind-key C-a send-prefix # C-a C-a to send C-a
+
 
 
 
