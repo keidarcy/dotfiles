@@ -400,7 +400,8 @@ tmux_conf_uninstall_plugins_on_reload=true
 # Index starts from 1
 set -g base-index 1
 bind-key 0 run "tmux split-window -p 40 'zsh -ci ftpane'"
-bind-key -r i run-shell "tmux neww sh tmux-cht.sh"
+bind-key -r i run-shell "tmux neww sh tmux-cht"
+
 bind-key -r C-i run-shell "tmux popup select-emoji"
 bind-key -r b last-pane
 
