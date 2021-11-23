@@ -51,15 +51,7 @@ touch .hushlogin # do not show Last login: Wed Jan 01 12:00:00 on ttys01
 ###################### vim ######################
 # install Vundle
 git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
-
-ln -sf ~/dotfiles/vim/.vimrc ~/.vimrc
-mkdir -p ~/.vim
-ln -sf ~/dotfiles/vim/plugins.vim ~/.vim/plugins.vim
-# :PlugInstall # to install all plugins
-
-mkdir -p ~/.config/nvim
-ln -sf ~/.config/nvim/.vim ~/.vim
-cp ~/dotfiles/vim/init.vim ~/.config/nvim/
+stow vim
 
 ###################################################
 

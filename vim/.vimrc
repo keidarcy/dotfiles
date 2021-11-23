@@ -72,7 +72,7 @@ let g:airline_theme='simple'
 " let g:terminal_color_14 = '#9AEDFE'
 "------Background Color------------"
 set foldcolumn=0
-hi LineNr ctermfg=bg ctermbg=bg         " tweak color. fake a custom left padding
+" hi LineNr ctermfg=bg ctermbg=bg         " tweak color. fake a custom left padding
 hi foldcolumn ctermbg=bg                      " hi means highlight
 hi vertsplit ctermfg=bg ctermbg=bg
 hi NonText ctermfg=gray guifg=grey10
