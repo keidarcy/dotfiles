@@ -2,7 +2,7 @@
 
 emojis=$(curl -sSL 'https://git.io/JXXO7')
 
-selected_emoji=$(echo $emojis | fzf)
+selected_emoji=$(echo $emojis | fzf | sed 's/^[^:]*:/:/g')
 
 echo $selected_emoji
 
