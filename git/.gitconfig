@@ -26,8 +26,3 @@
     added = green bold
     changed = yellow bold
     untracked = red bold
-
-[diff]
-    tool = vscode
-[difftool "vscode"]
-	cmd = "code --wait --diff $LOCAL $REMOTE"

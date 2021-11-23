@@ -25,13 +25,11 @@
 brew help || /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 brew update
 # ./pkg/Brewfile
-cd pkg
-brew bundle
+brew bundle --file=pkg/Brewfile
 ###################################################
 
 
 ###################### zsh ######################
-cd ..
 stow zsh
 ## install Oh-my-zsh https://github.com/ohmyzsh/ohmyzsh
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
@@ -52,13 +50,16 @@ touch .hushlogin # do not show Last login: Wed Jan 01 12:00:00 on ttys01
 # install Vundle
 git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
 stow vim
-
 ###################################################
 
 
 
 ###################### tmux ######################
-sh tmux/oh_my_tmux.sh
+# oh my tmux https://github.com/gpakosz/.tmux
+# require (perl, curl, tmux, git)
+git clone https://github.com/gpakosz/.tmux.git ${HOME}/.tmux
+ln -sf ~/.tmux/.tmux.conf ~/.tmux.conf
+stow tmux
 ###################################################
 
 
@@ -71,6 +72,7 @@ sh tmux/oh_my_tmux.sh
 ###################### others ######################
 # https://github.com/junegunn/fzf#using-homebrew
 # To install useful key bindings and fuzzy completion:
+stow git
 $(brew --prefix)/opt/fzf/install # config fzf
 p10k configure # config powerlevel10k
 ###################################################
