@@ -5,6 +5,8 @@ tap "homebrew/services"
 tap "mongodb/brew"
 # Interpreted, interactive, object-oriented programming language
 brew "python@3.9"
+# Organize software neatly under a single directory tree (e.g. /usr/local)
+brew "stow"
 # Official Amazon AWS command-line interface
 brew "awscli"
 # Clone of cat(1) with syntax highlighting and Git integration
@@ -33,7 +35,7 @@ brew "tmux"
 brew "tree"
 # Internet file retriever
 brew "wget"
-# UNIX shell (command interpreter)
-brew "zsh"
+# # UNIX shell (command interpreter)
+# brew "zsh"
 # High-performance, schema-free, document-oriented database
 brew "mongodb/brew/mongodb-community"

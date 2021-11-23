@@ -24,23 +24,17 @@
 # Install Homebrew (https://brew.sh/)
 brew help || /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 brew update
-# To install useful key bindings and fuzzy completion:
-# $(brew --prefix)/opt/fzf/install #
-cd zsh
+# ./pkg/Brewfile
+cd pkg
 brew bundle
 ###################################################
 
 
 ###################### zsh ######################
 cd ..
-mkdir -p ~/Code/bin
-ln -sf ~/dotfiles/zsh/.zshrc ~/.zshrc
+stow zsh
 ## install Oh-my-zsh https://github.com/ohmyzsh/ohmyzsh
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
-ln -sf ~/dotfiles/zsh/aliases.z.sh ~/Code/bin/aliases.z.sh
-ln -sf ~/dotfiles/zsh/functions.z.sh ~/Code/bin/functions.z.sh
-ln -sf ~/dotfiles/zsh/paths.z.sh ~/Code/bin/paths.z.sh
-
 ## install zsh-user https://github.com/zsh-users
 git clone https://github.com/zsh-users/zsh-completions ${ZSH_CUSTOM:=~/.oh-my-zsh/custom}/plugins/zsh-completions
 git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
@@ -84,6 +78,7 @@ sh tmux/oh_my_tmux.sh
 
 ###################### others ######################
 # https://github.com/junegunn/fzf#using-homebrew
+# To install useful key bindings and fuzzy completion:
 $(brew --prefix)/opt/fzf/install # config fzf
 p10k configure # config powerlevel10k
 ###################################################
