@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-languages=$(echo "javascript bash typescript python php golang rust mongo" | tr " " "\n")
+languages=$(echo "javascript bash typescript python php golang rust mongo node" | tr " " "\n")
 core_utils=$(echo "find xargs sed awk" | tr " " "\n")
 selected=$(echo "$languages\n$core_utils" | fzf)
 

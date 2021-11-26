@@ -57,6 +57,8 @@ ZSH_THEME="powerlevel10k/powerlevel10k"
 plugins=(
         git
         git-prompt
+        docker
+        docker-compose
         vi-mode
         colored-man-pages
         # custome plugins
