@@ -5,6 +5,12 @@ join-lines() {
   done
 }
 
+# CTRL-GCTRL-F for files
+# CTRL-GCTRL-B for branches
+# CTRL-GCTRL-T for tags
+# CTRL-GCTRL-R for remotes
+# CTRL-GCTRL-H for commit hashes
+
 bind-git-helper() {
   local c
   for c in $@; do
