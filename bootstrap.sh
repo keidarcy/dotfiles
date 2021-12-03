@@ -31,15 +31,10 @@ brew bundle --file=pkg/Brewfile
 
 ###################### zsh ######################
 stow zsh
-## install Oh-my-zsh https://github.com/ohmyzsh/ohmyzsh
-sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
-## install zsh-user https://github.com/zsh-users
-git clone https://github.com/zsh-users/zsh-completions ${ZSH_CUSTOM:=~/.oh-my-zsh/custom}/plugins/zsh-completions
-git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
-git clone https://github.com/zsh-users/zsh-syntax-highlighting ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
-# install p10k
-git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k
-
+# https://github.com/zdharma-continuum/zinit#manual-installation
+ZINIT_HOME="${XDG_DATA_HOME:-${HOME}/.local/share}/zinit/zinit.git"
+mkdir -p "$(dirname $ZINIT_HOME)"
+git clone https://github.com/zdharma-continuum/zinit.git "$ZINIT_HOME"
 source ~/.zshrc
 touch .hushlogin # do not show Last login: Wed Jan 01 12:00:00 on ttys01
 ###################################################
@@ -48,8 +43,8 @@ touch .hushlogin # do not show Last login: Wed Jan 01 12:00:00 on ttys01
 
 ###################### vim ######################
 # install Vundle
-git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
 stow vim
+git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
 ###################################################
 
 
@@ -57,9 +52,9 @@ stow vim
 ###################### tmux ######################
 # oh my tmux https://github.com/gpakosz/.tmux
 # require (perl, curl, tmux, git)
+stow tmux
 git clone https://github.com/gpakosz/.tmux.git ${HOME}/.tmux
 ln -sf ~/.tmux/.tmux.conf ~/.tmux.conf
-stow tmux
 ###################################################
 
 

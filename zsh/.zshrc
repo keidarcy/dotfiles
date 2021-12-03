@@ -34,7 +34,8 @@ export EDITOR=vim
 
 
 # --------------Vim area-------------------------------
-# bindkey -v
+bindkey -v
+KEYTIMEOUT=5
 # use the vi navigation keys in menu completion
 zstyle ':completion:*' menu select
 zmodload zsh/complist
@@ -49,25 +50,36 @@ bindkey -M menuselect 'j' vi-down-line-or-history
 bindkey -v '^?' backward-delete-char
 # -----------------------------------------------------
 
-# -------------Oh-My-Zsh----------------------
-#ZSH_THEME="agnoster"
-#ZSH_THEME="bira"
-ZSH_THEME="powerlevel10k/powerlevel10k"
+# -------------zinit----------------------
+ZINIT_HOME="${XDG_DATA_HOME:-${HOME}/.local/share}/zinit/zinit.git"
+source "${ZINIT_HOME}/zinit.zsh"
 
-plugins=(
-        git
-        git-prompt
-        docker
-        docker-compose
-        vi-mode
-        colored-man-pages
-        # custome plugins
-        zsh-completions
-        zsh-autosuggestions
-        zsh-syntax-highlighting
-    )
+zinit snippet OMZL::git.zsh
+zinit snippet OMZP::git
+zinit snippet OMZP::git-prompt
+
+# https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins/vi-mode
+zinit snippet OMZP::vi-mode
+VI_MODE_SET_CURSOR=true # for cursor shape
+
+
+zinit ice as"completion"
+zinit snippet OMZP::docker/_docker
+
+zinit ice as"completion"
+zinit snippet OMZP::docker-compose/_docker-compose
+
+zinit ice as"completion"
+zinit snippet OMZP::fd/_fd
+
+zinit for \
+    light-mode  zsh-users/zsh-autosuggestions \
+    light-mode  zdharma-continuum/fast-syntax-highlighting \
+
+zinit ice depth=1; zinit light romkatv/powerlevel10k
+
 # this line fix slow paste speed caused by zsh-syntax-highlighting
-zstyle ':bracketed-paste-magic' active-widgets '.self-*'
+# zstyle ':bracketed-paste-magic' active-widgets '.self-*'
 # enable zsh completion system
 autoload -Uz compinit
 if [ $(date +'%j') != $(stat -f '%Sm' -t '%j' ~/.zcompdump) ]; then
@@ -79,10 +91,10 @@ fi
 # -------------Oh-My-Zsh----------------------
 
 
-export ZSH=$HOME/.oh-my-zsh
+# export ZSH=$HOME/.oh-my-zsh
 export BIN=$HOME/.homebin
 
-[[ -f $ZSH/oh-my-zsh.sh ]] && source $ZSH/oh-my-zsh.sh
+# [[ -f $ZSH/oh-my-zsh.sh ]] && source $ZSH/oh-my-zsh.sh
 for file in ~/dotfiles/zsh/.sources/*.sh; do source $file; done
 [[ -f ~/.fzf.zsh ]] && source ~/.fzf.zsh
 [[ -f ~/.p10k.zsh ]] && source ~/.p10k.zsh
