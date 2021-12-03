@@ -1,6 +1,12 @@
 # Vim
 alias e='nvim'
 
+# Easier navigation
+alias ..="cd .."
+alias ...="cd ../.."
+alias ....="cd ../../.."
+alias .....="cd ../../../.."
+
 # ls
 alias ls='exa'
 alias l='exa -lhF'
@@ -21,9 +27,6 @@ alias nah='git reset --hard;git clean -df;'
 alias gll='git log --graph --pretty='\''%Cred%h%Creset -%C(auto)%d%Creset %s %Cgreen(%cr) %C(bold #008080)<%an>%Creset %C(bold blue)<%ae>%Creset'\'
 alias glla='git log --graph --pretty='\''%Cred%h%Creset -%C(auto)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset'\'' --all'
 alias glls='git log --graph --pretty='\''%Cred%h%Creset -%C(auto)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset'\'' --stat'
-
-# npm
-alias npm lt='npm list --depth 0'
 
 # tmux
 alias t='tmux'
