@@ -81,7 +81,6 @@ fi
 
 export ZSH=$HOME/.oh-my-zsh
 export BIN=$HOME/.homebin
-export VOLTA_HOME="$HOME/.volta"
 
 [[ -f $ZSH/oh-my-zsh.sh ]] && source $ZSH/oh-my-zsh.sh
 for file in ~/dotfiles/zsh/.sources/*.sh; do source $file; done
@@ -103,16 +102,16 @@ export FZF_DEFAULT_OPTS=$FZF_DEFAULT_OPTS'
 --inline-info
 --color=dark
 --color=fg:-1,bg:-1,hl:#5fff87,fg+:-1,bg+:-1,hl+:#ffaf5f
---color=info:#af87ff,prompt:#5fff87,pointer:#ff87d7,marker:#ff87d7,spinner:#ff87d7
+--color=info:#af87ff,prompt:#5fff87,pointer:#ff87d7,marker:#ff00aa,spinner:#ff87d7
 '
-export FZF_TMUX=1
-export FZF_TMUX_OPTS='-p50% -y10%'
+# export FZF_TMUX=1
+# export FZF_TMUX_OPTS='-p50% -y10%'
 
 # https://github.com/wfxr/forgit#-installation
 # source <(curl -sSL git.io/forgit)
 
 # --------- fasd https://github.com/clvv/fasd
-# eval "$(fasd --init auto)"
+eval "$(fasd --init auto)"
 
 
 # --------- cht.sh https://github.com/chubin/cheat.sh#zsh-tab-completion
