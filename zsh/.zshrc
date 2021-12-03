@@ -68,10 +68,10 @@ plugins=(
     )
 # this line fix slow paste speed caused by zsh-syntax-highlighting
 zstyle ':bracketed-paste-magic' active-widgets '.self-*'
-# enable zsh-completions
-# load cached .zcompdump once a day
+# enable zsh completion system
 autoload -Uz compinit
 if [ $(date +'%j') != $(stat -f '%Sm' -t '%j' ~/.zcompdump) ]; then
+# load cached .zcompdump once a day
   compinit
 else
   compinit -C
@@ -109,13 +109,17 @@ export FZF_TMUX=1
 export FZF_TMUX_OPTS='-p50% -y10%'
 
 # https://github.com/wfxr/forgit#-installation
-source <(curl -sSL git.io/forgit)
+# source <(curl -sSL git.io/forgit)
 
 # --------- fasd https://github.com/clvv/fasd
-eval "$(fasd --init auto)"
+# eval "$(fasd --init auto)"
 
 
 # --------- cht.sh https://github.com/chubin/cheat.sh#zsh-tab-completion
 # echo 'fpath=(~/.zsh.d/ $fpath)' >> ~/.zshrc
 # --------------Tools----------------------
 #
+
+# tabtab source for packages
+# uninstall by removing these lines
+# [[ -f ~/.config/tabtab/zsh/__tabtab.zsh ]] && . ~/.config/tabtab/zsh/__tabtab.zsh || true
