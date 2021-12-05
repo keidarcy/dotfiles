@@ -88,7 +88,8 @@ if [ $(date +'%j') != $(stat -f '%Sm' -t '%j' ~/.zcompdump) ]; then
 else
   compinit -C
 fi
-# -------------Oh-My-Zsh----------------------
+_comp_options+=(globdots) # Include hidden files.
+# -------------zinit----------------------
 
 
 # export ZSH=$HOME/.oh-my-zsh
