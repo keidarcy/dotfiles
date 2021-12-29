@@ -57,6 +57,9 @@ git clone https://github.com/gpakosz/.tmux.git ${HOME}/.tmux
 ln -sf ~/.tmux/.tmux.conf ~/.tmux.conf
 ###################################################
 
+###################### git ######################
+stow git
+###################################################
 
 
 ###################### fonts ######################
@@ -67,7 +70,6 @@ ln -sf ~/.tmux/.tmux.conf ~/.tmux.conf
 ###################### others ######################
 # https://github.com/junegunn/fzf#using-homebrew
 # To install useful key bindings and fuzzy completion:
-stow git
 $(brew --prefix)/opt/fzf/install # config fzf
-p10k configure # config powerlevel10k
+# p10k configure # config powerlevel10k
 ###################################################

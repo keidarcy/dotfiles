@@ -6,18 +6,12 @@ if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]
 fi
 
 
-# avoid all annoying beep noise
-setopt no_beep
-
-# hide host and username
-export DEFAULT_USER="$(whoami)"
-
 # Completing directory stack
 # DIRSTACKSIZE=100
 setopt AUTO_PUSHD
-
-# Fix 'Warning: Failed to set locale category LC_TIME to en_JP.'
-export LC_ALL=en_US.UTF-8
+setopt no_beep # avoid all annoying beep noise
+export DEFAULT_USER="$(whoami)" # hide host and username
+export LC_ALL=en_US.UTF-8 # Fix 'Warning: Failed to set locale category LC_TIME to en_JP.'
 
 # Set history
 HISTFILE=~/.zsh_history
@@ -31,7 +25,6 @@ export EDITOR=vim
 #DISABLE_AUTO_UPDATE="true"
 #COMPLETION_WAITING_DOTS="true"
 #DISABLE_UNTRACKED_FILES_DIRTY="true"
-
 
 # --------------Vim area-------------------------------
 bindkey -v
@@ -92,15 +85,10 @@ _comp_options+=(globdots) # Include hidden files.
 # -------------zinit----------------------
 
 
-# export ZSH=$HOME/.oh-my-zsh
 export BIN=$HOME/.homebin
-
-# [[ -f $ZSH/oh-my-zsh.sh ]] && source $ZSH/oh-my-zsh.sh
 for file in ~/dotfiles/zsh/.sources/*.sh; do source $file; done
-[[ -f ~/.fzf.zsh ]] && source ~/.fzf.zsh
-[[ -f ~/.p10k.zsh ]] && source ~/.p10k.zsh
-
-
+[[ -f ~/.fzf.zsh ]] && source ~/.fzf.zsh # enable fzf keybindings tab completion
+[[ -f ~/.p10k.zsh ]] && source ~/.p10k.zsh # enable p10k theme
 
 # --------------Tools----------------------
 #
@@ -120,17 +108,8 @@ export FZF_DEFAULT_OPTS=$FZF_DEFAULT_OPTS'
 # export FZF_TMUX=1
 # export FZF_TMUX_OPTS='-p50% -y10%'
 
-# https://github.com/wfxr/forgit#-installation
-# source <(curl -sSL git.io/forgit)
-
 # --------- fasd https://github.com/clvv/fasd
 eval "$(fasd --init auto)"
-
-
-# --------- cht.sh https://github.com/chubin/cheat.sh#zsh-tab-completion
-# echo 'fpath=(~/.zsh.d/ $fpath)' >> ~/.zshrc
-# --------------Tools----------------------
-#
 
 # tabtab source for packages
 # uninstall by removing these lines
