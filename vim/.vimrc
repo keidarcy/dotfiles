@@ -5,8 +5,8 @@
 "  / . \    | |      | | | |__| | \  /   _| |_| |  | | | \ \| |____
 " /_/ \_\   |_|      |_|  \____/   \/   |_____|_|  |_|_|  \_\\_____|
 "
-" Author: @xyh
-" Github: https://github.com/xyyolab/dotfiles
+" Author: @keidarcy
+" Github: https://github.com/keidarcy/dotfiles
 
 
 set nocompatible                        "We want the latest Vim settings/options.
@@ -16,15 +16,17 @@ syntax enable
 so ~/.vim/plugins.vim
 "-------------------------------General Setting------------------------------------------"
 
-set backspace=indent,eol,start          "Make backspace behave like every other editor.
-set relativenumber "se rnu              "let's activate line numbers.
-set noerrorbells visualbell t_vb=	"no bell!
-set autowriteall                        "Automatically write the file when switching buffers.
-set complete=.,w,b,u                    "Set our desired autocompletion matching.
-set tabstop=8                           " tab, space, next line etc
-set expandtab                           " tab, space, next line etc
+set scrolloff=8                         " scroll margin
+set tabstop=4                           " tab, space, next line etc
 set softtabstop=4                       " tab, space, next line etc
+set expandtab                           " tab, space, next line etc
+set smartindent
 set shiftwidth=4                        " tab, space, next line etc,
+set backspace=indent,eol,start          " Make backspace behave like every other editor.
+set relativenumber "se rnu              " let's activate line numbers.
+set noerrorbells visualbell t_vb=	" no bell!
+set autowriteall                        " Automatically write the file when switching buffers.
+set complete=.,w,b,u                    " Set our desired autocompletion matching.
 set clipboard=unnamed                   " Mac OS X clipboard sharing
 
 "------Gui Setting for macvim-------"
