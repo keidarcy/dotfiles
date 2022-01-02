@@ -31,6 +31,7 @@ bindkey -v
 KEYTIMEOUT=5
 # use the vi navigation keys in menu completion
 zstyle ':completion:*' menu select
+zstyle ':completion:*' matcher-list 'm:{a-zA-Z}={A-Za-z}'
 zmodload zsh/complist
 #
 # Normal mode <v> to get CLI into vim editor

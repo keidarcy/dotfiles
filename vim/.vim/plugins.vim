@@ -3,6 +3,7 @@ call plug#begin('~/.vim/plugged')
 Plug 'dracula/vim', { 'name': 'dracula' }                     " dracula theme
 Plug 'w0ng/vim-hybrid'                                        " A dark color scheme for Vim
 Plug 'drewtempelmeyer/palenight.vim'                          " palenight theme
+Plug 'morhetz/gruvbox'                                        " gruvbox theme
 Plug 'tpope/vim-vinegar'                                      " press '-' file system
 Plug 'scrooloose/nerdtree'                                    " sidebar sytem
 Plug 'tpope/vim-commentary'                                   " fast comment

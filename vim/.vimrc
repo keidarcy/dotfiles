@@ -22,12 +22,23 @@ set softtabstop=4                       " tab, space, next line etc
 set expandtab                           " tab, space, next line etc
 set smartindent
 set shiftwidth=4                        " tab, space, next line etc,
-set backspace=indent,eol,start          " Make backspace behave like every other editor.
 set relativenumber "se rnu              " let's activate line numbers.
+set nowrap
+set smartcase
+set noswapfile
+set nobackup
+set undodir=~/.vim/undodir
+set undofile
+set colorcolumn=90
+
+set backspace=indent,eol,start          " Make backspace behave like every other editor.
 set noerrorbells visualbell t_vb=	" no bell!
 set autowriteall                        " Automatically write the file when switching buffers.
 set complete=.,w,b,u                    " Set our desired autocompletion matching.
 set clipboard=unnamed                   " Mac OS X clipboard sharing
+"---------------Search-------------"
+set hlsearch
+set incsearch
 
 "------Gui Setting for macvim-------"
 set guifont=Fira_Code:h17		"Set the default font family and size.
@@ -50,7 +61,7 @@ let mapleader = ','                     "The default leader is \, but a comma is
 "---------------Visuals-------------"
 set t_CO=256                            "Use 256 colors. This is useful for Terminal Vim.
 set background=dark                     " dark,light
-colorscheme palenight                         "dracula, palenight, hybrid
+colorscheme gruvbox                         "dracula, palenight, hybrid,gruvbox
 let g:hybrid_custom_term_colors = 1
 let g:hybrid_reduced_contrast = 1
 let g:palenight_terminal_italics=1
@@ -79,9 +90,6 @@ hi foldcolumn ctermbg=bg                      " hi means highlight
 hi vertsplit ctermfg=bg ctermbg=bg
 hi NonText ctermfg=gray guifg=grey10
 
-"---------------Search-------------"
-set hlsearch
-set incsearch
 
 "-------------------------------Window Management--------------------------"
 " window control prefix
@@ -118,7 +126,6 @@ nmap <C-L><C-L> <C-W>>
 "-------------------------------Window Management--------------------------"
 
 
-
 "-------------------------------Key Binding--------------------------------"
 
 " map Esc to jj
@@ -141,12 +148,6 @@ inoremap <C-l> <C-o>A
 " make current file executable
 nnoremap <leader>x :!chmod +x %<CR>
 
-" Fast move 10 lines
-nnoremap J 10j
-nnoremap K 10k
-vnoremap J 10j
-vnoremap K 10k
-
 " Make it easy to edit the Vimrc file.
 nmap <Leader>ev :tabedit ~/.vimrc<cr>
 nmap <Leader>ep :e ~/.vim/plugins.vim<cr>
@@ -162,6 +163,9 @@ nmap <C-S> :CtrlPBufTag<cr>
 nmap <C-C> :CtrlPMRUFiles<cr>
 
 nmap <Leader>f :tag<space>
+
+
+nnoremap <leader><CR> :so ~/.vimrc<CR>
 "-------------------------------Key Binding--------------------------------"
 
 
