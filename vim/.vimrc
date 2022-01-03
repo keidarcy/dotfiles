@@ -1,10 +1,9 @@
-
-" \ \ / /\ \   / /\ \   / / __ \ \    / /_   _|  \/  |  __ \ / ____|
-"  \ V /  \ \_/ /  \ \_/ / |  | \ \  / /  | | | \  / | |__) | |
-"   > <    \   /    \   /| |  | |\ \/ /   | | | |\/| |  _  /| |
-"  / . \    | |      | | | |__| | \  /   _| |_| |  | | | \ \| |____
-" /_/ \_\   |_|      |_|  \____/   \/   |_____|_|  |_|_|  \_\\_____|
-"
+"  _        _     _
+" | | _____(_) __| | __ _ _ __ ___ _   _
+" | |/ / _ \ |/ _` |/ _` | '__/ __| | | |
+" |   <  __/ | (_| | (_| | | | (__| |_| |
+" |_|\_\___|_|\__,_|\__,_|_|  \___|\__, |
+"                                  |___/
 " Author: @keidarcy
 " Github: https://github.com/keidarcy/dotfiles
 
@@ -57,7 +56,7 @@ if empty(glob('~/.vim/autoload/plug.vim'))
   autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
 endif
 
-let mapleader = ','                     "The default leader is \, but a comma is better.
+let mapleader = ' '                     "The default leader is \, use it to space.
 "---------------Visuals-------------"
 set t_CO=256                            "Use 256 colors. This is useful for Terminal Vim.
 set background=dark                     " dark,light
@@ -166,6 +165,8 @@ nmap <Leader>f :tag<space>
 
 
 nnoremap <leader><CR> :so ~/.vimrc<CR>
+nnoremap <leader>p o<esc>P<CR>
+vnoremap <leader>p "_dP
 "-------------------------------Key Binding--------------------------------"
 
 
