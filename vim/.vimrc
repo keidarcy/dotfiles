@@ -60,7 +60,7 @@ let mapleader = ' '                     "The default leader is \, use it to spac
 "---------------Visuals-------------"
 set t_CO=256                            "Use 256 colors. This is useful for Terminal Vim.
 set background=dark                     " dark,light
-colorscheme gruvbox                         "dracula, palenight, hybrid,gruvbox
+colorscheme industry                         "dracula, palenight, hybrid,gruvbox
 let g:hybrid_custom_term_colors = 1
 let g:hybrid_reduced_contrast = 1
 let g:palenight_terminal_italics=1
@@ -85,9 +85,9 @@ let g:airline_theme='simple'
 "------Background Color------------"
 set foldcolumn=0
 " hi LineNr ctermfg=bg ctermbg=bg         " tweak color. fake a custom left padding
-hi foldcolumn ctermbg=bg                      " hi means highlight
-hi vertsplit ctermfg=bg ctermbg=bg
-hi NonText ctermfg=gray guifg=grey10
+" hi foldcolumn ctermbg=bg                      " hi means highlight
+" hi vertsplit ctermfg=bg ctermbg=bg
+" hi NonText ctermfg=gray guifg=grey10
 
 
 "-------------------------------Window Management--------------------------"
