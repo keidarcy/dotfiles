@@ -23,28 +23,36 @@
 
 # Install Homebrew (https://brew.sh/)
 brew help || /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
-brew update
-# ./pkg/Brewfile
-brew bundle --file=pkg/Brewfile
+
+# TODO: add logic for ci and local
+# if mac ci
+brew install stow tmux fzf
+# else local mac
+# brew update
+# brew bundle --file=pkg/Brewfile
+stow --target=${HOME} git
+stow --target=${HOME} zsh
+stow --target=${HOME} vim
+stow --target=${HOME} tmux
+ls -la ${HOME}
 ###################################################
 
-
 ###################### zsh ######################
-stow zsh
 # https://github.com/zdharma-continuum/zinit#manual-installation
 ZINIT_HOME="${XDG_DATA_HOME:-${HOME}/.local/share}/zinit/zinit.git"
 mkdir -p "$(dirname $ZINIT_HOME)"
 git clone https://github.com/zdharma-continuum/zinit.git "$ZINIT_HOME"
-source ~/.zshrc
+source ${HOME}/.zshrc
 touch .hushlogin # do not show Last login: Wed Jan 01 12:00:00 on ttys01
 ###################################################
 
 
 
 ###################### vim ######################
-# install Vundle
-stow vim
-git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
+# https://github.com/junegunn/vim-plug
+curl -fLo ${HOME}/.vim/autoload/plug.vim --create-dirs \
+    https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+vim +'silent! PlugInstall' +qall
 ###################################################
 
 
@@ -52,13 +60,9 @@ git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
 ###################### tmux ######################
 # oh my tmux https://github.com/gpakosz/.tmux
 # require (perl, curl, tmux, git)
-stow tmux
 git clone https://github.com/gpakosz/.tmux.git ${HOME}/.tmux
-ln -sf ~/.tmux/.tmux.conf ~/.tmux.conf
-###################################################
-
-###################### git ######################
-stow git
+ln -sf ${HOME}/.tmux/.tmux.conf ~/.tmux.conf
+tmux source ${HOME}/.tmux.conf
 ###################################################
 
 
