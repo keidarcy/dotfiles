@@ -25,12 +25,14 @@
 brew help || /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 
 # TODO: add logic for ci and local
-brew install stow tmux
+brew install stow tmux fzf
 # do not update and install in ci test
 # brew update
 # ./pkg/Brewfile
 # brew bundle --file=pkg/Brewfile
 stow_programs=$(echo "git zsh vim tmux" | tr " " "\n")
+echo $ZSH_NAME
+ls -la .
 for p in $stow_programs; do; stow --target=${HOME} $p; done
 ###################################################
 
