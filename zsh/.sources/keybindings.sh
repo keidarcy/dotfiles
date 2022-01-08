@@ -1,15 +1,15 @@
+# CTRL-G CTRL-F for files
+# CTRL-G CTRL-B for branches
+# CTRL-G CTRL-T for tags
+# CTRL-G CTRL-R for remotes
+# CTRL-G CTRL-H for commit hashes
+
 join-lines() {
   local item
   while read item; do
     echo -n "${(q)item} "
   done
 }
-
-# CTRL-GCTRL-F for files
-# CTRL-GCTRL-B for branches
-# CTRL-GCTRL-T for tags
-# CTRL-GCTRL-R for remotes
-# CTRL-GCTRL-H for commit hashes
 
 bind-git-helper() {
   local c

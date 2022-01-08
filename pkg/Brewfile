@@ -1,7 +1,7 @@
-###### 
+######
 # How to generate this file
 # brew bundle dump --describe --file=./Brewfile
-###### 
+######
 tap "homebrew/bundle"
 tap "homebrew/cask"
 tap "homebrew/core"
@@ -43,3 +43,5 @@ brew "wget"
 # brew "zsh"
 # High-performance, schema-free, document-oriented database
 brew "mongodb/brew/mongodb-community"
+
+brew "git-delta"

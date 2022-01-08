@@ -28,7 +28,8 @@ export EDITOR=vim
 
 # --------------Vim area-------------------------------
 bindkey -v
-KEYTIMEOUT=5
+# https://github.com/softmoth/zsh-vim-mode#keytimeout
+KEYTIMEOUT=100
 # use the vi navigation keys in menu completion
 zstyle ':completion:*' menu select
 zstyle ':completion:*' matcher-list 'm:{a-zA-Z}={A-Za-z}'
