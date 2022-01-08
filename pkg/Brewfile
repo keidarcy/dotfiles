@@ -43,5 +43,7 @@ brew "wget"
 # brew "zsh"
 # High-performance, schema-free, document-oriented database
 brew "mongodb/brew/mongodb-community"
-
+# Syntax-highlighting pager for git and diff output
 brew "git-delta"
+# GitHub command-line tool
+brew "gh"

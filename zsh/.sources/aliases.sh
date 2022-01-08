@@ -2,6 +2,7 @@
 alias e='nvim'
 
 # Easier navigation
+alias ~="cd ~"
 alias ..="cd .."
 alias ...="cd ../.."
 alias ....="cd ../../.."

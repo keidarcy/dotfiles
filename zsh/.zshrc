@@ -88,7 +88,7 @@ _comp_options+=(globdots) # Include hidden files.
 
 
 export BIN=$HOME/.homebin
-for file in ~/dotfiles/zsh/.sources/*.sh; do source $file; done
+for file in ~/dotfiles/zsh/.sources/*.sh; do [[ -f $file ]] && source $file; done
 [[ -f ~/.fzf.zsh ]] && source ~/.fzf.zsh # enable fzf keybindings tab completion
 [[ -f ~/.p10k.zsh ]] && source ~/.p10k.zsh # enable p10k theme
 
