@@ -51,6 +51,7 @@ touch .hushlogin # do not show Last login: Wed Jan 01 12:00:00 on ttys01
 # https://github.com/junegunn/vim-plug
 curl -fLo ${HOME}/.vim/autoload/plug.vim --create-dirs \
     https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+git clone https://github.com/morhetz/gruvbox.git ${HOME}/.vim/plugged/gruvbox
 vim +'silent! PlugInstall' +qall
 ###################################################
 

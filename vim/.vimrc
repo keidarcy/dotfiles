@@ -60,7 +60,7 @@ let mapleader = ' '                     "The default leader is \, use it to spac
 "---------------Visuals-------------"
 set t_CO=256                            "Use 256 colors. This is useful for Terminal Vim.
 set background=dark                     " dark,light
-colorscheme industry                         "dracula, palenight, hybrid,gruvbox
+colorscheme gruvbox                         "dracula, palenight, hybrid,gruvbox
 let g:hybrid_custom_term_colors = 1
 let g:hybrid_reduced_contrast = 1
 let g:palenight_terminal_italics=1
