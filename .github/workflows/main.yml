@@ -33,4 +33,4 @@ jobs:
       - name: Run install shell
         run: |
           chmod +x bootstrap.sh
-          ./bootstrap.sh
+          zsh bootstrap.sh
