@@ -23,18 +23,25 @@
 
 # Install Homebrew (https://brew.sh/)
 brew help || /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
-brew update
+
+# TODO: add logic for ci and local
+brew install stow tmux
+# do not update and install in ci test
+# brew update
 # ./pkg/Brewfile
-brew bundle --file=pkg/Brewfile
+# brew bundle --file=pkg/Brewfile
+
 ###################################################
 
 
 ###################### zsh ######################
+stow --version
 stow zsh
 # https://github.com/zdharma-continuum/zinit#manual-installation
 ZINIT_HOME="${XDG_DATA_HOME:-${HOME}/.local/share}/zinit/zinit.git"
 mkdir -p "$(dirname $ZINIT_HOME)"
 git clone https://github.com/zdharma-continuum/zinit.git "$ZINIT_HOME"
+zinit self-update
 source ~/.zshrc
 touch .hushlogin # do not show Last login: Wed Jan 01 12:00:00 on ttys01
 ###################################################
@@ -42,9 +49,10 @@ touch .hushlogin # do not show Last login: Wed Jan 01 12:00:00 on ttys01
 
 
 ###################### vim ######################
-# install Vundle
 stow vim
-git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
+# https://github.com/junegunn/vim-plug
+curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
+    https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 ###################################################
 
 
@@ -55,6 +63,7 @@ git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
 stow tmux
 git clone https://github.com/gpakosz/.tmux.git ${HOME}/.tmux
 ln -sf ~/.tmux/.tmux.conf ~/.tmux.conf
+tmux source ~/.tmux.conf
 ###################################################
 
 ###################### git ######################
