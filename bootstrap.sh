@@ -25,7 +25,7 @@
 brew help || /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 
 # TODO: add logic for ci and local
-brew install stow tmux
+brew install stow tmux exa
 # do not update and install in ci test
 # brew update
 # ./pkg/Brewfile
@@ -33,15 +33,19 @@ brew install stow tmux
 
 ###################################################
 
+###################### git ######################
+stow git
+ls -la ../
+###################################################
 
 ###################### zsh ######################
 stow --version
 stow zsh
+ls -la ../
 # https://github.com/zdharma-continuum/zinit#manual-installation
 ZINIT_HOME="${XDG_DATA_HOME:-${HOME}/.local/share}/zinit/zinit.git"
 mkdir -p "$(dirname $ZINIT_HOME)"
 git clone https://github.com/zdharma-continuum/zinit.git "$ZINIT_HOME"
-zinit self-update
 source ~/.zshrc
 touch .hushlogin # do not show Last login: Wed Jan 01 12:00:00 on ttys01
 ###################################################
@@ -64,10 +68,6 @@ stow tmux
 git clone https://github.com/gpakosz/.tmux.git ${HOME}/.tmux
 ln -sf ~/.tmux/.tmux.conf ~/.tmux.conf
 tmux source ~/.tmux.conf
-###################################################
-
-###################### git ######################
-stow git
 ###################################################
 
 
