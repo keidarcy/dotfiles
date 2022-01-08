@@ -30,15 +30,14 @@ brew install stow tmux fzf
 # brew update
 # ./pkg/Brewfile
 # brew bundle --file=pkg/Brewfile
-stow_programs=$(echo "git zsh vim tmux" | tr " " "\n")
-echo $ZSH_NAME
-ls -la .
-for p in $stow_programs; do; stow --target=${HOME} $p; done
+stow --target=${HOME} git
+stow --target=${HOME} zsh
+stow --target=${HOME} vim
+stow --target=${HOME} tmux
+ls -la ~
 ###################################################
 
 ###################### zsh ######################
-ls -la ${HOME}
-uname -a
 # https://github.com/zdharma-continuum/zinit#manual-installation
 ZINIT_HOME="${XDG_DATA_HOME:-${HOME}/.local/share}/zinit/zinit.git"
 mkdir -p "$(dirname $ZINIT_HOME)"
