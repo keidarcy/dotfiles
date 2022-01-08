@@ -30,7 +30,10 @@ brew install stow tmux
 # brew update
 # ./pkg/Brewfile
 # brew bundle --file=pkg/Brewfile
-stow --target=${HOME} git zsh vim tmux
+stow --target=${HOME} git
+stow --target=${HOME} zsh
+stow --target=${HOME} vim
+stow --target=${HOME} tmux
 ###################################################
 
 ###################### zsh ######################
