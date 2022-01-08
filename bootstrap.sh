@@ -35,18 +35,17 @@ brew install stow tmux exa
 
 ###################### git ######################
 stow git
-ls -la ../
 ###################################################
 
 ###################### zsh ######################
-stow --version
 stow zsh
 ls -la ../
+pwd
 # https://github.com/zdharma-continuum/zinit#manual-installation
 ZINIT_HOME="${XDG_DATA_HOME:-${HOME}/.local/share}/zinit/zinit.git"
 mkdir -p "$(dirname $ZINIT_HOME)"
 git clone https://github.com/zdharma-continuum/zinit.git "$ZINIT_HOME"
-source ~/.zshrc
+source ${HOME}/.zshrc
 touch .hushlogin # do not show Last login: Wed Jan 01 12:00:00 on ttys01
 ###################################################
 
@@ -55,7 +54,7 @@ touch .hushlogin # do not show Last login: Wed Jan 01 12:00:00 on ttys01
 ###################### vim ######################
 stow vim
 # https://github.com/junegunn/vim-plug
-curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
+curl -fLo ${HOME}/.vim/autoload/plug.vim --create-dirs \
     https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 ###################################################
 
@@ -67,7 +66,7 @@ curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
 stow tmux
 git clone https://github.com/gpakosz/.tmux.git ${HOME}/.tmux
 ln -sf ~/.tmux/.tmux.conf ~/.tmux.conf
-tmux source ~/.tmux.conf
+tmux source ${HOME}/.tmux.conf
 ###################################################
 
 
