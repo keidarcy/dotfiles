@@ -25,16 +25,15 @@
 brew help || /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 
 # TODO: add logic for ci and local
+# if mac ci
 brew install stow tmux fzf
-# do not update and install in ci test
+# else local mac
 # brew update
-# ./pkg/Brewfile
 # brew bundle --file=pkg/Brewfile
 stow --target=${HOME} git
 stow --target=${HOME} zsh
 stow --target=${HOME} vim
 stow --target=${HOME} tmux
-ls -la ~
 ###################################################
 
 ###################### zsh ######################
@@ -52,6 +51,7 @@ touch .hushlogin # do not show Last login: Wed Jan 01 12:00:00 on ttys01
 # https://github.com/junegunn/vim-plug
 curl -fLo ${HOME}/.vim/autoload/plug.vim --create-dirs \
     https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+vim +PlugInstall +qall
 ###################################################
 
 
