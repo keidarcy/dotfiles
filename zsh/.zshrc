@@ -73,8 +73,8 @@ zinit for \
 
 zinit ice depth=1; zinit light romkatv/powerlevel10k
 
-# this line fix slow paste speed caused by zsh-syntax-highlighting
-# zstyle ':bracketed-paste-magic' active-widgets '.self-*'
+# to run aws-cli command completion, you need to run bashcompinit
+autoload bashcompinit && bashcompinit
 # enable zsh completion system
 autoload -Uz compinit
 if [ $(date +'%j') != $(stat -f '%Sm' -t '%j' ~/.zcompdump) ]; then
@@ -84,6 +84,7 @@ else
   compinit -C
 fi
 _comp_options+=(globdots) # Include hidden files.
+complete -C '/usr/local/bin/aws_completer' aws
 # -------------zinit----------------------
 
 
