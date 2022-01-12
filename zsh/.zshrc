@@ -84,7 +84,6 @@ else
   compinit -C
 fi
 _comp_options+=(globdots) # Include hidden files.
-complete -C '/usr/local/bin/aws_completer' aws
 # -------------zinit----------------------
 
 
