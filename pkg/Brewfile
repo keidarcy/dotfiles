@@ -47,3 +47,5 @@ brew "mongodb/brew/mongodb-community"
 brew "git-delta"
 # GitHub command-line tool
 brew "gh"
+
+brew "gsed"
