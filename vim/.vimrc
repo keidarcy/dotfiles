@@ -56,7 +56,7 @@ if empty(glob('~/.vim/autoload/plug.vim'))
   autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
 endif
 
-let mapleader = ' '                     "The default leader is \, use it to space.
+let mapleader = ','                     "The default leader is \, use it to space.
 "---------------Visuals-------------"
 set t_CO=256                            "Use 256 colors. This is useful for Terminal Vim.
 set background=dark                     " dark,light
