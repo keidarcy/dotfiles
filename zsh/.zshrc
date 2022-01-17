@@ -73,8 +73,7 @@ zinit for \
 
 zinit ice depth=1; zinit light romkatv/powerlevel10k
 
-# to run aws-cli command completion, you need to run bashcompinit
-autoload bashcompinit && bashcompinit
+FPATH="$(brew --prefix)/share/zsh/site-functions:${FPATH}"
 # enable zsh completion system
 autoload -Uz compinit
 if [ $(date +'%j') != $(stat -f '%Sm' -t '%j' ~/.zcompdump) ]; then
