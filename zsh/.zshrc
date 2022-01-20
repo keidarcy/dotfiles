@@ -51,7 +51,7 @@ source "${ZINIT_HOME}/zinit.zsh"
 
 zinit snippet OMZL::git.zsh
 zinit snippet OMZP::git
-zinit snippet OMZP::git-prompt
+# zinit snippet OMZP::git-prompt
 
 # https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins/vi-mode
 zinit snippet OMZP::vi-mode
