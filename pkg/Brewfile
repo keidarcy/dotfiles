@@ -47,5 +47,9 @@ brew "mongodb/brew/mongodb-community"
 brew "git-delta"
 # GitHub command-line tool
 brew "gh"
-
+# GNU implementation of the famous stream editor
 brew "gsed"
+# GPU-accelerated terminal emulator
+brew "alacritty"
+# Desktop automation application
+brew "hammerspoon"

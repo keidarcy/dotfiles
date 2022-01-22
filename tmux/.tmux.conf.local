@@ -398,6 +398,10 @@ tmux_conf_uninstall_plugins_on_reload=true
 # keidarcy
 ###################
 #
+#
+set -g default-terminal "screen-<t_CO>color"
+set-option -sa terminal-overrides ',alacritty:RGB'
+#
 # Index starts from 1
 set -g base-index 1
 bind-key 0 run "tmux split-window -p 40 'zsh -ci ftpane'"

@@ -26,7 +26,7 @@ brew help || /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Ho
 
 # TODO: add logic for ci and local
 # if mac ci
-brew install stow tmux fzf
+brew install stow tmux fzf alacritty
 # else local mac
 # brew update
 # brew bundle --file=pkg/Brewfile
@@ -34,6 +34,7 @@ stow --target=${HOME} git
 stow --target=${HOME} zsh
 stow --target=${HOME} vim
 stow --target=${HOME} tmux
+stow --target=${HOME} alacritty
 ###################################################
 
 ###################### zsh ######################
