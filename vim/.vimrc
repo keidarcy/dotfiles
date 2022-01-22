@@ -40,6 +40,7 @@ set hlsearch
 set incsearch
 
 "------Gui Setting for macvim-------"
+set termguicolors
 set guifont=Fira_Code:h17		"Set the default font family and size.
 set guioptions-=e
 set linespace=15                        "Not work in terminal vim.
