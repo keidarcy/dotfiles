@@ -21,3 +21,9 @@ bind-git-helper() {
 }
 bind-git-helper f b t r l s
 unset -f bind-git-helper
+
+# edit alacritty.yml
+
+open-terminal-config() { nvim ~/.config/alacritty/alacritty.yml }
+zle -N open-terminal-config
+bindkey '^g,' open-terminal-config
