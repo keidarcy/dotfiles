@@ -1,3 +1,7 @@
+# https://github.com/alacritty/alacritty/wiki/Color-schemes
+import:
+ - ~/.config/alacritty/gruvbox.yml
+
 env:
   TERM: alacritty
 
@@ -23,32 +27,6 @@ font:
     style: Regular
   size: 14.0
 
-# https://github.com/eendroroy/alacritty-theme
-colors:
-  primary:
-    background: '0x282828'
-    foreground: '0xdfbf8e'
-
-  normal:
-    black: '0x665c54'
-    red: '0xea6962'
-    green: '0xa9b665'
-    yellow: '0xe78a4e'
-    blue: '0x7daea3'
-    magenta: '0xd3869b'
-    cyan: '0x89b482'
-    white: '0xdfbf8e'
-
-  bright:
-    black: '0x928374'
-    red: '0xea6962'
-    green: '0xa9b665'
-    yellow: '0xe3a84e'
-    blue: '0x7daea3'
-    magenta: '0xd3869b'
-    cyan: '0x89b482'
-    white: '0xdfbf8e'
-
 cursor:
   style:
     shape: Block
@@ -58,9 +36,9 @@ cursor:
 key_bindings:
   - { key: Key0, mods: Command, action: ResetFontSize }
 
-shell:
-  program: /bin/zsh
-  args:
-    - -l
-    - -c
-    - 'tmux attach -t "main" || tmux new -s "main"'
+# shell:
+#   program: /bin/zsh
+#   args:
+#     - -l
+#     - -c
+#     - 'tmux attach -t "main" || tmux new -s "main"'

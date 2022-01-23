@@ -398,9 +398,9 @@ tmux_conf_uninstall_plugins_on_reload=true
 # keidarcy
 ###################
 #
-#
-set -g default-terminal screen-256color
-set -g terminal-overrides ",alacritty:RGB"
+# set -g default-terminal builtin_xterm
+# set -g default-terminal screen-256color
+# set -g terminal-overrides ",alacritty:RGB"
 #
 # Index starts from 1
 set -g base-index 1
