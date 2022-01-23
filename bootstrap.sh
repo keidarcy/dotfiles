@@ -18,6 +18,9 @@
 # defaults write com.visualstudio.code.oss ApplePressAndHoldEnabled -bool false    # For VS Codium
 # defaults delete -g ApplePressAndHoldEnabled                                      # If necessary, reset global default
 
+### Hide specific App in dock
+# /usr/libexec/PlistBuddy -c 'Add :LSUIElement bool true' /Applications/[AppName].app/Contents/Info.plist
+
 ### disable spelling and Grammar
 # https://apple.stackexchange.com/questions/299470/how-to-permanently-turn-off-check-spelling-while-typing-in-macos
 
@@ -35,6 +38,7 @@ stow --target=${HOME} zsh
 stow --target=${HOME} vim
 stow --target=${HOME} tmux
 stow --target=${HOME} alacritty
+stow --target=${HOME} hammerspoon
 ###################################################
 
 ###################### zsh ######################

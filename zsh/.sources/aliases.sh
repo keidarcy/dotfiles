@@ -61,3 +61,6 @@ alias sed='gsed' # overwrite macos sed to `brew install gnu-sed` /usr/bin/sed
 
 # Docker
 alias dc='docker-compose'
+
+
+alias when-c='when-changed -r -v -1 . '

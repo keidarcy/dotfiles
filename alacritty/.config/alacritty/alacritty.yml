@@ -57,3 +57,10 @@ cursor:
 
 key_bindings:
   - { key: Key0, mods: Command, action: ResetFontSize }
+
+shell:
+  program: /bin/zsh
+  args:
+    - -l
+    - -c
+    - 'tmux attach -t "main" || tmux new -s "main"'
