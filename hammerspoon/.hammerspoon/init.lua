@@ -9,7 +9,7 @@ hs.window.animationDuration = 0
 
 local wm = require("WindowManager")
 -- Window Management
-hs.hotkey.bind(hyper, "u", function()
+hs.hotkey.bind(hyper, "return", function()
     wm.windowMaximize(0)
 end)
 hs.hotkey.bind(hyper, "[", function()

@@ -33,9 +33,9 @@ screenPositions.rightHalf = {
 
 screenPositions.middleHalf = {
     x = THIRD_GRID_SIZE / 2,
-    y = (GRID_SIZE_VERTICAL - GRID_SIZE_VERTICAL / 1.1) / 2,
+    y = (GRID_SIZE_VERTICAL - GRID_SIZE_VERTICAL) / 2,
     w = TWO_THIRD_GRID_SIZE,
-    h = GRID_SIZE_VERTICAL / 1.1
+    h = GRID_SIZE_VERTICAL
 }
 
 screenPositions.leftThird = {
