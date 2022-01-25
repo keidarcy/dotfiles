@@ -9,7 +9,7 @@ hs.window.animationDuration = 0
 hyper = {"cmd", "ctrl", "shift"}
 
 -- Window Management
-local wm = require("WindowManager")
+local wm = require("window-manager")
 hs.hotkey.bind(hyper, "return", function()
     wm.windowMaximize(0)
 end)
@@ -38,15 +38,25 @@ hs.hotkey.bind(hyper, "o", function()
     wm.moveWindowToPosition(wm.screenPositions.rightTwoThird)
 end)
 
+-- Show the bundleID of the currently open window
+hs.hotkey.bind(hyper, "b", function()
+    local bundleId = hs.window.focusedWindow():application():bundleID()
+    hs.alert.show(bundleId)
+    hs.pasteboard.setContents(bundleId)
+end)
+
 -- App toggle
-local ToggleMe = require("ToggleMe")
+local tm = require("toggle-me")
 local apps = {{"alt", "space", "Alacritty"}}
-ToggleMe:setMap(apps)
+tm:set_map(apps)
 
 -- load depends on local environment
-if utils.file_exists("local.lua") then
-    dofile("local.lua")
+if utils.file_exists("local.load.lua") then
+    dofile("local.load.lua")
 end
+
+-- Change keybind to specific apps
+dofile("app-keybinding.lua")
 
 -- reload setting
 hs.hotkey.bind(hyper, "r", hs.reload)

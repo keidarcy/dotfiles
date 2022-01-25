@@ -10,4 +10,14 @@ function Utils.file_exists(name)
     end
 end
 
+function Utils.key_stroke(mods, key)
+    return function()
+        hs.eventtap.keyStroke(mods, key, 0)
+    end
+end
+
+function Utils.remap(mods, key, fn)
+    return hs.hotkey.bind(mods, key, fn, nil, fn)
+end
+
 return Utils
