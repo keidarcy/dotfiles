@@ -1,14 +1,15 @@
 -- ------------------------------------------------------------------------------------
 -- 🔨🥄 Configuration file @keidarcy
 -- ------------------------------------------------------------------------------------
-hyper = {"cmd", "ctrl", "shift"}
-
+local utils = require("utils")
 hs.hotkey.alertDuration = 0
 hs.hints.showTitleThresh = 0
 hs.window.animationDuration = 0
 
-local wm = require("WindowManager")
+hyper = {"cmd", "ctrl", "shift"}
+
 -- Window Management
+local wm = require("WindowManager")
 hs.hotkey.bind(hyper, "return", function()
     wm.windowMaximize(0)
 end)
@@ -39,13 +40,13 @@ end)
 
 -- App toggle
 local ToggleMe = require("ToggleMe")
-local toggleKey = "alt"
-local apps = {{toggleKey, "1", "Google Chrome"},
-              {toggleKey, "2", "com.microsoft.VSCode"},
-              {toggleKey, "3", "Slack"},
-              {toggleKey, "4", "com.insomnia.app"},
-              {toggleKey, "space", "Alacritty"}}
+local apps = {{"alt", "space", "Alacritty"}}
 ToggleMe:setMap(apps)
+
+-- load depends on local environment
+if utils.file_exists("local.lua") then
+    dofile("local.lua")
+end
 
 -- reload setting
 hs.hotkey.bind(hyper, "r", hs.reload)
