@@ -19,10 +19,9 @@ function ToggleMe:toggle_app(app_name)
         else
             app:activate()
         end
-    else
-        hs.application.open(app_name)
+    -- else
+    --     hs.application.open(app_name)
     end
 end
 
 return ToggleMe
-
