@@ -1,6 +1,13 @@
+### Default refresh config file
+# https://gist.github.com/keidarcy/351976bf606dd6f74666e815e2d87d98
+###
+
+### Color scheme
 # https://github.com/alacritty/alacritty/wiki/Color-schemes
+###
+
 import:
- - ~/.config/alacritty/gruvbox.yml
+ - ~/.config/alacritty/color-schemes/monokai-pro.yml # Ayu, Gruvbox, Dracula, Monokai Pro
 
 env:
   TERM: alacritty
@@ -25,20 +32,13 @@ font:
   normal:
     family: MesloLGS NF # should be "Menlo" or something on macOS.
     style: Regular
+  bold:
+    style: Bold
+  italic:
+    style: italic
+  bold_italic:
+    style: Bold Italic
   size: 14.0
-
-cursor:
-  style:
-    shape: Block
-    blinking: On
-  blink_interval: 500
 
 key_bindings:
   - { key: Key0, mods: Command, action: ResetFontSize }
-
-# shell:
-#   program: /bin/zsh
-#   args:
-#     - -l
-#     - -c
-#     - 'tmux attach -t "main" || tmux new -s "main"'

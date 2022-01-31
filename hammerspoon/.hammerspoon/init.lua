@@ -58,6 +58,10 @@ end
 -- Change keybind to specific apps
 dofile("app-keybinding.lua")
 
+-- Show active window highlighting
+require("window-highlight").start()
+-- windowHighlight = require("window-highlight").start()
+
 -- reload setting
 hs.hotkey.bind(hyper, "r", hs.reload)
 hs.alert.show("🔨🥄✅")

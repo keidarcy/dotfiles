@@ -1,5 +1,6 @@
 # >>>>>>>HELLO ZSH WORLD<<<<<<<<
 
+echo 1111
 ## p10k instant prompt to avoid latency of .zshrc load
 if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
   source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
