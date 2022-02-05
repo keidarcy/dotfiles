@@ -10,8 +10,7 @@ local TWO_THIRD_GRID_SIZE = GRID_SIZE_HORIZONTAL / 3 * 2
 
 -- Set the grid size and add a few pixels of margin
 -- Also, don't animate window changes... That's too slow
-hs.grid.setGrid(GRID_SIZE_HORIZONTAL .. "x" ..
-                    GRID_SIZE_VERTICAL)
+hs.grid.setGrid(GRID_SIZE_HORIZONTAL .. "x" .. GRID_SIZE_VERTICAL)
 hs.grid.setMargins({20, 20})
 hs.window.animationDuration = 0
 
