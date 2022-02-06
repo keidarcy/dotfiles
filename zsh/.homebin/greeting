@@ -4,11 +4,12 @@
 # echo "\033[31mred\033[0m"
 # printf "\033[31mred\033[0m\n" all same
 
+# https://github.com/romkatv/powerlevel10k#change-the-color-palette-used-by-your-terminal
 _echoGreeting() {
     COLOR_START="\033[3"
     COLOR_END="\033[0m"
     echo "${COLOR_START}1mWelcome${COLOR_END}, It's ${COLOR_START}6mnew${COLOR_END} ${COLOR_START}5menvironment${COLOR_END}!"
-    
+
     printf "${COLOR_START}0;47mblack${COLOR_END} "
     printf "${COLOR_START}1mred${COLOR_END} "
     printf "${COLOR_START}2mgreen${COLOR_END} "
@@ -17,7 +18,7 @@ _echoGreeting() {
     printf "${COLOR_START}5mmagenta${COLOR_END} "
     printf "${COLOR_START}6mcyan${COLOR_END} "
     printf "${COLOR_START}7mwhite${COLOR_END}\n"
-    
+
     # SGR (Select Graphic Rendition) parameters
     printf "${COLOR_START}0;46mblack${COLOR_END} " # background
     printf "${COLOR_START}1;1mred${COLOR_END} " # bold
@@ -29,7 +30,7 @@ _echoGreeting() {
     printf "${COLOR_START}7;21mwhite${COLOR_END}\n\n" # double underline
     # FIRST_LINE=$(echo "0;47mblack 1mred 2mgreen 3myellow 4mblue 5mmagenta 6mcyan 7mwhite " | tr " " " ")
     # SECOND_LINE=$(echo "0;46mblack 1;1mred 2;2mgreen 3;3myellow 4;4mblue 5;46;28mmagenta 6;9mcyan 7;21mwhite " | tr " " " ")
-    
+
     # for current_color in $FIRST_LINE; do printf "${COLOR_START}${current_color}${COLOR_END} "; done
     # printf "\n"
     # for current_color in $SECOND_LINE; do printf "${COLOR_START}${current_color}${COLOR_END} "; done
@@ -37,17 +38,3 @@ _echoGreeting() {
 }
 
 _echoGreeting
-
-
-
-
-
-
-
-
-
-
-
-
-
-
