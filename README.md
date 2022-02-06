@@ -4,7 +4,7 @@
 # Get Started
 
 ```sh
-git clone https://github.com/xyyolab/dotfiles.git ${HOME}/dotfiles
+git clone https://github.com/keidarcy/dotfiles.git ${HOME}/dotfiles
 cd dotfiles
 sh bootstrap.sh
 ```

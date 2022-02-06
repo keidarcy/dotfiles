@@ -7,7 +7,7 @@
 ###
 
 import:
- - ~/.config/alacritty/color-schemes/monokai-pro.yml # Ayu, Gruvbox, Dracula, Monokai Pro
+  - ~/.config/alacritty/local.yml # Ayu, Gruvbox, Dracula, Monokai Pro
 
 env:
   TERM: alacritty

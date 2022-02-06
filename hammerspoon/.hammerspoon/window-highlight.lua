@@ -34,7 +34,7 @@ module.windowFilter = hs.window.filter.new():setOverrideFilter{
 module.start = function()
     module.logger.i("Starting Window Highlight")
     hs.window.highlight.start(nil, module.windowFilter)
-    hs.hotkey.bind(hyper, "o", function()
+    hs.hotkey.bind(hyper, "p", function()
         module.stop()
     end)
     return module

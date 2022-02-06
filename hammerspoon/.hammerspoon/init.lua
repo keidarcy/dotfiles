@@ -6,7 +6,7 @@ hs.hotkey.alertDuration = 0
 hs.hints.showTitleThresh = 0
 hs.window.animationDuration = 0
 
-hyper = {"cmd", "ctrl", "shift"}
+hyper = {"alt", "shift"}
 
 -- Window Management
 local wm = require("window-manager")
@@ -19,17 +19,17 @@ end)
 hs.hotkey.bind(hyper, "]", function()
     wm.moveWindowToPosition(wm.screenPositions.rightHalf)
 end)
-hs.hotkey.bind(hyper, "h", function()
+hs.hotkey.bind(hyper, "j", function()
     wm.moveWindowToPosition(wm.screenPositions.leftThird)
 end)
-hs.hotkey.bind(hyper, "j", function()
-    wm.moveWindowToPosition(wm.screenPositions.middleThird)
-end)
 hs.hotkey.bind(hyper, "k", function()
-    wm.moveWindowToPosition(wm.screenPositions.middleHalf)
+    wm.moveWindowToPosition(wm.screenPositions.middleThird)
 end)
 hs.hotkey.bind(hyper, "l", function()
     wm.moveWindowToPosition(wm.screenPositions.rightThird)
+end)
+hs.hotkey.bind(hyper, "u", function()
+    wm.moveWindowToPosition(wm.screenPositions.middleHalf)
 end)
 hs.hotkey.bind(hyper, "i", function()
     wm.moveWindowToPosition(wm.screenPositions.leftTwoThird)
