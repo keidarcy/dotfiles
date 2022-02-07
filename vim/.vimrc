@@ -93,12 +93,12 @@ set foldcolumn=0
 
 "-------------------------------Window Management--------------------------"
 " window control prefix
-nnoremap  [Window]   <Nop>
-nmap      s [Window]
+" nnoremap  [Window]   <Nop>
+" nmap      s [Window]
 
 " sv, sg to splite window in normal mode
-nnoremap <silent> [Window]p  :<C-u>split<CR>
-nnoremap <silent> [Window]v  :<C-u>vsplit<CR>
+" nnoremap <silent> [Window]p  :<C-u>split<CR>
+" nnoremap <silent> [Window]v  :<C-u>vsplit<CR>
 
 "---------------Window Split---------"
 set splitbelow
@@ -128,9 +128,6 @@ nmap <C-L><C-L> <C-W>>
 
 "-------------------------------Key Binding--------------------------------"
 
-" map Esc to jj
-imap jj <Esc>
-
 " leader+e to close window fast
 noremap <leader>q :q<cr>
 
@@ -147,6 +144,12 @@ inoremap <C-l> <C-o>A
 
 " make current file executable
 nnoremap <leader>x :!chmod +x %<CR>
+
+" Fast move 15 lines
+nnoremap J 15j
+nnoremap K 15k
+vnoremap J 15j
+vnoremap K 15k
 
 " Make it easy to edit the Vimrc file.
 nmap <Leader>ev :tabedit ~/.vimrc<cr>
@@ -192,12 +195,6 @@ set noshowmode		"hide --INSERT-- etc mode bar
 let g:lightline = { 'colorscheme': 'palenight' }
 
 
-""""""""""""""""""""
-" => VimWiki
-""""""""""""""""""""
-let g:vimwiki_list = [{'path': '~/vimwiki/',
-                      \ 'syntax': 'markdown', 'ext': '.md'}]
-
 
 """"""""""""""""""""
 " => easymotion
@@ -224,6 +221,17 @@ let g:ale_fixers = {
 \   'javascript': ['eslint','prettier'],
 \}
 let g:ale_fix_on_save = 1
+
+
+""""""""""""""""""""
+" => VSCODE
+if exists('g:vscode')
+    xmap gc  <Plug>VSCodeCommentary
+    nmap gc  <Plug>VSCodeCommentary
+    omap gc  <Plug>VSCodeCommentary
+    nmap gcc <Plug>VSCodeCommentaryLine
+endif
+""""""""""""""""""""
 
 "-------------------------------Plugins Related----------------------------"
 
