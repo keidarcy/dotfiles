@@ -98,6 +98,7 @@ for file in ~/dotfiles/zsh/.sources/*.sh; do [[ -f $file ]] && source $file; don
 #
 export FZF_COMPLETION_TRIGGER='*'
 export FZF_DEFAULT_COMMAND='fd --type f --hidden --follow --exclude .git'
+export FZF_CTRL_R_OPTS="--history=${HISTFILE} --history-size=200000"
 export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
 export FZF_DEFAULT_OPTS=$FZF_DEFAULT_OPTS'
 --height 40% --layout=reverse --border

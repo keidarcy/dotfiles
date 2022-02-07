@@ -12,7 +12,7 @@ local function handle_app_event(name, event, app)
     -- Chrome keybind
     if event == hs.application.watcher.activated then
         if app:bundleID() == "com.google.Chrome" or app:bundleID() ==
-            "com.google.Chrome.canary" then
+            "com.google.Chrome.canary" or app:bundleID() == "com.runningwithcrayons.Alfred" then
             for _, key in ipairs(chrome_keys) do
                 key:enable()
             end
@@ -20,7 +20,7 @@ local function handle_app_event(name, event, app)
     end
     if event == hs.application.watcher.deactivated then
         if app:bundleID() == "com.google.Chrome" or app:bundleID() ==
-            "com.google.Chrome.canary" then
+            "com.google.Chrome.canary" or app:bundleID() == "com.runningwithcrayons.Alfred" then
             for _, key in ipairs(chrome_keys) do
                 key:disable()
             end
