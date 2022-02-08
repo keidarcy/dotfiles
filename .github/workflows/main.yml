@@ -32,5 +32,5 @@ jobs:
       # Runs a set of commands using the runners shell
       - name: Run install shell
         run: |
-          chmod +x bootstrap.sh
+          chmod +x .github/bootstrap.sh
           zsh .github/bootstrap.sh
