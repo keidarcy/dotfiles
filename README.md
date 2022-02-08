@@ -5,6 +5,6 @@
 
 ```sh
 git clone https://github.com/keidarcy/dotfiles.git ${HOME}/dotfiles
-cd dotfiles
-sh bootstrap.sh
+cd ${HOME}/dotfiles
+sh .github/bootstrap.sh
 ```
