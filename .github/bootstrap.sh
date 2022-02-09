@@ -1,7 +1,7 @@
 #!/usr/bin/env sh
 
 if [[ "$(uname -s)" == "Darwin" ]]; then
-    source ./macos.sh
+    sh ./macos.sh
     elif [[ "$(uname -s)" == "Linux" ]]; then
     echo "Linux"
 fi
