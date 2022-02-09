@@ -7,7 +7,6 @@
 " Author: @keidarcy
 " Github: https://github.com/keidarcy/dotfiles
 
-
 set nocompatible                        "We want the latest Vim settings/options.
 
 syntax enable
@@ -123,8 +122,22 @@ nmap <C-K><C-K> <C-W>+
 nmap <C-H><C-H> <C-W><
 nmap <C-L><C-L> <C-W>>
 
-"-------------------------------Window Management--------------------------"
 
+
+"-------------------------------NeoVIM--------------------------"
+" highligh when yank
+augroup highlight_yank
+    autocmd!
+    au TextYankPost * silent! lua vim.highlight.on_yank{higroup="IncSearch", timeout=300}
+augroup END
+
+"-------------------------------VSCode--------------------------"
+if exists('g:vscode')
+    xmap gc  <Plug>VSCodeCommentary
+    nmap gc  <Plug>VSCodeCommentary
+    omap gc  <Plug>VSCodeCommentary
+    nmap gcc <Plug>VSCodeCommentaryLine
+endif
 
 "-------------------------------Key Binding--------------------------------"
 
@@ -168,14 +181,16 @@ nmap <C-C> :CtrlPMRUFiles<cr>
 nmap <Leader>f :tag<space>
 
 
-nnoremap <leader><CR> :so ~/.vimrc<CR>
+nnoremap <Leader><CR> :so ~/.vimrc<CR>
 nnoremap <leader>p o<esc>P<CR>
 vnoremap <leader>p "_dP
-"-------------------------------Key Binding--------------------------------"
+nnoremap <C-j> :cnext<CR>
+nnoremap <C-k> :cprev<CR>
 
-
-
-
+" n " n, i, c, t
+" nore " no recursively execution
+" map " map command
+nnoremap <leader>pv :Vex<CR>
 
 
 "-------------------------------Plugins Related----------------------------"
@@ -222,18 +237,6 @@ let g:ale_fixers = {
 \}
 let g:ale_fix_on_save = 1
 
-
-""""""""""""""""""""
-" => VSCODE
-if exists('g:vscode')
-    xmap gc  <Plug>VSCodeCommentary
-    nmap gc  <Plug>VSCodeCommentary
-    omap gc  <Plug>VSCodeCommentary
-    nmap gcc <Plug>VSCodeCommentaryLine
-endif
-""""""""""""""""""""
-
-"-------------------------------Plugins Related----------------------------"
 
 
 "----------Auto-Commands-------------"

@@ -54,13 +54,7 @@ alias subdirsize='du -h -d 1 | sort -hr'
 alias myip='curl ipinfo.io/ip'
 alias mypath='echo $PATH | tr -s ':' '\n''
 alias myport='lsof -nP +c 150 | grep LISTEN'
-alias ealiases='e $BIN/aliases.z.sh'
-alias efunctions='e $BIN/functions.z.sh'
-alias epaths='e $BIN/paths.z.sh'
 alias sed='gsed' # overwrite macos sed to `brew install gnu-sed` /usr/bin/sed
-
-# Docker
-alias dc='docker-compose'
 
 
 alias when-c='when-changed -r -v -1 . '
