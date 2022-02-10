@@ -64,24 +64,9 @@ colorscheme gruvbox                         "dracula, palenight, hybrid,gruvbox
 let g:hybrid_custom_term_colors = 1
 let g:hybrid_reduced_contrast = 1
 let g:palenight_terminal_italics=1
-let g:airline_theme='simple'
+let g:airline_theme='base16_gruvbox_dark_hard'
 "let g:bg='#CAA9FA'
-
-" let g:terminal_color_0  = '#000000'     "manual darcula
-" let g:terminal_color_1  = '#FF5555'
-" let g:terminal_color_2  = '#50FA7B'
-" let g:terminal_color_3  = '#F1FA8C'
-" let g:terminal_color_4  = '#BD93F9'
-" let g:terminal_color_5  = '#FF79C6'
-" let g:terminal_color_6  = '#8BE9FD'
-" let g:terminal_color_7  = '#BFBFBF'
-" let g:terminal_color_8  = '#4D4D4D'
-" let g:terminal_color_9  = '#FF6E67'
-" let g:terminal_color_10 = '#5AF78E'
-" let g:terminal_color_11 = '#F4F99D'
-" let g:terminal_color_12 = '#CAA9FA'
-" let g:terminal_color_13 = '#FF92D0'
-" let g:terminal_color_14 = '#9AEDFE'
+"
 "------Background Color------------"
 set foldcolumn=0
 " hi LineNr ctermfg=bg ctermbg=bg         " tweak color. fake a custom left padding

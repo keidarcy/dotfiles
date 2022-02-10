@@ -2,7 +2,7 @@
 
 ## p10k instant prompt to avoid latency of .zshrc load
 if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
-  source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
+    source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
 fi
 
 
@@ -68,8 +68,8 @@ zinit ice as"completion"
 zinit snippet OMZP::fd/_fd
 
 zinit for \
-    light-mode  zsh-users/zsh-autosuggestions \
-    light-mode  zdharma-continuum/fast-syntax-highlighting \
+light-mode  zsh-users/zsh-autosuggestions \
+light-mode  zdharma-continuum/fast-syntax-highlighting \
 
 zinit ice depth=1; zinit light romkatv/powerlevel10k
 
@@ -77,10 +77,10 @@ FPATH="$(brew --prefix)/share/zsh/site-functions:${FPATH}"
 # enable zsh completion system
 autoload -Uz compinit
 if [ $(date +'%j') != $(stat -f '%Sm' -t '%j' ~/.zcompdump) ]; then
-# load cached .zcompdump once a day
-  compinit
+    # load cached .zcompdump once a day
+    compinit
 else
-  compinit -C
+    compinit -C
 fi
 _comp_options+=(globdots) # Include hidden files.
 # -------------zinit----------------------
