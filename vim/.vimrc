@@ -21,6 +21,7 @@ set expandtab                           " tab, space, next line etc
 set smartindent
 set shiftwidth=4                        " tab, space, next line etc,
 set relativenumber "se rnu              " let's activate line numbers.
+set number
 set nowrap
 set smartcase
 set noswapfile

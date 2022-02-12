@@ -27,3 +27,5 @@ unset -f bind-git-helper
 open-terminal-config() { nvim ~/.config/alacritty/alacritty.yml }
 zle -N open-terminal-config
 bindkey '^g,' open-terminal-config
+bindkey -s ^f "tmux-sessionizer\n"
+bindkey -s ^a^f "tmux-cht\n"

@@ -20,7 +20,7 @@ export SAVEHIST=10001
 HISTORY_IGNORE="(l[a,l,s,h,]*|c[lear]|[vim,zsh]rc|pwd|exit|cd|cd *|z)"
 
 # Basic Settings
-export EDITOR=vim
+export EDITOR=nvim
 #HYPHEN_INSENSITIVE="true"
 #DISABLE_AUTO_UPDATE="true"
 #COMPLETION_WAITING_DOTS="true"
