@@ -34,6 +34,7 @@ set noerrorbells visualbell t_vb=	" no bell!
 set autowriteall                        " Automatically write the file when switching buffers.
 set complete=.,w,b,u                    " Set our desired autocompletion matching.
 set clipboard=unnamed                   " Mac OS X clipboard sharing
+
 "---------------Search-------------"
 set hlsearch
 set incsearch
@@ -56,11 +57,11 @@ if empty(glob('~/.vim/autoload/plug.vim'))
   autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
 endif
 
-let mapleader = ','                     "The default leader is \, use it to space.
+let mapleader = ' '                     "The default leader is \, use it to space.
 "---------------Visuals-------------"
 set t_CO=256                            "Use 256 colors. This is useful for Terminal Vim.
-set background=dark                     " dark,light
-colorscheme gruvbox                         "dracula, palenight, hybrid,gruvbox
+set background=dark
+colorscheme gruvbox
 let g:hybrid_custom_term_colors = 1
 let g:hybrid_reduced_contrast = 1
 let g:palenight_terminal_italics=1
@@ -88,26 +89,10 @@ set foldcolumn=0
 set splitbelow
 set splitright
 
-nmap <C-J> <C-W><C-J>
-nmap <C-K> <C-W><C-K>
-nmap <C-H> <C-W><C-H>
-nmap <C-L> <C-W><C-L>
-
-
-"---------------Window Switch---------"
-noremap <C-J> <C-W>j
-noremap <C-K> <C-W>k
-noremap <C-H> <C-W>h
-noremap <C-L> <C-W>l
-
-
-"---------------Resize Management---------"
-nmap <C-J><C-J> <C-W>-
-nmap <C-K><C-K> <C-W>+
-nmap <C-H><C-H> <C-W><
-nmap <C-L><C-L> <C-W>>
-
-
+nnoremap <leader>h :wincmd h<CR>
+nnoremap <leader>j :wincmd j<CR>
+nnoremap <leader>k :wincmd k<CR>
+nnoremap <leader>l :wincmd l<CR>
 
 "-------------------------------NeoVIM--------------------------"
 " highligh when yank
@@ -206,7 +191,7 @@ nmap <leader>s <Plug>(easymotion-s2)
 " => fzf
 """"""""""""""""""""
 set rtp+=/usr/local/opt/fzf
-nnoremap <silent> <Leader>rg :Rg <C-R><C-W><CR>
+nnoremap <silent> <leader>rg :Rg <C-R><C-W><CR>
 nnoremap <silent> <c-p> :Files <CR>
 command! -bang -nargs=? -complete=dir Files
     \ call fzf#vim#files(<q-args>, fzf#vim#with_preview({'options': ['--layout=reverse', '--info=inline']}), <bang>0)
@@ -221,7 +206,6 @@ let g:ale_fixers = {
 \   'javascript': ['eslint','prettier'],
 \}
 let g:ale_fix_on_save = 1
-
 
 
 "----------Auto-Commands-------------"
