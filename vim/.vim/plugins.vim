@@ -8,7 +8,7 @@ endfunction
 call plug#begin('~/.vim/plugged')
 
 " appearance
-Plug 'morhetz/gruvbox'                                        " gruvbox theme
+Plug 'gruvbox-community/gruvbox'                                        " gruvbox theme
 Plug 'vim-airline/vim-airline'                                " status bar
 Plug 'vim-airline/vim-airline-themes'                         " A collection of themes for vim-airline
 Plug 'itchyny/vim-cursorword'                                 " Underlines the word under the cursor
@@ -16,24 +16,25 @@ Plug 'lfv89/vim-interestingwords'                             " A vim plugin for
 Plug 'ap/vim-css-color'                                       " show color directly
 
 " functionality
-Plug 'ervandew/supertab'                                      " Perform all your vim insert mode completions with Tab
 Plug 'tpope/vim-vinegar'                                      " press '-' file system
 Plug 'scrooloose/nerdtree'                                    " sidebar sytem
 Plug 'tpope/vim-commentary'                                   " fast comment
 Plug 'tpope/vim-surround'                                     " fast change surrounding quote
 Plug 'terryma/vim-multiple-cursors'                           " ctrl + n select next same pattern
-Plug 'dense-analysis/ale', Cond(!exists('g:vscode'))          " Check syntax in Vim asynchronously and fix files
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'                                       " Things you can do with fzf and Vim
-Plug 'tpope/vim-fugitive'                                     " Git inside vim, like :Gcommit
-Plug 'junegunn/gv.vim'                                        " A git commit browser in Vim
-Plug 'airblade/vim-gitgutter'
-" Plug 'neoclide/coc.nvim', Cond(!exists('g:vscode'), {'branch': 'release'})  " Intellisense engine
+" Plug 'tpope/vim-fugitive'                                     " Git inside vim, like :Gcommit
+" Plug 'junegunn/gv.vim'                                        " A git commit browser in Vim
+" Plug 'airblade/vim-gitgutter'
 "
 "
 " use normal easymotion when in vim mode
 Plug 'easymotion/vim-easymotion', Cond(!exists('g:vscode'))
 " use vscode easymotion when in vscode mode
 Plug 'asvetliakov/vim-easymotion', Cond(exists('g:vscode'), { 'as': 'vsc-easymotion' })
+
+" lsp
+Plug 'neovim/nvim-lspconfig'
+Plug 'hrsh7th/nvim-compe'
 
 call plug#end()

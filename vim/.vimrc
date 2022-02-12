@@ -196,16 +196,13 @@ nnoremap <silent> <c-p> :Files <CR>
 command! -bang -nargs=? -complete=dir Files
     \ call fzf#vim#files(<q-args>, fzf#vim#with_preview({'options': ['--layout=reverse', '--info=inline']}), <bang>0)
 
-""""""""""""""""""""
-" => ale
-""""""""""""""""""""
-let g:ale_sign_error = '✗'
-let g:ale_sign_warning = '⚡'
-let g:ale_fixers = {
-\   '*': ['remove_trailing_lines', 'trim_whitespace'],
-\   'javascript': ['eslint','prettier'],
-\}
-let g:ale_fix_on_save = 1
+
+"---------------neovim---------------"
+if has('nvim')
+    luafile ~/.config/nvim/nvim-lspconfig.lua
+    luafile ~/.config/nvim/compe-config.lua
+endif
+
 
 
 "----------Auto-Commands-------------"

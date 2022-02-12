@@ -38,7 +38,7 @@ fi
 #################### stow everything ###############################
 stow --target=${HOME} git
 stow --target=${HOME} zsh
-stow --target=${HOME} vim
+stow --target=${HOME} nvim
 stow --target=${HOME} tmux
 stow --target=${HOME} alacritty
 
@@ -54,8 +54,8 @@ touch .hushlogin # do not show Last login: Wed Jan 01 12:00:00 on ttys01
 # https://github.com/junegunn/vim-plug
 curl -fLo ${HOME}/.vim/autoload/plug.vim --create-dirs \
 https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
-git clone https://github.com/morhetz/gruvbox.git ${HOME}/.vim/plugged/gruvbox
-vim +'silent! PlugInstall' +qall
+git clone https://github.com/gruvbox-community/gruvbox.git ${HOME}/.vim/plugged/gruvbox
+nvim +'silent! PlugInstall' +qall
 
 ###################### tmux ######################
 tmux source ${HOME}/.tmux.conf
