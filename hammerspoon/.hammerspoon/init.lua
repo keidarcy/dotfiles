@@ -61,6 +61,13 @@ dofile("app-keybinding.lua")
 -- Show active window highlighting
 require("window-highlight").start()
 -- windowHighlight = require("window-highlight").start()
+--
+-- WIP pomodoro app
+-- local Pomo = require 'pomodoro'
+-- hs.hotkey.bind(hyper, '7', Pomo.startNew)
+-- hs.hotkey.bind(hyper, '8', Pomo.togglePaused)
+-- hs.hotkey.bind(hyper, '9', Pomo.toggleLatestDisplay)
+--
 
 -- reload setting
 hs.hotkey.bind(hyper, "r", hs.reload)

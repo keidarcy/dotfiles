@@ -86,14 +86,18 @@ set foldcolumn=0
 " nnoremap <silent> [Window]p  :<C-u>split<CR>
 " nnoremap <silent> [Window]v  :<C-u>vsplit<CR>
 
-"---------------Window Split---------"
 set splitbelow
 set splitright
 
-nnoremap <leader>h :wincmd h<CR>
-nnoremap <leader>j :wincmd j<CR>
-nnoremap <leader>k :wincmd k<CR>
-nnoremap <leader>l :wincmd l<CR>
+" nnoremap <leader>h <C-W>h
+" nnoremap <leader>j <C-W>j
+" nnoremap <leader>k <C-W>k
+" nnoremap <leader>l <C-W>l
+
+" nnoremap <leader>h :wincmd h<CR>
+" nnoremap <leader>j :wincmd j<CR>
+" nnoremap <leader>k :wincmd k<CR>
+" nnoremap <leader>l :wincmd l<CR>
 
 "-------------------------------NeoVIM--------------------------"
 " highligh when yank
@@ -146,11 +150,7 @@ nmap <Leader><space> :nohlsearch<cr>
 " Make NERDTree easier to toggle
 nmap <C-Z> :NERDTreeToggle<cr>
 
-nmap <C-S> :CtrlPBufTag<cr>
-nmap <C-C> :CtrlPMRUFiles<cr>
-
 nmap <Leader>f :tag<space>
-
 
 nnoremap <Leader><CR> :so ~/.vimrc<CR>
 nnoremap <leader>p o<esc>P<CR>
