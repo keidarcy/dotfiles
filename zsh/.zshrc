@@ -86,7 +86,7 @@ _comp_options+=(globdots) # Include hidden files.
 # -------------zinit----------------------
 
 
-for file in ~/dotfiles/zsh/.config/zsh/*.sh; do [[ -f $file ]] && source $file; done
+for file in ~/.config/zsh/*.sh; do [[ -f $file ]] && source $file; done
 [[ -f ~/.fzf.zsh ]] && source ~/.fzf.zsh # enable fzf keybindings tab completion
 [[ -f ~/.p10k.zsh ]] && source ~/.p10k.zsh # enable p10k theme
 

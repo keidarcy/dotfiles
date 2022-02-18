@@ -37,7 +37,7 @@ fi
 
 #################### stow everything ###############################
 stow --target=${HOME} git
-stow --target=${HOME} zsh
+stow --target=${HOME} --no-folding zsh
 stow --target=${HOME} nvim
 stow --target=${HOME} tmux
 stow --target=${HOME} alacritty
