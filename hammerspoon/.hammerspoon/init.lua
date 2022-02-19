@@ -67,8 +67,31 @@ require("window-highlight").start()
 -- hs.hotkey.bind(hyper, '7', Pomo.startNew)
 -- hs.hotkey.bind(hyper, '8', Pomo.togglePaused)
 -- hs.hotkey.bind(hyper, '9', Pomo.toggleLatestDisplay)
---
 
 -- reload setting
 hs.hotkey.bind(hyper, "r", hs.reload)
 hs.alert.show("🔨🥄✅")
+
+hs.loadSpoon("Seal")
+spoon.Seal:loadPlugins({"apps", "useractions", "pasteboard"})
+spoon.Seal:bindHotkeys({
+    toggle = {hyper, "Space"}
+})
+spoon.Seal.plugins.useractions.actions = {
+    ["Google Search"] = {
+        keyword = "gg",
+        description = "Google search and I'm feeling lucky",
+        fn = function(query)
+            hs.urlevent.openURL("https://www.google.com/search?q=" .. query)
+        end,
+        url = "https://www.google.com",
+        icon = "favicon"
+    },
+    ["Tell me"] = {
+        keyword = "tm",
+        fn = function(str)
+            hs.alert.show(str)
+        end
+    }
+}
+spoon.Seal:start()
