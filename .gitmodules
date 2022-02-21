@@ -1,3 +1,6 @@
 [submodule "work-dotfiles"]
 	path = work-dotfiles
 	url = git@github.com:keidarcy/work-dotfiles.git
+[submodule "personal-dotfiles"]
+	path = personal-dotfiles
+	url = git@github.com:keidarcy/personal-dotfiles.git
