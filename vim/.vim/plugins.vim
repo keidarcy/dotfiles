@@ -23,7 +23,7 @@ Plug 'tpope/vim-surround'                                     " fast change surr
 Plug 'terryma/vim-multiple-cursors'                           " ctrl + n select next same pattern
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'                                       " Things you can do with fzf and Vim
-" Plug 'tpope/vim-fugitive'                                     " Git inside vim, like :Gcommit
+Plug 'tpope/vim-fugitive'                                     " Git inside vim, like :Gcommit
 " Plug 'junegunn/gv.vim'                                        " A git commit browser in Vim
 " Plug 'airblade/vim-gitgutter'
 "

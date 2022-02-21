@@ -51,9 +51,7 @@ local apps = {{"alt", "space", "Alacritty"}}
 tm:set_map(apps)
 
 -- load depends on local environment
-if utils.file_exists("local.load.lua") then
-    dofile("local.load.lua")
-end
+dofile("env.lua")
 
 -- Change keybind to specific apps
 dofile("app-keybinding.lua")
