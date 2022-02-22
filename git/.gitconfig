@@ -82,3 +82,5 @@
     cmd = code --wait $MERGED
 [mergetool]
 	keepBackup = false
+[pull]
+	rebase = true
