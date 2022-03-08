@@ -4,15 +4,19 @@ alias e='nvim'
 # Easier navigation
 alias ~="cd ~"
 alias ..="cd .."
+alias ..\/="cd .."
 alias ...="cd ../.."
 alias ....="cd ../../.."
 alias .....="cd ../../../.."
 
-# ls
+# ls - exa
+# https://github.com/ogham/exa#command-line-options
 alias ls='exa'
 alias l='exa -lhF'
-alias tree='exa --tree --level=3'
 alias ll='exa -lahF --git --icons'
+alias la='exa -lbhHigUmuSa@ --time-style=long-iso --git --color-scale' # all extended list
+alias tree='exa --tree --level=3'
+
 
 # Git Stuff
 alias gs='git status'
