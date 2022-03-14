@@ -59,6 +59,7 @@ alias myip='curl ipinfo.io/ip'
 alias mypath='echo $PATH | tr -s ':' '\n''
 alias myport='lsof -nP +c 150 | grep LISTEN'
 alias sed='gsed' # overwrite macos sed to `brew install gnu-sed` /usr/bin/sed
+alias awk='gawk'
 
 
 alias when-c='when-changed -r -v -1 . '

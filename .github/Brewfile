@@ -49,6 +49,8 @@ brew "git-delta"
 brew "gh"
 # GNU implementation of the famous stream editor
 brew "gsed"
+# GNU awk utility
+brew "gawk"
 # GPU-accelerated terminal emulator
 brew "alacritty"
 # Desktop automation application
