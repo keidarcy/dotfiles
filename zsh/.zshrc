@@ -73,10 +73,13 @@ light-mode  zdharma-continuum/fast-syntax-highlighting \
 
 zinit ice depth=1; zinit light romkatv/powerlevel10k
 
-FPATH="$(brew --prefix)/share/zsh/site-functions:${FPATH}"
+
+if [[ "$(uname -s)" == "Darwin" ]]; then
+    FPATH="$(brew --prefix)/share/zsh/site-functions:${FPATH}"
+fi
 # enable zsh completion system
 autoload -Uz compinit
-if [ $(date +'%j') != $(stat -f '%Sm' -t '%j' ~/.zcompdump) ]; then
+if [[ "$(uname -s)" == "Darwin" && $(date +'%j') != $(stat -f '%Sm' -t '%j' ~/.zcompdump) ]]; then
     # load cached .zcompdump once a day
     compinit
 else
