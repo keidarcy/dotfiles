@@ -31,8 +31,20 @@ if [[ "$(uname -s)" == "Darwin" ]]; then
     # else local mac
     # brew update
     # brew bundle --file=pkg/Brewfile
-    elif [[ "$(uname -s)" == "Linux" ]]; then
-    echo "Linux"
+    # elif [[ "$(uname -s)" == "Linux" ]]; then
+else
+    sudo apt-get update
+    sudo apt-get install stow \
+    tmux \
+    fzf \
+    nvim \
+    exa \
+    zsh \
+    fasd \
+    ranger \
+    fd-find \ # https://github.com/sharkdp/fd#on-debian
+    ripgrep \
+    bat
 fi
 
 #################### stow everything ###############################
@@ -66,6 +78,10 @@ tmux source ${HOME}/.tmux.conf
 # To install useful key bindings and fuzzy completion:
 if [[ "$(uname -s)" == "Darwin" ]]; then
     $(brew --prefix)/opt/fzf/install # config fzf
+else
+    # install fzf
+    git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
+    ~/.fzf/install
 fi
 # p10k configure # config powerlevel10k
 

@@ -80,6 +80,7 @@ fi
 # enable zsh completion system
 autoload -Uz compinit
 if [[ "$(uname -s)" == "Darwin" && $(date +'%j') != $(stat -f '%Sm' -t '%j' ~/.zcompdump) ]]; then
+    # %Sm.. is for macos
     # load cached .zcompdump once a day
     compinit
 else
