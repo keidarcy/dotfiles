@@ -1,0 +1,30 @@
+#!/usr/bin/env bash
+
+usage='usage: cute-ppw.sh [-gs provider_name]
+
+Options:
+-h,	--help  Show this help message and exit.
+-g, --get <name>: get ppw
+-s, --set <name>: set ppw'
+
+action=$1
+provider_name=$2
+case $action in
+    -h|--help)
+        echo "$usage"
+        exit 0
+    ;;
+    -g|--get)
+        selected=$(jq --arg provider_name "$provider_name" '.providers[] | select(.name==$provider_name)' $HOME/.config/ppw/local.ppw.json)
+        echo $selected | jq .
+        echo "get ppw"
+    ;;
+    -s|--set)
+        jq '.updated_at | . = "working in process"' local.ppw.json
+        echo "set ppw"
+    ;;
+    *)
+        echo "$usage"
+        exit 1
+    ;;
+esac
