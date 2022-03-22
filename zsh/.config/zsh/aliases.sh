@@ -47,7 +47,7 @@ alias tkserver='tmux kill-server'
 # System
 alias h='history'
 alias c='clear'
-alias ra='ranger'
+alias rr='ranger'
 alias mkdir='mkdir -p'
 alias zshrc='e ~/.zshrc'
 alias vimrc='e ~/.vimrc'

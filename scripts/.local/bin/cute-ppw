@@ -16,8 +16,7 @@ case $action in
     ;;
     -g|--get)
         selected=$(jq --arg provider_name "$provider_name" '.providers[] | select(.name==$provider_name)' $HOME/.config/ppw/local.ppw.json)
-        echo $selected | jq .
-        echo "get ppw"
+        echo $selected
     ;;
     -s|--set)
         jq '.updated_at | . = "working in process"' local.ppw.json
@@ -25,6 +24,5 @@ case $action in
     ;;
     *)
         echo "$usage"
-        exit 1
     ;;
 esac
