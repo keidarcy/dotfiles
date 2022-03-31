@@ -27,7 +27,7 @@ if [[ "$(uname -s)" == "Darwin" ]]; then
     
     # TODO: add logic for ci and local
     # if mac ci
-    brew install stow tmux fzf alacritty starship
+    brew install stow tmux fzf alacritty
     # else local mac
     # brew update
     # brew bundle --file=pkg/Brewfile

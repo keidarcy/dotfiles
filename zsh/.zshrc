@@ -1,5 +1,11 @@
 # >>>>>>>HELLO ZSH WORLD<<<<<<<<
 
+## p10k instant prompt to avoid latency of .zshrc load
+if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
+    source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
+fi
+
+
 # Completing directory stack
 # DIRSTACKSIZE=100
 setopt AUTO_PUSHD
@@ -65,6 +71,9 @@ zinit for \
 light-mode  zsh-users/zsh-autosuggestions \
 light-mode  zdharma-continuum/fast-syntax-highlighting \
 
+zinit ice depth=1; zinit light romkatv/powerlevel10k
+
+
 if [[ "$(uname -s)" == "Darwin" ]]; then
     FPATH="$(brew --prefix)/share/zsh/site-functions:${FPATH}"
 fi
@@ -83,6 +92,7 @@ _comp_options+=(globdots) # Include hidden files.
 
 for file in ~/.config/zsh/*.sh; do [[ -f $file ]] && source $file; done
 [[ -f ~/.fzf.zsh ]] && source ~/.fzf.zsh # enable fzf keybindings tab completion
+[[ -f ~/.p10k.zsh ]] && source ~/.p10k.zsh # enable p10k theme
 
 # --------------Tools----------------------
 #
@@ -105,10 +115,6 @@ export FZF_DEFAULT_OPTS=$FZF_DEFAULT_OPTS'
 
 # --------- fasd https://github.com/clvv/fasd
 eval "$(fasd --init auto)"
-
-# --------- starship https://starship.rs/config/
-export STARSHIP_CONFIG=~/.config/starship/starship.toml
-eval "$(starship init zsh)"
 
 # tabtab source for packages
 # uninstall by removing these lines

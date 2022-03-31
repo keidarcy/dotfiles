@@ -57,5 +57,3 @@ brew "alacritty"
 brew "hammerspoon"
 # Bash scripts that integrate bat with various command-line tools
 brew "eth-p/software/bat-extras"
-# Cross-shell prompt for astronauts
-brew "starship"
