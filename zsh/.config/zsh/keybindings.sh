@@ -29,3 +29,16 @@ zle -N open-terminal-config
 bindkey '^g,' open-terminal-config
 bindkey -s ^f "tmux-sessionizer\n"
 bindkey -s ^a^f "tmux-cht\n"
+
+
+
+# vi-mode yank to system clipboard
+# macos pbcopy
+# linux xclip
+function vi-yank-pbcopy {
+    zle vi-yank
+   echo "$CUTBUFFER" | pbcopy -i
+}
+
+zle -N vi-yank-pbcopy
+bindkey -M vicmd 'y' vi-yank-pbcopy
