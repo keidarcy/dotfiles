@@ -14,6 +14,7 @@ Plug 'vim-airline/vim-airline-themes'                         " A collection of 
 Plug 'itchyny/vim-cursorword'                                 " Underlines the word under the cursor
 Plug 'lfv89/vim-interestingwords'                             " A vim plugin for highlighting and navigating words
 Plug 'ap/vim-css-color'                                       " show color directly
+Plug 'tribela/vim-transparent' " transparent background
 
 " functionality
 Plug 'tpope/vim-vinegar'                                      " press '-' file system
