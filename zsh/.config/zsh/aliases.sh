@@ -58,6 +58,7 @@ alias subdirsize='du -h -d 1 | sort -hr'
 alias myip='curl ipinfo.io/ip'
 alias mypath='echo $PATH | tr -s ':' '\n''
 alias myport='lsof -nP +c 150 | grep LISTEN'
+alias mywifi="curl -s 'https://gist.githubusercontent.com/keidarcy/da0adc30aac5259cba70d6774b40d568/raw/88a794d35dbb0217b0c939090cfa693a6fa4da6f/wifi-password.sh' | sh"
 alias sed='gsed' # overwrite macos sed to `brew install gnu-sed` /usr/bin/sed
 alias awk='gawk'
 alias grep='grep --color=auto'
