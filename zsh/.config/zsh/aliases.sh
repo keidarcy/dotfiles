@@ -1,5 +1,6 @@
 # Vim
 alias e='nvim'
+alias vim='nvim'
 
 # Easier navigation
 alias ~="cd ~"
