@@ -15,6 +15,7 @@ Plug 'itchyny/vim-cursorword'                                 " Underlines the w
 Plug 'lfv89/vim-interestingwords'                             " A vim plugin for highlighting and navigating words
 Plug 'ap/vim-css-color'                                       " show color directly
 Plug 'tribela/vim-transparent' " transparent background
+Plug 'fladson/vim-kitty' " kitty config syntax highlightling
 
 " functionality
 Plug 'tpope/vim-vinegar'                                      " press '-' file system
