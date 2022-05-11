@@ -1,5 +1,5 @@
 -- ------------------------------------------------------------------------------------
--- 🔨🥄 Configuration file @keidarcy
+-- 🔨🥄 Configuration file @keidarcy 
 -- ------------------------------------------------------------------------------------
 local utils = require("utils")
 hs.hotkey.alertDuration = 0
@@ -58,38 +58,14 @@ dofile("app-keybinding.lua")
 
 -- Show active window highlighting
 require("window-highlight").start()
--- windowHighlight = require("window-highlight").start()
---
--- WIP pomodoro app
--- local Pomo = require 'pomodoro'
--- hs.hotkey.bind(hyper, '7', Pomo.startNew)
--- hs.hotkey.bind(hyper, '8', Pomo.togglePaused)
--- hs.hotkey.bind(hyper, '9', Pomo.toggleLatestDisplay)
+
+-- Show time
+hs.hotkey.bind(hyper, "t", function()
+  	local prettyNow = os.date("%A              📅%B %d %Y              🕐%I:%M:%S %p")
+	hs.alert.show(prettyNow, hs.alert.defaultStyle, hs.screen.mainScreen(), 1.5)
+end)
 
 -- reload setting
 hs.hotkey.bind(hyper, "r", hs.reload)
 hs.alert.show("🔨🥄✅")
 
--- hs.loadSpoon("Seal")
--- spoon.Seal:loadPlugins({"apps", "useractions", "pasteboard"})
--- spoon.Seal:bindHotkeys({
---     toggle = {hyper, "Space"}
--- })
--- spoon.Seal.plugins.useractions.actions = {
---     ["Google Search"] = {
---         keyword = "gg",
---         description = "Google search and I'm feeling lucky",
---         fn = function(query)
---             hs.urlevent.openURL("https://www.google.com/search?q=" .. query)
---         end,
---         url = "https://www.google.com",
---         icon = "favicon"
---     },
---     ["Tell me"] = {
---         keyword = "tm",
---         fn = function(str)
---             hs.alert.show(str)
---         end
---     }
--- }
--- spoon.Seal:start()
