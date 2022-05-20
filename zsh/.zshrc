@@ -10,6 +10,7 @@ fi
 # DIRSTACKSIZE=100
 setopt AUTO_PUSHD
 setopt no_beep # avoid all annoying beep noise
+setopt share_history # SHARE!
 export DEFAULT_USER="$(whoami)" # hide host and username
 export LC_ALL=en_US.UTF-8 # Fix 'Warning: Failed to set locale category LC_TIME to en_JP.'
 
