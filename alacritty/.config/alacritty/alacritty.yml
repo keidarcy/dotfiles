@@ -23,7 +23,7 @@ window:
     x: 12
     y: 10
   decorations: buttonless
-background_opacity: 0.9
+  opacity: 0.9
 
 scrolling:
   history: 10000
