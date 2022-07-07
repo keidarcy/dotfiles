@@ -23,7 +23,7 @@ window:
     x: 12
     y: 10
   decorations: buttonless
-  opacity: 0.9
+  opacity: 1
 
 scrolling:
   history: 10000
