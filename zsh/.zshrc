@@ -116,7 +116,3 @@ export FZF_DEFAULT_OPTS=$FZF_DEFAULT_OPTS'
 
 # --------- fasd https://github.com/clvv/fasd
 eval "$(fasd --init auto)"
-
-# tabtab source for packages
-# uninstall by removing these lines
-# [[ -f ~/.config/tabtab/zsh/__tabtab.zsh ]] && . ~/.config/tabtab/zsh/__tabtab.zsh || true
