@@ -7,6 +7,11 @@ export PATH="$VOLTA_HOME/bin:$PATH"
 
 # Bun
 # bun completions
-[ -s "/Users/yahao.xing/.bun/_bun" ] && source "/Users/yahao.xing/.bun/_bun"
+[ -s "$HOME/.bun/_bun" ] && source "$HOME/.bun/_bun"
 export BUN_INSTALL="/Users/yahao.xing/.bun"
 export PATH="$BUN_INSTALL/bin:$PATH"
+
+# pnpm
+export PNPM_HOME="$HOME/Library/pnpm"
+export PATH="$PNPM_HOME:$PATH"
+# pnpm end

@@ -116,3 +116,4 @@ export FZF_DEFAULT_OPTS=$FZF_DEFAULT_OPTS'
 
 # --------- fasd https://github.com/clvv/fasd
 eval "$(fasd --init auto)"
+
