@@ -1,11 +1,5 @@
 # >>>>>>>HELLO ZSH WORLD<<<<<<<<
 
-## p10k instant prompt to avoid latency of .zshrc load
-if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
-    source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
-fi
-
-
 # Completing directory stack
 # DIRSTACKSIZE=100
 setopt AUTO_PUSHD
@@ -50,29 +44,32 @@ bindkey -v '^?' backward-delete-char
 ZINIT_HOME="${XDG_DATA_HOME:-${HOME}/.local/share}/zinit/zinit.git"
 source "${ZINIT_HOME}/zinit.zsh"
 
-zinit snippet OMZL::git.zsh
-zinit snippet OMZP::git
-# zinit snippet OMZP::git-prompt
-
-# https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins/vi-mode
-zinit snippet OMZP::vi-mode
 VI_MODE_SET_CURSOR=true # for cursor shape
 
 
-zinit ice as"completion"
+zinit ice as"completion" wait"2"
 zinit snippet OMZP::docker/_docker
 
-zinit ice as"completion"
+zinit ice as"completion" wait"2"
 zinit snippet OMZP::docker-compose/_docker-compose
 
 zinit ice as"completion"
 zinit snippet OMZP::fd/_fd
 
+zinit snippet OMZL::git.zsh
+zinit snippet OMZP::git
+# zinit snippet OMZP::git-prompt
+# https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins/vi-mode
+zinit snippet OMZP::vi-mode
+
 zinit for \
 light-mode  zsh-users/zsh-autosuggestions \
 light-mode  zdharma-continuum/fast-syntax-highlighting \
+light-mode  romkatv/zsh-prompt-benchmark\
 
-zinit ice depth=1; zinit light romkatv/powerlevel10k
+zinit ice depth=1 pick="jovial.zsh-theme"; zinit light keidarcy/joy
+# give a shot of simple thin prompt
+# zinit ice depth=1; zinit light romkatv/powerlevel10k
 
 
 if [[ "$(uname -s)" == "Darwin" ]]; then
@@ -93,7 +90,7 @@ _comp_options+=(globdots) # Include hidden files.
 
 for file in ~/.config/zsh/*.sh; do [[ -f $file ]] && source $file; done
 [[ -f ~/.fzf.zsh ]] && source ~/.fzf.zsh # enable fzf keybindings tab completion
-[[ -f ~/.p10k.zsh ]] && source ~/.p10k.zsh # enable p10k theme
+# [[ -f ~/.p10k.zsh ]] && source ~/.p10k.zsh # enable p10k theme
 
 # --------------Tools----------------------
 #
