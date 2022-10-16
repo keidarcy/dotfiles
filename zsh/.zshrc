@@ -21,7 +21,8 @@ export EDITOR=nvim
 #COMPLETION_WAITING_DOTS="true"
 #DISABLE_UNTRACKED_FILES_DIRTY="true"
 
-# --------------Vim area-------------------------------
+# -----------------------------------------------------
+# vim
 bindkey -v
 # https://github.com/softmoth/zsh-vim-mode#keytimeout
 KEYTIMEOUT=100
@@ -38,19 +39,19 @@ bindkey -M menuselect 'k' vi-up-line-or-history
 bindkey -M menuselect 'l' vi-forward-char
 bindkey -M menuselect 'j' vi-down-line-or-history
 bindkey -v '^?' backward-delete-char
-# -----------------------------------------------------
 
-# -------------zinit----------------------
+# -----------------------------------------------------
+# zint https://zdharma-continuum.github.io/zinit/wiki/
 ZINIT_HOME="${XDG_DATA_HOME:-${HOME}/.local/share}/zinit/zinit.git"
 source "${ZINIT_HOME}/zinit.zsh"
 
 VI_MODE_SET_CURSOR=true # for cursor shape
 
 
-zinit ice as"completion" wait"2"
+zinit ice as"completion" wait lucid
 zinit snippet OMZP::docker/_docker
 
-zinit ice as"completion" wait"2"
+zinit ice as"completion" wait lucid
 zinit snippet OMZP::docker-compose/_docker-compose
 
 zinit ice as"completion"
@@ -85,18 +86,16 @@ else
     compinit -C
 fi
 _comp_options+=(globdots) # Include hidden files.
-# -------------zinit----------------------
 
-
+# -----------------------------------------------------
+# custom scripts
 for file in ~/.config/zsh/*.sh; do [[ -f $file ]] && source $file; done
-[[ -f ~/.fzf.zsh ]] && source ~/.fzf.zsh # enable fzf keybindings tab completion
 # [[ -f ~/.p10k.zsh ]] && source ~/.p10k.zsh # enable p10k theme
 
-# --------------Tools----------------------
-#
-#
-# -------- fzf https://github.com/junegunn/fzf
-#
+
+# -----------------------------------------------------
+# fzf https://github.com/junegunn/fzf
+[[ -f ~/.fzf.zsh ]] && source ~/.fzf.zsh # enable fzf keybindings tab completion
 export FZF_COMPLETION_TRIGGER='*'
 export FZF_DEFAULT_COMMAND='fd --type f --hidden --follow --exclude .git'
 export FZF_CTRL_R_OPTS="--history=${HISTFILE} --history-size=200000"
@@ -111,6 +110,7 @@ export FZF_DEFAULT_OPTS=$FZF_DEFAULT_OPTS'
 # export FZF_TMUX=1
 # export FZF_TMUX_OPTS='-p50% -y10%'
 
-# --------- fasd https://github.com/clvv/fasd
+# -----------------------------------------------------
+# fasd https://github.com/clvv/fasd
 eval "$(fasd --init auto)"
 
