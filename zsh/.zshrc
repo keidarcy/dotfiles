@@ -1,18 +1,31 @@
 # >>>>>>>HELLO ZSH WORLD<<<<<<<<
 
 # Completing directory stack
+
 # DIRSTACKSIZE=100
 setopt AUTO_PUSHD
 setopt no_beep # avoid all annoying beep noise
-setopt share_history # SHARE!
 export DEFAULT_USER="$(whoami)" # hide host and username
 export LC_ALL=en_US.UTF-8 # Fix 'Warning: Failed to set locale category LC_TIME to en_JP.'
 
-# Set history
+# #region history
 HISTFILE=~/.zsh_history
-export HISTSIZE=1000
-export SAVEHIST=10001
-HISTORY_IGNORE="(l[a,l,s,h,]*|c[lear]|[vim,zsh]rc|pwd|exit|cd|cd *|z)"
+HISTORY_IGNORE="(l[a,l,s,h,]*|c[lear]|[vim,zsh]rc|pwd|exit|cd|cd# *|z# *|e# *)"
+HISTSIZE=10000
+SAVEHIST=10001
+# see https://zsh.sourceforge.io/Doc/Release/Options.html for detail
+setopt APPEND_HISTORY             # zsh が終了した際に HISTFILE を置き換えるのではなく追記する
+setopt EXTENDED_HISTORY           # HISTFILE にタイムスタンプを記録する
+setopt HIST_EXPIRE_DUPS_FIRST     # 重複する履歴を削除してから保存する
+setopt HIST_IGNORE_ALL_DUPS       # 履歴の内容と重複する行を履歴リストに追加しない
+setopt HIST_IGNORE_SPACE          # 先頭がスペースで始まる行を履歴に追加しない
+setopt HIST_LEX_WORDS             # クォートされた空白を正しく取り扱う
+setopt HIST_NO_STORE              # history コマンドを履歴に追加しない
+setopt HIST_REDUCE_BLANKS         # 履歴に追加する際に不要な空白を取り除く
+setopt HIST_SAVE_NO_DUPS          # HISTFILE に重複する履歴を保存しない
+setopt HIST_VERIFY                # 履歴補完した内容を即実行せず行エディタに読み込む
+setopt SHARE_HISTORY              # 複数の zsh 間で HISTFILE を共有する 
+#endregion history
 
 # Basic Settings
 export EDITOR=nvim
@@ -40,8 +53,8 @@ bindkey -M menuselect 'l' vi-forward-char
 bindkey -M menuselect 'j' vi-down-line-or-history
 bindkey -v '^?' backward-delete-char
 
-# -----------------------------------------------------
-# zint https://zdharma-continuum.github.io/zinit/wiki/
+#region zinit
+#https://zdharma-continuum.github.io/zinit/wiki/
 ZINIT_HOME="${XDG_DATA_HOME:-${HOME}/.local/share}/zinit/zinit.git"
 source "${ZINIT_HOME}/zinit.zsh"
 
@@ -54,7 +67,7 @@ zinit snippet OMZP::docker/_docker
 zinit ice as"completion" wait lucid
 zinit snippet OMZP::docker-compose/_docker-compose
 
-zinit ice as"completion"
+zinit ice as"completion" wait lucid
 zinit snippet OMZP::fd/_fd
 
 zinit snippet OMZL::git.zsh
@@ -63,10 +76,12 @@ zinit snippet OMZP::git
 # https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins/vi-mode
 zinit snippet OMZP::vi-mode
 
+zinit ice wait lucid
 zinit for \
-light-mode  zsh-users/zsh-autosuggestions \
-light-mode  zdharma-continuum/fast-syntax-highlighting \
-light-mode  romkatv/zsh-prompt-benchmark\
+light-mode zsh-users/zsh-autosuggestions \
+light-mode zdharma-continuum/fast-syntax-highlighting \
+light-mode romkatv/zsh-prompt-benchmark \
+light-mode zdharma-continuum/history-search-multi-word
 
 zinit ice depth=1 pick="jovial.zsh-theme"; zinit light keidarcy/joy
 # give a shot of simple thin prompt
@@ -86,14 +101,16 @@ else
     compinit -C
 fi
 _comp_options+=(globdots) # Include hidden files.
+#endregion zinit
 
-# -----------------------------------------------------
+#region custom
 # custom scripts
 for file in ~/.config/zsh/*.sh; do [[ -f $file ]] && source $file; done
 # [[ -f ~/.p10k.zsh ]] && source ~/.p10k.zsh # enable p10k theme
+#endregion custom scripts
 
 
-# -----------------------------------------------------
+#region fzf
 # fzf https://github.com/junegunn/fzf
 [[ -f ~/.fzf.zsh ]] && source ~/.fzf.zsh # enable fzf keybindings tab completion
 export FZF_COMPLETION_TRIGGER='*'
@@ -107,8 +124,16 @@ export FZF_DEFAULT_OPTS=$FZF_DEFAULT_OPTS'
 --color=fg:-1,bg:-1,hl:#5fff87,fg+:-1,bg+:-1,hl+:#ffaf5f
 --color=info:#af87ff,prompt:#5fff87,pointer:#ff87d7,marker:#ff00aa,spinner:#ff87d7
 '
+
+# overrides fzf "^R" use `history-search-multi-word` "^R" shortcut
+bindkey -M emacs "^R" history-search-multi-word
+bindkey -M vicmd "^R" history-search-multi-word
+bindkey -M viins "^R" history-search-multi-word
+zstyle ":history-search-multi-word" highlight-color "fg=#5fff87,bold"
 # export FZF_TMUX=1
 # export FZF_TMUX_OPTS='-p50% -y10%'
+
+#endregion fzf
 
 # -----------------------------------------------------
 # fasd https://github.com/clvv/fasd
