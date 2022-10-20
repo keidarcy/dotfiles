@@ -14,8 +14,7 @@ Plug 'vim-airline/vim-airline-themes'                         " A collection of 
 Plug 'itchyny/vim-cursorword'                                 " Underlines the word under the cursor
 Plug 'lfv89/vim-interestingwords'                             " A vim plugin for highlighting and navigating words
 Plug 'ap/vim-css-color'                                       " show color directly
-Plug 'tribela/vim-transparent' " transparent background
-Plug 'fladson/vim-kitty' " kitty config syntax highlightling
+Plug 'tribela/vim-transparent'                                " transparent background
 
 " functionality
 Plug 'tpope/vim-vinegar'                                      " press '-' file system
@@ -26,8 +25,8 @@ Plug 'terryma/vim-multiple-cursors'                           " ctrl + n select 
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'                                       " Things you can do with fzf and Vim
 Plug 'tpope/vim-fugitive'                                     " Git inside vim, like :Gcommit
-" Plug 'junegunn/gv.vim'                                        " A git commit browser in Vim
-" Plug 'airblade/vim-gitgutter'
+" Plug 'junegunn/gv.vim'                                      " A git commit browser in Vim
+Plug 'airblade/vim-gitgutter'                                 " shows git diff markers
 "
 "
 " use normal easymotion when in vim mode
