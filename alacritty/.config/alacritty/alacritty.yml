@@ -7,7 +7,7 @@
 ###
 
 import:
-  - ~/.config/alacritty/local.yml # Ayu, Gruvbox, Dracula, Monokai Pro
+  - ~/.config/alacritty/local.yml # ayu, gruvbox, dracula, monokai-pro
 
 env:
   TERM: alacritty
@@ -42,3 +42,6 @@ font:
 
 key_bindings:
   - { key: Key0, mods: Command, action: ResetFontSize }
+  - { key: F, mods: Alt, chars: "\x1bf" }
+  - { key: B, mods: Alt, chars: "\x1bb" }
+  - { key: D, mods: Alt, chars: "\x1bd" }
