@@ -83,10 +83,19 @@ light-mode zdharma-continuum/fast-syntax-highlighting \
 light-mode romkatv/zsh-prompt-benchmark \
 light-mode zdharma-continuum/history-search-multi-word
 
+# Load joy theme
 zinit ice depth=1 pick="jovial.zsh-theme"; zinit light keidarcy/joy
-# give a shot of simple thin prompt
-# zinit ice depth=1; zinit light romkatv/powerlevel10k
 
+# Load powerlevel10k theme
+# zinit ice depth"1" # git clone depth
+# zinit light romkatv/powerlevel10k
+# [[ -f ~/.p10k.zsh ]] && source ~/.p10k.zsh # enable p10k theme
+
+# Load starship theme
+# zinit ice as"command" from"gh-r" \ # `starship` binary as command, from github release
+#           atclone"./starship init zsh > init.zsh; ./starship completions zsh > _starship" \ # starship setup at clone(create init.zsh, completion)
+#           atpull"%atclone" src"init.zsh" # pull behavior same as clone, source init.zsh
+# zinit light starship/starship
 
 if [[ "$(uname -s)" == "Darwin" ]]; then
     FPATH="$(brew --prefix)/share/zsh/site-functions:${FPATH}"
@@ -106,7 +115,6 @@ _comp_options+=(globdots) # Include hidden files.
 #region custom
 # custom scripts
 for file in ~/.config/zsh/*.sh; do [[ -f $file ]] && source $file; done
-# [[ -f ~/.p10k.zsh ]] && source ~/.p10k.zsh # enable p10k theme
 #endregion custom scripts
 
 
