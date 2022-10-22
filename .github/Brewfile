@@ -57,3 +57,5 @@ brew "alacritty"
 brew "hammerspoon"
 # Bash scripts that integrate bat with various command-line tools
 brew "eth-p/software/bat-extras"
+
+brew "gitui"
