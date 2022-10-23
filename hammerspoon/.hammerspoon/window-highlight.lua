@@ -22,7 +22,8 @@ hs.window.highlight.ui.frameColor = {
 -- hs.window.highlight.ui.windowHiddenFlashColorInvert = {0, 1, 1, 0.8}
 
 local module = {}
-module.logger = hs.logger.new("windowHighlight.lua")
+local enabled = false
+local log = hs.logger.new("window-highlight", "debug")
 
 module.windowFilter = hs.window.filter.new():setOverrideFilter{
     visible = true,
@@ -31,18 +32,16 @@ module.windowFilter = hs.window.filter.new():setOverrideFilter{
     currentSpace = true
 }
 
-module.start = function()
-    module.logger.i("Starting Window Highlight")
-    hs.window.highlight.start(nil, module.windowFilter)
-    hs.hotkey.bind(hyper, "p", function()
-        module.stop()
-    end)
-    return module
-end
-
-module.stop = function()
-    module.logger.i("Stopping Window Highlight")
-    hs.window.highlight.stop()
+module.toggle = function()
+    if enabled == false then
+        log:i("Starting Window Highlight")
+        hs.window.highlight.start(nil, module.windowFilter)
+        enabled = true
+    else
+        enabled = false
+        log:i("Stopping Window Highlight")
+        hs.window.highlight.stop()
+    end
     return module
 end
 

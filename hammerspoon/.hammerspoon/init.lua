@@ -57,12 +57,17 @@ dofile("env.lua")
 dofile("app-keybinding.lua")
 
 -- Show active window highlighting
-require("window-highlight").start()
+local windowHighlight = require("window-highlight")
+hs.hotkey.bind(hyper, "h", function()
+    windowHighlight.toggle()
+end)
+windowHighlight.toggle()
 
 -- Show time
 hs.hotkey.bind(hyper, "t", function()
-  	local prettyNow = os.date("%A              📅%B %d %Y              🕐%I:%M:%S %p")
-	hs.alert.show(prettyNow, hs.alert.defaultStyle, hs.screen.mainScreen(), 1.5)
+    local prettyNow = os.date(
+        "%A              📅%B %d %Y              🕐%I:%M:%S %p")
+    hs.alert.show(prettyNow, hs.alert.defaultStyle, hs.screen.mainScreen(), 1.5)
 end)
 
 -- reload setting
