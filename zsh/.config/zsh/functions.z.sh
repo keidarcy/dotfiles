@@ -16,6 +16,17 @@ vs ()
   fi
 }
 
+# https://github.com/clvv/fasd/blob/90b531a5daaa545c74c7d98974b54cbdb92659fc/fasd#L89
+fasd_cd() {
+  if [ $# -le 1 ]; then
+    fasd "$@"
+  else
+    local _fasd_ret="$(fasd -e 'printf %s' "$@")"
+    [ -z "$_fasd_ret" ] && return
+    [ -d "$_fasd_ret" ] && cd "$_fasd_ret" || printf %s\n "$_fasd_ret"
+  fi
+}
+
 # using ripgrep combined with preview
 # find-in-file - usage: fif <searchTerm>
 fif() {

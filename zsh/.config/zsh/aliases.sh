@@ -10,6 +10,10 @@ alias ...="cd ../.."
 alias ....="cd ../../.."
 alias .....="cd ../../../.."
 
+# https://github.com/clvv/fasd/blob/90b531a5daaa545c74c7d98974b54cbdb92659fc/fasd#L98-L99
+alias z='fasd_cd -d'
+alias zz='fasd_cd -d -i'
+
 # ls - exa
 # https://github.com/ogham/exa#command-line-options
 alias ls='exa'

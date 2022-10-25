@@ -142,7 +142,3 @@ zstyle ":history-search-multi-word" highlight-color "fg=#5fff87,bold"
 
 #endregion fzf
 
-# -----------------------------------------------------
-# fasd https://github.com/clvv/fasd
-eval "$(fasd --init auto)"
-
