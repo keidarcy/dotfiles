@@ -1,12 +1,18 @@
+# Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
+# Initialization code that may require console input (password prompts, [y/n]
+# confirmations, etc.) must go above this block; everything else may go below.
+if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
+  source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
+fi
 # >>>>>>>HELLO ZSH WORLD<<<<<<<<
 
 # Completing directory stack
 
 # DIRSTACKSIZE=100
 setopt AUTO_PUSHD
-setopt no_beep # avoid all annoying beep noise
+setopt no_beep                  # avoid all annoying beep noise
 export DEFAULT_USER="$(whoami)" # hide host and username
-export LC_ALL=en_US.UTF-8 # Fix 'Warning: Failed to set locale category LC_TIME to en_JP.'
+export LC_ALL=en_US.UTF-8       # Fix 'Warning: Failed to set locale category LC_TIME to en_JP.'
 
 # #region history
 HISTFILE=~/.zsh_history
@@ -14,17 +20,17 @@ HISTORY_IGNORE="(l[a,l,s,h,]*|c[lear]|[vim,zsh]rc|pwd|exit|cd|cd# *|z# *|e# *)"
 HISTSIZE=10000
 SAVEHIST=10001
 # see https://zsh.sourceforge.io/Doc/Release/Options.html for detail
-setopt APPEND_HISTORY             # zsh が終了した際に HISTFILE を置き換えるのではなく追記する
-setopt EXTENDED_HISTORY           # HISTFILE にタイムスタンプを記録する
-setopt HIST_EXPIRE_DUPS_FIRST     # 重複する履歴を削除してから保存する
-setopt HIST_IGNORE_ALL_DUPS       # 履歴の内容と重複する行を履歴リストに追加しない
-setopt HIST_IGNORE_SPACE          # 先頭がスペースで始まる行を履歴に追加しない
-setopt HIST_LEX_WORDS             # クォートされた空白を正しく取り扱う
-setopt HIST_NO_STORE              # history コマンドを履歴に追加しない
-setopt HIST_REDUCE_BLANKS         # 履歴に追加する際に不要な空白を取り除く
-setopt HIST_SAVE_NO_DUPS          # HISTFILE に重複する履歴を保存しない
-setopt HIST_VERIFY                # 履歴補完した内容を即実行せず行エディタに読み込む
-setopt SHARE_HISTORY              # 複数の zsh 間で HISTFILE を共有する 
+setopt APPEND_HISTORY         # zsh が終了した際に HISTFILE を置き換えるのではなく追記する
+setopt EXTENDED_HISTORY       # HISTFILE にタイムスタンプを記録する
+setopt HIST_EXPIRE_DUPS_FIRST # 重複する履歴を削除してから保存する
+setopt HIST_IGNORE_ALL_DUPS   # 履歴の内容と重複する行を履歴リストに追加しない
+setopt HIST_IGNORE_SPACE      # 先頭がスペースで始まる行を履歴に追加しない
+setopt HIST_LEX_WORDS         # クォートされた空白を正しく取り扱う
+setopt HIST_NO_STORE          # history コマンドを履歴に追加しない
+setopt HIST_REDUCE_BLANKS     # 履歴に追加する際に不要な空白を取り除く
+setopt HIST_SAVE_NO_DUPS      # HISTFILE に重複する履歴を保存しない
+setopt HIST_VERIFY            # 履歴補完した内容を即実行せず行エディタに読み込む
+setopt SHARE_HISTORY          # 複数の zsh 間で HISTFILE を共有する
 #endregion history
 
 # Basic Settings
@@ -60,7 +66,6 @@ source "${ZINIT_HOME}/zinit.zsh"
 
 VI_MODE_SET_CURSOR=true # for cursor shape
 
-
 zinit ice as"completion" wait lucid
 zinit snippet OMZP::docker/_docker
 
@@ -77,18 +82,19 @@ zinit snippet OMZP::vi-mode
 
 zinit ice wait lucid
 zinit for \
-light-mode zsh-users/zsh-autosuggestions \
-light-mode zdharma-continuum/fast-syntax-highlighting \
-light-mode romkatv/zsh-prompt-benchmark \
-light-mode zdharma-continuum/history-search-multi-word
+    light-mode zsh-users/zsh-autosuggestions \
+    light-mode zdharma-continuum/fast-syntax-highlighting \
+    light-mode romkatv/zsh-prompt-benchmark \
+    light-mode zdharma-continuum/history-search-multi-word
 
 # Load joy theme
-zinit ice depth=1 pick="jovial.zsh-theme"; zinit light keidarcy/joy
+# zinit ice depth=1 pick="jovial.zsh-theme"
+# zinit light keidarcy/joy
 
 # Load powerlevel10k theme
-# zinit ice depth"1" # git clone depth
-# zinit light romkatv/powerlevel10k
-# [[ -f ~/.p10k.zsh ]] && source ~/.p10k.zsh # enable p10k theme
+zinit ice depth"1" # git clone depth
+zinit light romkatv/powerlevel10k
+[[ -f ~/.p10k.zsh ]] && source ~/.p10k.zsh # enable p10k theme
 
 # Load starship theme
 # zinit ice as"command" from"gh-r" \ # `starship` binary as command, from github release
@@ -116,7 +122,6 @@ _comp_options+=(globdots) # Include hidden files.
 for file in ~/.config/zsh/*.sh; do [[ -f $file ]] && source $file; done
 #endregion custom scripts
 
-
 #region fzf
 # fzf https://github.com/junegunn/fzf
 [[ -f ~/.fzf.zsh ]] && source ~/.fzf.zsh # enable fzf keybindings tab completion
@@ -141,4 +146,3 @@ zstyle ":history-search-multi-word" highlight-color "fg=#5fff87,bold"
 # export FZF_TMUX_OPTS='-p50% -y10%'
 
 #endregion fzf
-
