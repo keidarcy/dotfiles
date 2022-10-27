@@ -167,7 +167,7 @@ nnoremap <leader>pv :Vex<CR>
 "-------------------------------Plugins Related----------------------------"
 
 """"""""""""""""""""
-" => NERDTre
+" => NERDTree
 """"""""""""""""""""
 let NERDTreeHijackNetrw = 0
 let NERDTreeShowHidden = 1

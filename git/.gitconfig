@@ -8,6 +8,7 @@
     editor = /usr/local/bin/nvim
     autoCRLF = input # unix - input, windows - true
     # https://github.com/dandavison/delta#configuration
+    # use `git --no-pager diff` to avoid pager 
     pager = delta
 
 [includeIf "gitdir:~/work/"]
