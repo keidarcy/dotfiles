@@ -87,6 +87,7 @@ zinit for \
     light-mode romkatv/zsh-prompt-benchmark \
     light-mode zdharma-continuum/history-search-multi-word
 
+#### theme
 # Load joy theme
 # zinit ice depth=1 pick="jovial.zsh-theme"
 # zinit light keidarcy/joy
@@ -101,6 +102,7 @@ zinit light romkatv/powerlevel10k
 #           atclone"./starship init zsh > init.zsh; ./starship completions zsh > _starship" \ # starship setup at clone(create init.zsh, completion)
 #           atpull"%atclone" src"init.zsh" # pull behavior same as clone, source init.zsh
 # zinit light starship/starship
+#### theme
 
 if [[ "$(uname -s)" == "Darwin" ]]; then
     FPATH="$(brew --prefix)/share/zsh/site-functions:${FPATH}"
