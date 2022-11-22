@@ -92,16 +92,17 @@ zinit for \
 # zinit ice depth=1 pick="jovial.zsh-theme"
 # zinit light keidarcy/joy
 
-# Load powerlevel10k theme
+## Load powerlevel10k theme
 zinit ice depth"1" # git clone depth
 zinit light romkatv/powerlevel10k
 [[ -f ~/.p10k.zsh ]] && source ~/.p10k.zsh # enable p10k theme
 
-# Load starship theme
+## Load starship theme
 # zinit ice as"command" from"gh-r" \ # `starship` binary as command, from github release
 #           atclone"./starship init zsh > init.zsh; ./starship completions zsh > _starship" \ # starship setup at clone(create init.zsh, completion)
 #           atpull"%atclone" src"init.zsh" # pull behavior same as clone, source init.zsh
 # zinit light starship/starship
+# eval "$(starship init zsh)"
 #### theme
 
 if [[ "$(uname -s)" == "Darwin" ]]; then
