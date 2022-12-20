@@ -1,11 +1,12 @@
 # Vim
 alias e='nvim'
-alias vim='nvim'
+# keep vim pure
+# alias vim='nvim'
 
 # Easier navigation
 alias ~="cd ~"
 alias ..="cd .."
-alias ..\/="cd .."
+alias ..="cd .."
 alias ...="cd ../.."
 alias ....="cd ../../.."
 alias .....="cd ../../../.."
@@ -21,7 +22,6 @@ alias l='exa -lhF'
 alias ll='exa -lahF --git --icons'
 alias la='exa -lbhHigUmuSa@ --time-style=long-iso --git --color-scale' # all extended list
 alias tree='exa --tree --level=3'
-
 
 # Git Stuff
 alias gs='git status'
@@ -55,19 +55,18 @@ alias c='clear'
 alias cc='c' # overwrite /usr/bin/cc
 alias rr='ranger'
 alias mkdir='mkdir -p'
-alias zshrc="e $HOME/dotfiles/zsh/.zshrc"
-alias vimrc="e $HOME/dotfiles/vim/.vimrc"
+alias zshrc='e $HOME/dotfiles/zsh/.zshrc'
+alias vimrc='e $HOME/dotfiles/vim/.vimrc'
 alias update='source ~/.zshrc'
 alias udpate='update'
 alias dirsize='du -sh'
 alias subdirsize='du -h -d 1 | sort -hr'
 alias myip='curl ipinfo.io/ip'
-alias mypath="echo $PATH | tr -s ':' '\n'"
+alias mypath='echo $PATH | tr -s ':' "\n"'
 alias myport='lsof -nP +c 150 | grep LISTEN'
 alias mywifi="curl -s 'https://gist.githubusercontent.com/keidarcy/da0adc30aac5259cba70d6774b40d568/raw/88a794d35dbb0217b0c939090cfa693a6fa4da6f/wifi-password.sh' | sh"
 alias sed='gsed' # overwrite macos sed to `brew install gnu-sed` /usr/bin/sed
 alias awk='gawk'
 alias grep='grep --color=auto'
-
 
 alias when-c='when-changed -r -v -1 . '
