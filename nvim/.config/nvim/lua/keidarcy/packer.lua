@@ -79,6 +79,10 @@ return require('packer').startup(function(use)
       requires = { 'kyazdani42/nvim-web-devicons', opt = true }
   }
 
+  use("airblade/vim-gitgutter")
+  use("tpope/vim-commentary")
+  use("tpope/vim-surround")
+
   -- Automatically set up your configuration after cloning packer.nvim
   -- Put this at the end after all plugins
   if packer_bootstrap then
