@@ -25,6 +25,7 @@ return require('packer').startup(function(use)
 	  requires = { {'nvim-lua/plenary.nvim'} }
   }
 
+  -- theme
   use({
 	  'rose-pine/neovim',
 	  as = 'rose-pine',
@@ -33,11 +34,17 @@ return require('packer').startup(function(use)
 	  end
   })
   use { "ellisonleao/gruvbox.nvim" }
+
+  -- lsp
   use({'nvim-treesitter/nvim-treesitter', run = ':TSUpdate'})
   use('nvim-treesitter/playground')
   use('theprimeagen/harpoon')
+
   use('mbbill/undotree')
+
+  -- git
   use('tpope/vim-fugitive')
+  use("lewis6991/gitsigns")
 
   use {
 	  'VonHeikemen/lsp-zero.nvim',
@@ -79,7 +86,6 @@ return require('packer').startup(function(use)
       requires = { 'kyazdani42/nvim-web-devicons', opt = true }
   }
 
-  use("airblade/vim-gitgutter")
   use("tpope/vim-commentary")
   use("tpope/vim-surround")
 
