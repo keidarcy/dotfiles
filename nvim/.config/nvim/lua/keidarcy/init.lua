@@ -1,2 +1,2 @@
 require("keidarcy.remap")
-require("keidarcy.set")
+require("keidarcy.setup")

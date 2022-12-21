@@ -30,3 +30,8 @@ vim.opt.updatetime = 50
 
 vim.opt.colorcolumn = "80"
 
+-- share clipboard with system
+vim.opt.clipboard = "unnamedplus"
+
+-- highlight on yank
+vim.cmd [[au TextYankPost * lua vim.highlight.on_yank {on_visual = false}]]
