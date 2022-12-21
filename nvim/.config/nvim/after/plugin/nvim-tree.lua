@@ -25,8 +25,9 @@ require("nvim-tree").setup({
     group_empty = true,
   },
   filters = {
-    dotfiles = true,
+    dotfiles = false,
   },
 })
 
-vim.keymap.set("n", "<c-n>", ":NvimTreeFindFileToggle<CR>")
+vim.keymap.set("n", "<c-b>", ":NvimTreeFindFileToggle<CR>")
+
