@@ -28,10 +28,17 @@ vim.opt.isfname:append("@-@")
 
 vim.opt.updatetime = 50
 
-vim.opt.colorcolumn = "80"
+vim.opt.colorcolumn = "0"
 
 -- share clipboard with system
 vim.opt.clipboard = "unnamedplus"
 
--- highlight on yank
-vim.cmd [[au TextYankPost * lua vim.highlight.on_yank {on_visual = false}]]
+-- highlight on yank 200ms
+vim.cmd [[au TextYankPost * lua vim.highlight.on_yank {on_visual = true}]]
+
+-- run source on save
+vim.cmd [[ augroup autosourcing
+	auto!
+	autocmd BufWritePost .vimrc source %
+augroup END ]]
+
