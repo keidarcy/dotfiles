@@ -50,6 +50,9 @@ lsp.setup_nvim_cmp({
 --    }
 --})
 
+
+vim.opt.signcolumn = 'yes'
+
 lsp.on_attach(function(client, bufnr)
   local opts = {buffer = bufnr, remap = false}
 
@@ -58,7 +61,8 @@ lsp.on_attach(function(client, bufnr)
       return
   end
 
-  vim.keymap.set("n", "gd", vim.lsp.buf.definition, opts)
+  -- https://github.com/VonHeikemen/lsp-zero.nvim#default-keybindings-1
+  -- vim.keymap.set("n", "gd", vim.lsp.buf.definition, opts)
   vim.keymap.set("n", "gi", vim.lsp.buf.implementation, opts)
   vim.keymap.set("n", "gh", vim.lsp.buf.hover, opts)
 
