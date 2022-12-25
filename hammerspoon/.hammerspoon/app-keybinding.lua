@@ -1,14 +1,17 @@
 local utils = require("utils")
 
-local chrome_keys = {utils.remap({"ctrl"}, "j", utils.key_stroke({}, "down")),
-                     utils.remap({"ctrl"}, "k", utils.key_stroke({}, "up")),
-                     utils.remap({"shift", "cmd"}, "E",
-    utils.key_stroke({"alt", "cmd"}, "i"))}
+local chrome_keys = {
+    utils.remap({ "ctrl", "shift" }, "j", utils.key_stroke({}, "down")),
+    utils.remap({ "ctrl", "shift" }, "k", utils.key_stroke({}, "up")),
+    utils.remap({ "shift", "cmd" }, "E", utils.key_stroke({ "alt", "cmd" }, "i"))
+}
 
-local slack_keys = {utils.remap({"ctrl"}, "j", utils.key_stroke({}, "down")),
-                    utils.remap({"ctrl"}, "k", utils.key_stroke({}, "up"))}
+local slack_keys = {
+    utils.remap({ "ctrl", "shift" }, "j", utils.key_stroke({}, "down")),
+    utils.remap({ "ctrl", "shift" }, "k", utils.key_stroke({}, "up"))
+}
 
-local function handle_app_event(name, event, app)
+local function handle_app_event(_, event, app)
     -- Chrome keybind
     if event == hs.application.watcher.activated then
         if app:bundleID() == "com.google.Chrome" or app:bundleID() ==
