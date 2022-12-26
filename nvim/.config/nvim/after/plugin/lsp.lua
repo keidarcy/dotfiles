@@ -26,7 +26,6 @@ lsp.configure('sumneko_lua', {
     }
 })
 
-
 local cmp = require('cmp')
 local cmp_select = { behavior = cmp.SelectBehavior.Select }
 local cmp_mappings = lsp.defaults.cmp_mappings({
@@ -40,6 +39,8 @@ local cmp_mappings = lsp.defaults.cmp_mappings({
 -- this helps with copilot setup
 cmp_mappings['<Tab>'] = nil
 cmp_mappings['<S-Tab>'] = nil
+-- disable enter
+cmp_mappings['<CR>'] = nil
 
 lsp.setup_nvim_cmp({
     mapping = cmp_mappings
@@ -71,7 +72,8 @@ lsp.on_attach(function(client, bufnr)
     map('n', '<C-k>', vim.lsp.buf.signature_help)
     map('n', '<F2>', vim.lsp.buf.rename)
     map('n', '<F4>', vim.lsp.buf.code_action)
-    map('x', '<F4>', vim.lsp.buf.range_code_action)
+    -- map('x', '<F4>', vim.lsp.buf.range_code_action)
+    map('x', '<F4>', '<cmd>lua vim.lsp.buf.range_code_action()<cr>')
 
     -- Diagnostics
     map('n', 'gl', vim.diagnostic.open_float)
