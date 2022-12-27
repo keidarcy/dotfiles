@@ -67,7 +67,7 @@ let g:hybrid_custom_term_colors = 1
 let g:hybrid_reduced_contrast = 1
 let g:palenight_terminal_italics=1
 let g:airline_theme='base16_gruvbox_dark_hard'
-"let g:bg='#CAA9FA'
+let g:bg='#CAA9FA'
 "
 "------Background Color------------"
 set foldcolumn=0

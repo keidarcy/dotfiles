@@ -45,6 +45,8 @@ augroup END ]]
 -- disable mouse
 vim.opt.mouse = ""
 
+-- add new line at end of file
+vim.opt.eol = true
 
 vim.opt.tabstop = 4
 vim.opt.softtabstop = 4
@@ -52,3 +54,5 @@ vim.opt.shiftwidth = 4
 
 -- set 2 space for js,ts,tsx files
 vim.cmd [[autocmd BufEnter *.{js,ts,tsx} :setlocal tabstop=2 shiftwidth=2 expandtab]]
+
+-- vim.o.termguicolors = true
