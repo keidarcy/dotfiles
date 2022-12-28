@@ -97,6 +97,9 @@ defaults write com.apple.dock minimize-to-application -bool true
 # Enable spring loading for all Dock items
 defaults write com.apple.dock enable-spring-load-actions-on-all-items -bool true
 
+# Stop Dock Icons from Bouncing
+defaults write com.apple.dock no-bouncing -bool true
+
 # Set mouse and trackpad tracking speed
 defaults write -g com.apple.mouse.scaling 3
 defaults write -g com.apple.trackpad.scaling 3
