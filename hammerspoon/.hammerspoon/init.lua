@@ -6,7 +6,7 @@ hs.hotkey.alertDuration = 0
 hs.hints.showTitleThresh = 0
 hs.window.animationDuration = 0
 
-hyper = {"alt", "shift"}
+local hyper = {"alt", "shift"}
 
 -- Window Management
 local wm = require("window-manager")

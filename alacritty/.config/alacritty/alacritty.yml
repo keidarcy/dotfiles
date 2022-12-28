@@ -9,6 +9,8 @@
 import:
   - ~/.config/alacritty/local.yml # ayu, gruvbox, dracula, monokai-pro
 
+# https://github.com/nicknisi/dotfiles/issues/33
+# terminals database is inaccessible
 env:
   TERM: xterm-256color
 
@@ -23,7 +25,7 @@ window:
     x: 12
     y: 10
   decorations: buttonless
-  opacity: 1
+  opacity: 0.95
 
 scrolling:
   history: 10000
