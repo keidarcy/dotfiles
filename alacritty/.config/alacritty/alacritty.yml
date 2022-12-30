@@ -30,6 +30,11 @@ window:
 scrolling:
   history: 10000
 
+cursor:
+  style:
+    blinking: Always
+  blink_interval: 600
+
 font:
   normal:
     family: MesloLGS NF # should be "Menlo" or something on macOS.

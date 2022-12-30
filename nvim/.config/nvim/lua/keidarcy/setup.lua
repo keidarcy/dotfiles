@@ -55,4 +55,8 @@ vim.opt.shiftwidth = 4
 -- set 2 space for js,ts,tsx files
 vim.cmd [[autocmd BufEnter *.{js,ts,tsx} :setlocal tabstop=2 shiftwidth=2 expandtab]]
 
--- vim.o.termguicolors = true
+-- format on save
+vim.cmd [[ augroup fmt
+  autocmd!
+  autocmd BufWritePre * undojoin | LspZeroFormat
+augroup END ]]
