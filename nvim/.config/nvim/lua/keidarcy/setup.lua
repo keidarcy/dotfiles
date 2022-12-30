@@ -23,18 +23,20 @@ vim.opt.incsearch = true
 vim.opt.termguicolors = true
 
 vim.opt.scrolloff = 8
-vim.opt.signcolumn = "yes"
 vim.opt.isfname:append("@-@")
 
 vim.opt.updatetime = 50
-
-vim.opt.colorcolumn = "0"
 
 -- share clipboard with system
 vim.opt.clipboard = "unnamedplus"
 
 -- highlight on yank 200ms
 vim.cmd [[au TextYankPost * lua vim.highlight.on_yank {on_visual = true}]]
+
+-- column color
+-- more setting in gitsigns
+vim.opt.signcolumn = "yes"
+vim.opt.colorcolumn = "0"
 
 -- run source on save
 vim.cmd [[ augroup autosourcing
