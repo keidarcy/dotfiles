@@ -118,11 +118,15 @@ local function setup()
         -- better edit
         use("tpope/vim-commentary")
         use("tpope/vim-surround")
+        use {
+            "windwp/nvim-autopairs",
+            config = function() require("nvim-autopairs").setup {} end
+        }
     end
 
     if packer_bootstrap then
-      print "Restart Neovim required after installation!"
-      require("packer").sync()
+        print "Restart Neovim required after installation!"
+        require("packer").sync()
     end
 
     packer_init()
@@ -133,4 +137,3 @@ local function setup()
 end
 
 setup()
-
