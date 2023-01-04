@@ -87,6 +87,9 @@ local function setup()
         use("github/copilot.vim")
         use("folke/zen-mode.nvim")
 
+        -- terminal
+        use("akinsho/toggleterm.nvim")
+
         -- better view
         use {
             'nvim-tree/nvim-tree.lua',

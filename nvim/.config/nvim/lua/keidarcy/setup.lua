@@ -1,5 +1,3 @@
--- vim.opt.guicursor = " " no fat cursor
-
 vim.opt.nu = true
 vim.opt.relativenumber = true
 
@@ -60,5 +58,10 @@ vim.cmd [[autocmd BufEnter *.{js,ts,tsx} :setlocal tabstop=2 shiftwidth=2 expand
 -- format on save
 vim.cmd [[ augroup fmt
   autocmd!
-  autocmd BufWritePre * undojoin | LspZeroFormat
+  autocmd BufWritePre *.{go,ts,rs,tf,lua} undojoin | LspZeroFormat
 augroup END ]]
+
+-- check spelling
+vim.o.spelloptions = "camel"
+vim.o.spellcapcheck = "" -- don't check for capital letters at start of sentence
+vim.o.fileformats = "unix,mac,dos"
