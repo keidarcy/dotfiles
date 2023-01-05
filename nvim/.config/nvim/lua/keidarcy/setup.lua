@@ -29,7 +29,7 @@ vim.opt.updatetime = 50
 vim.opt.clipboard = "unnamedplus"
 
 -- highlight on yank 200ms
-vim.cmd [[au TextYankPost * lua vim.highlight.on_yank {on_visual = true}]]
+vim.cmd([[au TextYankPost * lua vim.highlight.on_yank {on_visual = true}]])
 
 -- column color
 -- more setting in gitsigns
@@ -37,10 +37,10 @@ vim.opt.signcolumn = "yes"
 vim.opt.colorcolumn = "0"
 
 -- run source on save
-vim.cmd [[ augroup autosourcing
+vim.cmd([[ augroup autosourcing
 	auto!
 	autocmd BufWritePost .vimrc source %
-augroup END ]]
+augroup END ]])
 
 -- disable mouse
 vim.opt.mouse = ""
@@ -53,13 +53,15 @@ vim.opt.softtabstop = 4
 vim.opt.shiftwidth = 4
 
 -- set 2 space for js,ts,tsx files
-vim.cmd [[autocmd BufEnter *.{js,ts,tsx} :setlocal tabstop=2 shiftwidth=2 expandtab]]
+vim.cmd([[autocmd BufEnter *.{js,ts,tsx} :setlocal tabstop=2 shiftwidth=2 expandtab]])
 
 -- format on save
-vim.cmd [[ augroup fmt
+vim.cmd([[
+augroup FormatAutogroup
   autocmd!
-  autocmd BufWritePre *.{go,ts,rs,tf,lua} undojoin | LspZeroFormat
-augroup END ]]
+  autocmd BufWritePost * FormatWrite
+augroup END
+]])
 
 -- check spelling
 vim.o.spelloptions = "camel"

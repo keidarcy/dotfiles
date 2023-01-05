@@ -86,6 +86,8 @@ local function setup()
         }
         use("github/copilot.vim")
         use("folke/zen-mode.nvim")
+        use('mhartington/formatter.nvim')
+
 
         -- terminal
         use("akinsho/toggleterm.nvim")
