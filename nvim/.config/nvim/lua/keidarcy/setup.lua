@@ -36,6 +36,10 @@ vim.cmd([[au TextYankPost * lua vim.highlight.on_yank {on_visual = true}]])
 vim.opt.signcolumn = "yes"
 vim.opt.colorcolumn = "0"
 
+vim.opt.splitbelow = true
+vim.opt.splitright = true
+
+
 -- run source on save
 vim.cmd([[ augroup autosourcing
 	auto!

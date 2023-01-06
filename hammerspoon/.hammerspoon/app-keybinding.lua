@@ -1,8 +1,10 @@
 local utils = require("utils")
 
 local chrome_keys = {
-    utils.remap({ "ctrl", "shift" }, "j", utils.key_stroke({}, "down")),
-    utils.remap({ "ctrl", "shift" }, "k", utils.key_stroke({}, "up")),
+    -- utils.remap({ "ctrl", "shift" }, "j", utils.key_stroke({}, "down")),
+    -- utils.remap({ "ctrl", "shift" }, "k", utils.key_stroke({}, "up")),
+    utils.remap({ "ctrl" }, "j", utils.key_stroke({}, "down")),
+    utils.remap({ "ctrl" }, "p", utils.key_stroke({}, "up")),
     utils.remap({ "shift", "cmd" }, "E", utils.key_stroke({ "alt", "cmd" }, "i"))
 }
 

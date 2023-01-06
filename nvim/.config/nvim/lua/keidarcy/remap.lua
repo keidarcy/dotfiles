@@ -1,4 +1,14 @@
+-- Modes
+--   normal_mode = 'n',
+--   insert_mode = 'i',
+--   visual_mode = 'v',
+--   visual_block_mode = 'x',
+--   term_mode = 't',
+--   command_mode = 'c',
+--
 vim.g.mapleader = " "
+vim.g.maplocalleader = " "
+
 -- simple vertical movement
 vim.keymap.set("n", "J", "15j")
 vim.keymap.set("n", "K", "15k")
@@ -9,7 +19,7 @@ vim.keymap.set("v", "K", "15k")
 vim.keymap.set("v", "N", ":m '>+1<CR>gv=gv")
 vim.keymap.set("v", "P", ":m '<-2<CR>gv=gv")
 
--- vim.keymap.set("n", "J", "mzJ`z")
+-- always in middle of screen
 vim.keymap.set("n", "<C-d>", "<C-d>zz")
 vim.keymap.set("n", "<C-u>", "<C-u>zz")
 vim.keymap.set("n", "n", "nzzzv")
