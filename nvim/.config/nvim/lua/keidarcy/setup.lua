@@ -39,7 +39,6 @@ vim.opt.colorcolumn = "0"
 vim.opt.splitbelow = true
 vim.opt.splitright = true
 
-
 -- run source on save
 vim.cmd([[ augroup autosourcing
 	auto!
