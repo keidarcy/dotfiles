@@ -119,6 +119,7 @@ local function setup()
 				require("colorizer").setup()
 			end,
 		})
+		use("RRethy/vim-illuminate")
 
 		-- better edit
 		use("tpope/vim-commentary")

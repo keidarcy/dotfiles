@@ -2,7 +2,7 @@
 
 # open a set of tmux
 tnew() {
-    tmux new -s $1 \; split-window -v -p 20 \; split-window -h \
+    tmux new -s $1 \; split-window -v -p 20 \; split-window -h
 }
 
 
@@ -171,4 +171,14 @@ _gs() {
   is_in_git_repo || return
   git stash list | fzf-down --reverse -d: --preview 'git show --color=always {1}' |
   cut -d: -f1
+}
+
+
+# show 255 colors
+# require zsh
+colors () {
+    for i in {0..255}
+    do
+        print -Pn "%K{$i}  %k%F{$i}${(l:3::0:)i}%f " ${${(M)$((i%6)):#3}:+$'\n'}
+    done
 }

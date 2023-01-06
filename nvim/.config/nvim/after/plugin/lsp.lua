@@ -20,6 +20,7 @@ lsp.configure("sumneko_lua", {
 				globals = {
 					"vim",
 					"hs", -- Hammerspoon
+                    "packer_plugins" -- packer 
 				},
 			},
 		},
