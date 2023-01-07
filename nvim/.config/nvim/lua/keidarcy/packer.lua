@@ -45,9 +45,6 @@ local function setup()
 		use({
 			"rose-pine/neovim",
 			as = "rose-pine",
-			config = function()
-				vim.cmd("colorscheme rose-pine")
-			end,
 		})
 		use({ "ellisonleao/gruvbox.nvim" })
 
@@ -91,6 +88,9 @@ local function setup()
 
 		-- terminal
 		use("akinsho/toggleterm.nvim")
+
+		-- keymap
+		use("folke/which-key.nvim")
 
 		-- better view
 		use({

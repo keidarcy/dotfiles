@@ -1,2 +1,2 @@
 require("keidarcy")
-
+require("plugins")

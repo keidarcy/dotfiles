@@ -46,7 +46,7 @@ vim.cmd([[ augroup autosourcing
 augroup END ]])
 
 -- disable mouse
-vim.opt.mouse = ""
+vim.opt.mouse = "a"
 
 -- add new line at end of file
 vim.opt.eol = true

@@ -15,6 +15,7 @@
 -- 	dim_inactive = false,
 -- 	transparent_mode = false,
 -- })
+--
 
 function ColorMyPencils(color)
 	color = color or "gruvbox"

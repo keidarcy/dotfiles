@@ -1,5 +1,3 @@
-vim.opt.signcolumn = "yes" -- Reserve space for diagnostic icons
-
 local lsp = require("lsp-zero")
 
 lsp.preset("recommended")
@@ -20,7 +18,8 @@ lsp.configure("sumneko_lua", {
 				globals = {
 					"vim",
 					"hs", -- Hammerspoon
-                    "packer_plugins" -- packer 
+					"packer_plugins", -- packer
+					"require",
 				},
 			},
 		},
@@ -50,6 +49,16 @@ lsp.setup_nvim_cmp({
 lsp.set_preferences({
 	suggest_lsp_servers = false,
 	set_lsp_keymaps = false,
+	configure_diagnostics = true,
+	cmp_capabilities = true,
+	manage_nvim_cmp = true,
+	call_servers = "local",
+	sign_icons = {
+		error = "✘",
+		warn = "▲",
+		hint = "⚑",
+		info = "",
+	},
 })
 
 lsp.on_attach(function(client, bufnr)
