@@ -37,7 +37,8 @@ cursor:
 
 font:
   normal:
-    family: MesloLGS NF # should be "Menlo" or something on macOS.
+    #family: MesloLGS NF # should be "Menlo" or something on macOS.
+    family: Hack Nerd Font
     style: Regular
   bold:
     style: Bold

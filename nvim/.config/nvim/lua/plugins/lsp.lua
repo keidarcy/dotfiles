@@ -1,3 +1,4 @@
+local navic = require("nvim-navic")
 local lsp = require("lsp-zero")
 
 lsp.preset("recommended")
@@ -67,6 +68,10 @@ lsp.on_attach(function(client, bufnr)
 		vim.keymap.set(mode, lhs, rhs, opts)
 	end
 
+	if client.server_capabilities.documentSymbolProvider then
+		navic.attach(client, bufnr)
+	end
+
 	-- how to disable eslint
 	--     if client.name == "eslint" then
 	--         vim.cmd.LspStop('eslint')
@@ -98,3 +103,5 @@ lsp.setup()
 vim.diagnostic.config({
 	virtual_text = true,
 })
+
+vim.o.winbar = "%{%v:lua.require'nvim-navic'.get_location()%}"
