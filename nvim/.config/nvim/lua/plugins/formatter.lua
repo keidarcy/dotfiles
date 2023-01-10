@@ -43,7 +43,15 @@ formatter.setup({
 		yaml = {
 			require("formatter.filetypes.yaml").prettierd,
 		},
-
+		terraform = {
+			function()
+				return {
+					exe = "terraform",
+					args = { "fmt", "-" },
+					stdin = true,
+				}
+			end,
+		},
 		["*"] = {
 			require("formatter.filetypes.any").remove_trailing_whitespace,
 		},

@@ -121,7 +121,7 @@ local function setup()
 		})
 		use("RRethy/vim-illuminate")
 
-        use("SmiteshP/nvim-navic")
+		use("SmiteshP/nvim-navic")
 
 		-- better edit
 		use("tpope/vim-commentary")
