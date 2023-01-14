@@ -70,3 +70,6 @@ augroup END
 vim.o.spelloptions = "camel"
 vim.o.spellcapcheck = "" -- don't check for capital letters at start of sentence
 vim.o.fileformats = "unix,mac,dos"
+
+-- hightlight current line
+vim.opt.cursorline = true
