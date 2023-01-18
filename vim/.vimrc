@@ -6,7 +6,6 @@
 "                                  |___/
 " Author: @keidarcy
 " Github: https://github.com/keidarcy/dotfiles
-
 set nocompatible                        "We want the latest Vim settings/options.
 
 syntax enable
@@ -89,15 +88,15 @@ set foldcolumn=0
 set splitbelow
 set splitright
 
-" nnoremap <leader>h <C-W>h
+nnoremap <C-h> <C-W>h
 " nnoremap <leader>j <C-W>j
 " nnoremap <leader>k <C-W>k
-" nnoremap <leader>l <C-W>l
+nnoremap <C-l> <C-W>l
 
-" nnoremap <leader>h :wincmd h<CR>
+" nnoremap <C-h> :wincmd h<CR>
 " nnoremap <leader>j :wincmd j<CR>
 " nnoremap <leader>k :wincmd k<CR>
-" nnoremap <leader>l :wincmd l<CR>
+" nnoremap <C-l> :wincmd l<CR>
 
 "-------------------------------NeoVIM--------------------------"
 " highligh when yank
@@ -154,9 +153,12 @@ nmap <Leader>f :tag<space>
 
 nnoremap <Leader><CR> :so ~/.vimrc<CR>
 nnoremap <leader>p o<esc>P<CR>
-vnoremap <leader>p "_dP
 nnoremap <C-j> :cnext<CR>
 nnoremap <C-k> :cprev<CR>
+nnoremap Y y$<CR>
+" vnoremap <leader>p "_dP
+vnoremap p "_dP
+
 
 " n " n, i, c, t
 " nore " no recursively execution
