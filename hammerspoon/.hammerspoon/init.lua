@@ -53,9 +53,6 @@ tm:set_map(apps)
 -- load depends on local environment
 dofile("env.lua")
 
--- Change keybind to specific apps
--- dofile("app-keybinding.lua")
-
 -- Show active window highlighting
 local windowHighlight = require("window-highlight")
 hs.hotkey.bind(hyper, "h", function()
@@ -68,6 +65,10 @@ hs.hotkey.bind(hyper, "t", function()
 	local prettyNow = os.date("%A              📅%B %d %Y              🕐%I:%M:%S %p")
 	hs.alert.show(prettyNow, hs.alert.defaultStyle, hs.screen.mainScreen(), 1.5)
 end)
+
+-- Change keybind to specific apps
+local app_key = require("app-keybinding")
+app_key:start()
 
 -- reload setting
 hs.hotkey.bind(hyper, "r", hs.reload)
