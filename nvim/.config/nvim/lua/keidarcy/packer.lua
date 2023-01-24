@@ -120,8 +120,10 @@ local function setup()
 			end,
 		})
 		use("RRethy/vim-illuminate")
-
 		use("SmiteshP/nvim-navic")
+
+		-- better movement
+		use("alexghergh/nvim-tmux-navigation")
 
 		-- better edit
 		use("tpope/vim-commentary")
