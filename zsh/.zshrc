@@ -87,6 +87,9 @@ zinit for \
     light-mode romkatv/zsh-prompt-benchmark \
     light-mode zdharma-continuum/history-search-multi-word
 
+zinit load zdharma-continuum/zui
+zinit load zdharma-continuum/zbrowse
+
 #### theme
 # Load joy theme
 # zinit ice depth=1 pick="jovial.zsh-theme"
