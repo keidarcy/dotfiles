@@ -89,8 +89,8 @@ set splitbelow
 set splitright
 
 nnoremap <C-h> <C-W>h
-" nnoremap <leader>j <C-W>j
-" nnoremap <leader>k <C-W>k
+nnoremap <C-j> <C-W>j
+nnoremap <C-k> <C-W>k
 nnoremap <C-l> <C-W>l
 
 " nnoremap <C-h> :wincmd h<CR>

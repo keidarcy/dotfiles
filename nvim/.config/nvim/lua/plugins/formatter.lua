@@ -22,14 +22,7 @@ formatter.setup({
 			require("formatter.filetypes.python").black,
 		},
 		javascript = {
-			-- prettierd
-			function()
-				return {
-					exe = "prettierd",
-					args = { vim.api.nvim_buf_get_name(0) },
-					stdin = true,
-				}
-			end,
+			require("formatter.filetypes.typescript").prettierd,
 		},
 		typescript = {
 			require("formatter.filetypes.typescript").prettierd,
