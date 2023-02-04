@@ -4,9 +4,9 @@
 local switcher = hs.window.switcher.new(hs.window.filter.new():setCurrentSpace(true))
 
 switcher.ui.selectedThumbnailSize = 200
-switcher.ui.showTitles = false
+switcher.ui.showTitles = true
 switcher.ui.showThumbnails = true
-switcher.ui.showSelectedTitle = false
+-- switcher.ui.showSelectedTitle = true
 
 local function mapCmdTab(event)
 	local flags = event:getFlags()
