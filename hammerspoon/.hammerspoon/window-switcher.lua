@@ -1,7 +1,14 @@
+-- https://www.hammerspoon.org/docs/hs.window.switcher.html
 -- Window Switcher
 -- This will override mac default cmd+tab
 local switcher = hs.window.switcher.new(hs.window.filter.new():setCurrentSpace(true))
-function mapCmdTab(event)
+
+switcher.ui.selectedThumbnailSize = 200
+switcher.ui.showTitles = false
+switcher.ui.showThumbnails = true
+switcher.ui.showSelectedTitle = false
+
+local function mapCmdTab(event)
 	local flags = event:getFlags()
 	local chars = event:getCharacters()
 	if chars == "\t" and flags:containExactly({ "cmd" }) then
