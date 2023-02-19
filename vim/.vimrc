@@ -122,7 +122,7 @@ noremap <leader>q :q<cr>
 noremap <leader>b :bd<cr>
 
 " Save file fast in insert mode
-inoremap <leader>w <Esc>:w<cr>
+" inoremap <leader>w <Esc>:w<cr>
 noremap <leader>w :w<cr>
 
 " Go to next line in insert mode
@@ -144,7 +144,7 @@ nmap <Leader>ep :e ~/.vim/plugins.vim<cr>
 nmap <Leader>es :e ~/.vim/snippets/
 
 " Add simple highlight removal
-nmap <Leader><space> :nohlsearch<cr>
+nmap <Leader><Leader> :nohlsearch<cr>
 
 " Make NERDTree easier to toggle
 nmap <C-Z> :NERDTreeToggle<cr>
