@@ -38,7 +38,7 @@ hs.hotkey.bind(hyper, "o", function()
 	wm.moveWindowToPosition(wm.screenPositions.rightTwoThird)
 end)
 
-require("window-switcher"):start()
+-- require("window-switcher"):start()
 
 -- Show the bundleID of the currently open window
 hs.hotkey.bind(hyper, "b", function()
