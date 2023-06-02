@@ -108,19 +108,19 @@ zinit light romkatv/powerlevel10k
 # eval "$(starship init zsh)"
 #### theme
 
-if [[ "$(uname -s)" == "Darwin" ]]; then
-    FPATH="$(brew --prefix)/share/zsh/site-functions:${FPATH}"
-fi
 # enable zsh completion system
-autoload -Uz compinit
-if [[ "$(uname -s)" == "Darwin" && $(date +'%j') != $(stat -f '%Sm' -t '%j' ~/.zcompdump) ]]; then
-    # %Sm.. is for macos
-    # load cached .zcompdump once a day
-    compinit
-else
-    compinit -C
+if type brew &>/dev/null; then
+    FPATH="$(brew --prefix)/share/zsh/site-functions:${FPATH}"
+    autoload -Uz compinit
+    if [[ $(date +'%j') != $(stat -f '%Sm' -t '%j' ~/.zcompdump) ]]; then
+        # %Sm.. is for macos
+        # load cached .zcompdump once a day
+        compinit
+    else
+        compinit -C
+    fi
+    _comp_options+=(globdots) # Include hidden files.
 fi
-_comp_options+=(globdots) # Include hidden files.
 #endregion zinit
 
 #region custom
