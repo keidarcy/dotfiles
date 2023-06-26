@@ -2,7 +2,7 @@
 
 # open a set of tmux
 tnew() {
-    tmux new -s $1 \; split-window -v -p 20 \; split-window -h
+    tmux new -s "$1" \; split-window -v -p 20 \; split-window -h
 }
 
 
@@ -10,7 +10,7 @@ tnew() {
 vs ()
 {
   if [[ $# -ne 0 ]]; then
-      code $1
+      code "$1"
   else
       code .
   fi
@@ -150,7 +150,8 @@ _gt() {
     --preview 'git show --color=always {}'
 }
 
-_gl() {
+# l is conflict with tmux pane movement
+_go() {
   is_in_git_repo || return
   git log --date=short --format="%C(green)%C(bold)%cd %C(auto)%h%d %s (%an)" --graph --color=always |
   fzf-down --ansi --no-sort --reverse --multi --bind 'ctrl-s:toggle-sort' \
