@@ -151,4 +151,6 @@ zstyle ":history-search-multi-word" highlight-color "fg=#5fff87,bold"
 # export FZF_TMUX=1
 # export FZF_TMUX_OPTS='-p50% -y10%'
 
+source $(brew --prefix)/share/zsh/site-functions/_todoist_fzf
+
 #endregion fzf
