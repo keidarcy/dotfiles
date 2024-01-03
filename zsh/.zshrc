@@ -13,6 +13,7 @@ setopt AUTO_PUSHD
 setopt no_beep                  # avoid all annoying beep noise
 export DEFAULT_USER="$(whoami)" # hide host and username
 export LC_ALL=en_US.UTF-8       # Fix 'Warning: Failed to set locale category LC_TIME to en_JP.'
+export TZ="Asia/Tokyo"
 
 # #region history
 HISTFILE=~/.zsh_history
