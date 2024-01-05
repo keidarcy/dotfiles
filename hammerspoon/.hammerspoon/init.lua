@@ -1,7 +1,6 @@
 -- ------------------------------------------------------------------------------------
 -- 🔨🥄 Configuration file @keidarcy
 -- ------------------------------------------------------------------------------------
-local utils = require("utils")
 hs.hotkey.alertDuration = 0
 hs.hints.showTitleThresh = 0
 hs.window.animationDuration = 0
