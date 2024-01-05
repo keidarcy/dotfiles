@@ -21,8 +21,8 @@ function ToggleMe:toggle_app(app_name)
 			app:hide()
 			hs.alert.show(app_name .. " Hide", hs.alert.defaultStyle, hs.screen.mainScreen(), 1.5)
 		else
-			hs.alert.show(app_name .. " Show", hs.alert.defaultStyle, hs.screen.mainScreen(), 1.5)
 			app:activate()
+			hs.alert.show(app_name .. " Show", hs.alert.defaultStyle, hs.screen.mainScreen(), 1.5)
 		end
 		-- else
 		--     hs.application.open(app_name)
