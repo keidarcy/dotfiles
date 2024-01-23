@@ -36,7 +36,7 @@ local function setup()
 
 		use({
 			"nvim-telescope/telescope.nvim",
-			tag = "0.1.0",
+			tag = "0.1.4",
 			-- or                            , branch = '0.1.x',
 			requires = { { "nvim-lua/plenary.nvim" } },
 		})
@@ -112,7 +112,7 @@ local function setup()
 				require("keidarcy.alpha").setup()
 			end,
 		})
-		use("lukas-reineke/indent-blankline.nvim")
+		use({ "lukas-reineke/indent-blankline.nvim", main = "ibl", opts = {} })
 		use({
 			"norcalli/nvim-colorizer.lua",
 			config = function()
