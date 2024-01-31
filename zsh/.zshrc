@@ -67,17 +67,17 @@ source "${ZINIT_HOME}/zinit.zsh"
 
 VI_MODE_SET_CURSOR=true # for cursor shape
 
-zinit ice as"completion" wait lucid
-zinit snippet OMZP::docker/_docker
+# zinit ice as"completion" wait lucid
+# zinit snippet OMZP::docker/_docker
 
-zinit ice as"completion" wait lucid
-zinit snippet OMZP::docker-compose/_docker-compose
+# zinit ice as"completion" wait lucid
+# zinit snippet OMZP::docker-compose/_docker-compose
 
 zinit ice as"completion" wait lucid
 zinit snippet OMZP::fd/_fd
 
-zinit snippet OMZL::git.zsh
-zinit snippet OMZP::git
+# zinit snippet OMZL::git.zsh
+# zinit snippet OMZP::git
 # https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins/vi-mode
 zinit snippet OMZP::vi-mode
 
@@ -88,8 +88,8 @@ zinit for \
     light-mode romkatv/zsh-prompt-benchmark \
     light-mode zdharma-continuum/history-search-multi-word
 
-zinit load zdharma-continuum/zui
-zinit load zdharma-continuum/zbrowse
+# zinit load zdharma-continuum/zui
+# zinit load zdharma-continuum/zbrowse
 
 #### theme
 # Load joy theme
