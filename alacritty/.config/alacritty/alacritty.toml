@@ -1,4 +1,4 @@
-import = ["/Users/yahao.xing/.config/alacritty/local.toml"]
+import = ["~/.config/alacritty/local.toml"]
 
 [cursor]
 blink_interval = 600
