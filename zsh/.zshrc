@@ -85,8 +85,9 @@ zinit ice wait lucid
 zinit for \
     light-mode zsh-users/zsh-autosuggestions \
     light-mode zdharma-continuum/fast-syntax-highlighting \
-    light-mode romkatv/zsh-prompt-benchmark \
-    light-mode zdharma-continuum/history-search-multi-word
+    light-mode romkatv/zsh-prompt-benchmark 
+    # \
+    # light-mode zdharma-continuum/history-search-multi-word
 
 # zinit load zdharma-continuum/zui
 # zinit load zdharma-continuum/zbrowse
@@ -99,7 +100,7 @@ zinit for \
 ## Load powerlevel10k theme
 zinit ice depth"1" # git clone depth
 zinit light romkatv/powerlevel10k
-[[ -f ~/.p10k.zsh ]] && source ~/.p10k.zsh # enable p10k theme
+[[ -f "$HOME/.p10k.zsh" ]] && source "$HOME/.p10k.zsh" # enable p10k theme
 
 ## Load starship theme
 # zinit ice as"command" from"gh-r" \ # `starship` binary as command, from github release
@@ -126,12 +127,12 @@ fi
 
 #region custom
 # custom scripts
-for file in ~/.config/zsh/*.sh; do [[ -f $file ]] && source $file; done
+for file in ~/.config/zsh/*.sh; do [[ -f "$file" ]] && source "$file"; done
 #endregion custom scripts
 
 #region fzf
 # fzf https://github.com/junegunn/fzf
-[[ -f ~/.fzf.zsh ]] && source ~/.fzf.zsh # enable fzf keybindings tab completion
+[[ -f "$HOME/.fzf.zsh" ]] && source "$HOME/.fzf.zsh" # enable fzf keybindings tab completion
 export FZF_COMPLETION_TRIGGER='*'
 export FZF_DEFAULT_COMMAND='fd --type f --hidden --follow --exclude .git'
 export FZF_CTRL_R_OPTS="--history=${HISTFILE} --history-size=200000"
@@ -144,14 +145,18 @@ export FZF_DEFAULT_OPTS=$FZF_DEFAULT_OPTS'
 --color=info:#af87ff,prompt:#5fff87,pointer:#ff87d7,marker:#ff00aa,spinner:#ff87d7
 '
 
-# overrides fzf "^R" use `history-search-multi-word` "^R" shortcut
-bindkey -M emacs "^R" history-search-multi-word
-bindkey -M vicmd "^R" history-search-multi-word
-bindkey -M viins "^R" history-search-multi-word
-zstyle ":history-search-multi-word" highlight-color "fg=#5fff87,bold"
-# export FZF_TMUX=1
-# export FZF_TMUX_OPTS='-p50% -y10%'
+# # overrides fzf "^R" use `history-search-multi-word` "^R" shortcut
+# bindkey -M emacs "^R" history-search-multi-word
+# bindkey -M vicmd "^R" history-search-multi-word
+# bindkey -M viins "^R" history-search-multi-word
+# zstyle ":history-search-multi-word" highlight-color "fg=#5fff87,bold"
+# # export FZF_TMUX=1
+# # export FZF_TMUX_OPTS='-p50% -y10%'
 
-source $(brew --prefix)/share/zsh/site-functions/_todoist_fzf
+# source $(brew --prefix)/share/zsh/site-functions/_todoist_fzf
 
 #endregion fzf
+
+export ATUIN_NOBIND="true"
+eval "$(atuin init zsh)"
+bindkey '^r' atuin-search
