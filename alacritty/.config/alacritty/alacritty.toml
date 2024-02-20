@@ -1,7 +1,7 @@
 import = ["~/.config/alacritty/local.toml"]
 
 [cursor]
-blink_interval = 600
+blink_interval = 500
 
 [cursor.style]
 blinking = "Always"
