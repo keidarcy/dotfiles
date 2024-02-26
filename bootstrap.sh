@@ -38,7 +38,7 @@ else
     tmux \
     fzf \
     nvim \
-    exa \
+    eza \
     zsh \
     fasd \
     ranger \

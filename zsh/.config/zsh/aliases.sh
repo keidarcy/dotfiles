@@ -15,13 +15,14 @@ alias .....="cd ../../../.."
 alias z='fasd_cd -d'
 alias zz='fasd_cd -d -i'
 
-# ls - exa
-# https://github.com/ogham/exa#command-line-options
-alias ls='exa'
-alias l='exa -lhF'
-alias ll='exa -lahF --git --icons'
-alias la='exa -lbhHigUmuSa@ --time-style=long-iso --git --color-scale' # all extended list
-alias tree='exa --tree --level=3'
+# ls - eza
+# A modern, maintained replacement for ls
+# https://github.com/eza-community/eza
+alias ls='eza'
+alias l='eza -lhF'
+alias ll='eza -lahF --git --icons'
+alias la='eza -lbhHigUmuSa@ --time-style=long-iso --git --color-scale' # all extended list
+alias tree='eza --tree --level=3'
 
 # Git Stuff
 alias gs='git status'
