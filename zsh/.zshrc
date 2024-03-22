@@ -160,3 +160,5 @@ export FZF_DEFAULT_OPTS=$FZF_DEFAULT_OPTS'
 export ATUIN_NOBIND="true"
 eval "$(atuin init zsh)"
 bindkey '^r' atuin-search
+bindkey -M vicmd "^R" atuin-search
+bindkey -M viins "^R" atuin-search

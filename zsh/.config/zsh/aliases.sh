@@ -3,6 +3,9 @@ alias e='nvim'
 # keep vim pure
 # alias vim='nvim'
 
+# https://github.com/TheR1D/shell_gpt
+alias f='sgpt'
+
 # Easier navigation
 alias ~="cd ~"
 alias ..="cd .."
@@ -58,8 +61,6 @@ alias rr='ranger'
 alias mkdir='mkdir -p'
 alias zshrc='e $HOME/dotfiles/zsh/.zshrc'
 alias vimrc='e $HOME/dotfiles/vim/.vimrc'
-alias update='source ~/.zshrc'
-alias udpate='update'
 alias dirsize='du -sh'
 alias subdirsize='du -h -d 1 | sort -hr'
 alias myip='curl ipinfo.io/ip'
