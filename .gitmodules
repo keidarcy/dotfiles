@@ -4,3 +4,6 @@
 [submodule "personal-dotfiles"]
 	path = personal-dotfiles
 	url = git@github.com:keidarcy/personal-dotfiles.git
+[submodule "alacritty/.config/alacritty/themes"]
+	path = alacritty/.config/alacritty/themes
+	url = git@github.com:keidarcy/alacritty-theme.git
