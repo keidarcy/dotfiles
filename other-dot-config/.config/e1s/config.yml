@@ -1,0 +1,29 @@
+# config.yml
+# This is the default configuration file for the e1s application.
+
+# Debug mode: Set to true to enable debug mode, false to disable it.
+debug: true
+
+# JSON logging: Set to true to enable logging in JSON format, false for plain text.
+#json: false
+
+# Log file path: Specify the path to the log file.
+# The default path is the system's temporary directory.
+log-file: "/tmp/e1s.log"
+
+# read-only mode: Set to true to enable read-only mode, false to allow changes.
+#read-only: false
+
+# Refresh rate: Specify the default refresh rate in seconds.
+# Set to -1 to disable auto-refresh.
+#refresh: 30
+
+# Shell: Specify the interactive shell to use with ecs exec.
+#shell: "/bin/sh"
+
+# AWS profile: Specify the AWS profile to use for credentials.
+#profile: ""
+
+# AWS region: Specify the AWS region for the resources.
+#region: ""
+
