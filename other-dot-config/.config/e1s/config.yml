@@ -29,19 +29,18 @@ log-file: "/tmp/e1s.log"
 
 # Color theme
 # hex color monokai from https://github.com/alacritty/alacritty-theme/blob/master/themes/monokai.toml
-#theme:
-#  BgColor: "#272822"
-#  FgColor: "#f8f8f2"
-#  BorderColor: "#a1efe4"
-#  Black: "#272822"
-#  Red: "#f92672"
-#  Green: "#a6e22e"
-#  Yellow: "#f4bf75"
-#  Blue: "#66d9ef"
-#  Magenta: "#ae81ff"
-#  Cyan: "#a1efe4"
-#  Gray: "#808080"
-
+# theme:
+#   BgColor: "#272822"
+#   FgColor: "#f8f8f2"
+#   BorderColor: "#a1efe4"
+#   Black: "#272822"
+#   Red: "#f92672"
+#   Green: "#a6e22e"
+#   Yellow: "#f4bf75"
+#   Blue: "#66d9ef"
+#   Magenta: "#ae81ff"
+#   Cyan: "#a1efe4"
+#   Gray: "#808080"
 # W3C color
 # theme:
 #   BgColor: black
