@@ -10,7 +10,6 @@ debug: true
 # Log file path: Specify the path to the log file.
 # The default path is the system's temporary directory.
 log-file: "/tmp/e1s.log"
-
 # read-only mode: Set to true to enable read-only mode, false to allow changes.
 #read-only: false
 
@@ -27,9 +26,13 @@ log-file: "/tmp/e1s.log"
 # AWS region: Specify the AWS region for the resources.
 #region: ""
 
-# Color theme
-# hex color monokai from https://github.com/alacritty/alacritty-theme/blob/master/themes/monokai.toml
-# theme:
+# theme
+# https://github.com/keidarcy/alacritty-theme/blob/master/images/rose-pine.png
+# theme: rose-pine
+
+# Customize color theme
+# hex colors example monokai from https://github.com/alacritty/alacritty-theme/blob/master/themes/monokai.toml
+# colors:
 #   BgColor: "#272822"
 #   FgColor: "#f8f8f2"
 #   BorderColor: "#a1efe4"
@@ -41,8 +44,8 @@ log-file: "/tmp/e1s.log"
 #   Magenta: "#ae81ff"
 #   Cyan: "#a1efe4"
 #   Gray: "#808080"
-# W3C color
-# theme:
+# W3C colors example
+# colors:
 #   BgColor: black
 #   FgColor: cadeblue
 #   BorderColor: dodgerblue
