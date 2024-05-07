@@ -54,9 +54,9 @@ vim.keymap.set("n", "<leader>s", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><
 -- quick chmod
 vim.keymap.set("n", "<leader>x", "<cmd>!chmod +x %<CR>", { silent = true })
 
--- quick save
-vim.keymap.set("i", "<leader>w", "<Esc>:w<CR>")
-vim.keymap.set("n", "<leader>w", ":w<CR>")
+-- -- quick save
+-- vim.keymap.set("i", "<leader>w", "<Esc>:w<CR>")
+-- vim.keymap.set("n", "<leader>w", ":w<CR>")
 
 -- easy  window movement
 -- vim.keymap.set("n", "<C-h>", "<C-w>h")
