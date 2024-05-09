@@ -11,63 +11,72 @@ local TWO_THIRD_GRID_SIZE = GRID_SIZE_HORIZONTAL / 3 * 2
 -- Set the grid size and add a few pixels of margin
 -- Also, don't animate window changes... That's too slow
 hs.grid.setGrid(GRID_SIZE_HORIZONTAL .. "x" .. GRID_SIZE_VERTICAL)
-hs.grid.setMargins({20, 20})
+hs.grid.setMargins({ 20, 20 })
 hs.window.animationDuration = 0
 
 -- Defining screen positions
 local screenPositions = {}
 screenPositions.leftHalf = {
-    x = 0,
-    y = 0,
-    w = HALF_GRID_SIZE,
-    h = GRID_SIZE_VERTICAL
+	x = 0,
+	y = 0,
+	w = HALF_GRID_SIZE,
+	h = GRID_SIZE_VERTICAL,
 }
 
 screenPositions.rightHalf = {
-    x = HALF_GRID_SIZE,
-    y = 0,
-    w = HALF_GRID_SIZE,
-    h = GRID_SIZE_VERTICAL
+	x = HALF_GRID_SIZE,
+	y = 0,
+	w = HALF_GRID_SIZE,
+	h = GRID_SIZE_VERTICAL,
 }
 
 screenPositions.middleHalf = {
-    x = THIRD_GRID_SIZE / 2,
-    y = (GRID_SIZE_VERTICAL - GRID_SIZE_VERTICAL) / 2,
-    w = TWO_THIRD_GRID_SIZE,
-    h = GRID_SIZE_VERTICAL
+	x = THIRD_GRID_SIZE / 2,
+	y = (GRID_SIZE_VERTICAL - GRID_SIZE_VERTICAL) / 2,
+	w = TWO_THIRD_GRID_SIZE,
+	h = GRID_SIZE_VERTICAL,
 }
 
 screenPositions.leftThird = {
-    x = 0,
-    y = 0,
-    w = THIRD_GRID_SIZE,
-    h = GRID_SIZE_VERTICAL
+	x = 0,
+	y = 0,
+	w = THIRD_GRID_SIZE,
+	h = GRID_SIZE_VERTICAL,
 }
+
 screenPositions.rightThird = {
-    x = TWO_THIRD_GRID_SIZE,
-    y = 0,
-    w = THIRD_GRID_SIZE,
-    h = GRID_SIZE_VERTICAL
+	x = TWO_THIRD_GRID_SIZE,
+	y = 0,
+	w = THIRD_GRID_SIZE,
+	h = GRID_SIZE_VERTICAL,
 }
 
 screenPositions.leftTwoThird = {
-    x = 0,
-    y = 0,
-    w = TWO_THIRD_GRID_SIZE,
-    h = GRID_SIZE_VERTICAL
+	x = 0,
+	y = 0,
+	w = TWO_THIRD_GRID_SIZE,
+	h = GRID_SIZE_VERTICAL,
 }
+
 screenPositions.rightTwoThird = {
-    x = THIRD_GRID_SIZE,
-    y = 0,
-    w = TWO_THIRD_GRID_SIZE,
-    h = GRID_SIZE_VERTICAL
+	x = THIRD_GRID_SIZE,
+	y = 0,
+	w = TWO_THIRD_GRID_SIZE,
+	h = GRID_SIZE_VERTICAL,
 }
 
 screenPositions.middleThird = {
-    x = THIRD_GRID_SIZE,
-    y = 0,
-    w = THIRD_GRID_SIZE,
-    h = GRID_SIZE_VERTICAL
+	x = THIRD_GRID_SIZE,
+	y = 0,
+	w = THIRD_GRID_SIZE,
+	h = GRID_SIZE_VERTICAL,
+}
+
+screenPositions.middleXYThird = {
+	x = THIRD_GRID_SIZE,
+	y = GRID_SIZE_VERTICAL / 4,
+	w = THIRD_GRID_SIZE,
+	h = GRID_SIZE_VERTICAL / 2,
 }
 -- screenPositions.top         = {x = 0,              y = 0,              w = GRID_SIZE_VERTICAL,      h = HALF_GRID_SIZE}
 -- screenPositions.bottom      = {x = 0,              y = HALF_GRID_SIZE, w = GRID_SIZE_VERTICAL,      h = HALF_GRID_SIZE}
@@ -81,25 +90,25 @@ WindowManager.screenPositions = screenPositions
 -- This function will move either the specified or the focuesd
 -- window to the requested screen position
 function WindowManager.moveWindowToPosition(cell, window)
-    if window == nil then
-        window = hs.window.focusedWindow()
-    end
-    if window then
-        local screen = window:screen()
-        hs.grid.set(window, cell, screen)
-    end
+	if window == nil then
+		window = hs.window.focusedWindow()
+	end
+	if window then
+		local screen = window:screen()
+		hs.grid.set(window, cell, screen)
+	end
 end
 
 -- This function will move either the specified or the focused
 -- window to the center of the sreen and let it fill up the
 -- entire screen.
 function WindowManager.windowMaximize(factor, window)
-    if window == nil then
-        window = hs.window.focusedWindow()
-    end
-    if window then
-        window:maximize()
-    end
+	if window == nil then
+		window = hs.window.focusedWindow()
+	end
+	if window then
+		window:maximize()
+	end
 end
 
 return WindowManager

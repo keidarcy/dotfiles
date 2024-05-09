@@ -36,6 +36,9 @@ end)
 hs.hotkey.bind(hyper, "o", function()
 	wm.moveWindowToPosition(wm.screenPositions.rightTwoThird)
 end)
+hs.hotkey.bind(hyper, "m", function()
+	wm.moveWindowToPosition(wm.screenPositions.middleXYThird)
+end)
 
 -- require("window-switcher"):start()
 
