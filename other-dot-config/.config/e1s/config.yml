@@ -1,6 +1,9 @@
 # config.yml
 # This is the default configuration file for the e1s application.
 
+# Cluster specified
+#cluster: your-ecs-cluster-name
+
 # Debug mode: Set to true to enable debug mode, false to disable it.
 debug: true
 
