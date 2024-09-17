@@ -58,11 +58,11 @@ alias tkserver='tmux kill-server'
 # System
 alias h='history'
 alias c='clear'
-alias cc='c' # overwrite /usr/bin/cc
+alias cc='clear' # overwrite /usr/bin/cc
 alias rr='ranger'
 alias mkdir='mkdir -p'
-alias zshrc='e $HOME/dotfiles/zsh/.zshrc'
-alias vimrc='e $HOME/dotfiles/vim/.vimrc'
+alias zshrc='nvim $HOME/dotfiles/zsh/.zshrc'
+alias vimrc='nvim $HOME/dotfiles/vim/.vimrc'
 alias dirsize='du -sh'
 alias subdirsize='du -h -d 1 | sort -hr'
 alias myip='curl ipinfo.io/ip'

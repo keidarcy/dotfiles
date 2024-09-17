@@ -59,3 +59,7 @@ brew "hammerspoon"
 brew "eth-p/software/bat-extras"
 
 brew "gitui"
+
+brew "keidarcy/tap/e1s"
+
+brew "olets/tap/zsh-abbr"
