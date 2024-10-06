@@ -131,7 +131,7 @@ fi
 source <(kubectl completion zsh)
 
 # https://zsh-abbr.olets.dev/commands.html#import-aliases
-abbr -q import-aliases
+# abbr -q import-aliases
 
 #region custom
 # custom scripts

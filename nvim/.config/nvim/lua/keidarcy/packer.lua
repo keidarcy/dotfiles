@@ -51,7 +51,7 @@ local function setup()
 		-- treesitter
 		use({ "nvim-treesitter/nvim-treesitter", run = ":TSUpdate" })
 		use("nvim-treesitter/playground")
-		use("p00f/nvim-ts-rainbow")
+		use("HiPhish/nvim-ts-rainbow2")
 
 		-- git
 		use("tpope/vim-fugitive")
@@ -81,6 +81,7 @@ local function setup()
 				{ "L3MON4D3/LuaSnip" },
 				{ "rafamadriz/friendly-snippets" },
 			},
+			branch = "v4.x",
 		})
 		use("github/copilot.vim")
 		use("folke/zen-mode.nvim")

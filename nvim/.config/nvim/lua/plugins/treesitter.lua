@@ -1,5 +1,3 @@
-local rainbow = { "#CC8888", "#CCCC88", "#88CC88", "#88CCCC", "#8888CC", "#CC88CC" }
-
 require("nvim-treesitter.configs").setup({
 	-- A list of parser names, or "all"
 	ensure_installed = { "help", "javascript", "typescript", "c", "lua", "rust", "go" },
@@ -23,13 +21,15 @@ require("nvim-treesitter.configs").setup({
 	},
 	rainbow = {
 		enable = true,
-		-- disable = { "jsx", "cpp" }, list of languages you want to disable the plugin for
-		extended_mode = true, -- Also highlight non-bracket delimiters like html tags, boolean or table: lang -> boolean
-		max_file_lines = nil, -- Do not enable for files with more than n lines, int
-		colors = rainbow,
-		termcolors = rainbow,
+		-- list of languages you want to disable the plugin for
+		-- disable = { "jsx", "cpp" },
+		-- Which query to use for finding delimiters
+		query = "rainbow-parens",
+		-- Highlight the entire buffer all at once
+		strategy = require("ts-rainbow").strategy.global,
 	},
 })
-for i, c in ipairs(rainbow) do -- p00f/rainbow#81
-	vim.cmd(("hi rainbowcol%d guifg=%s"):format(i, c))
-end
+-- This part is no longer necessary with nvim-ts-rainbow2
+-- for i, c in ipairs(rainbow) do -- p00f/rainbow#81
+-- 	vim.cmd(("hi rainbowcol%d guifg=%s"):format(i, c))
+-- end

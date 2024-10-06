@@ -3,6 +3,8 @@ if not status_ok then
 	return
 end
 
+require("which-key.health").check()
+
 -- local opts = {
 -- 	mode = "n", -- NORMAL mode
 -- 	-- prefix: use "<leader>f" for example for mapping everything related to finding files
@@ -35,4 +37,4 @@ end
 local mappings = {}
 local opts = {}
 
-wk.register(mappings, opts)
+wk.add(mappings, opts)
