@@ -76,4 +76,4 @@ alias grep='grep --color=auto'
 
 alias when-c='when-changed -r -v -1 . '
 
-alias tod='todoist'
+alias python='python3'
