@@ -18,7 +18,7 @@ log-file: "/tmp/e1s.log"
 
 # Refresh rate: Specify the default refresh rate in seconds.
 # Set to -1 to disable auto-refresh.
-#refresh: 30
+refresh: -1
 
 # Shell: Specify the interactive shell to use with ecs exec.
 #shell: "/bin/sh"
