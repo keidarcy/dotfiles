@@ -16,6 +16,7 @@
 ```
 brew install --cask hammerspoon
 brew install --cask alacritty
+brew install orbstack
 ```
 
 ## Fonts
