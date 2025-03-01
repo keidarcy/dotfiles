@@ -25,4 +25,5 @@ stow vim # use vim setting only
 
 ```
 git submodule update --init -- personal-dotfiles
+git submodule update --init -- alacritty/.config/alacritty/themes
 ```

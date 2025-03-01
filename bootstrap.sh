@@ -50,9 +50,11 @@ fi
 #################### stow everything ###############################
 stow --target=${HOME} git
 stow --target=${HOME} --no-folding zsh
+stow --target=${HOME} vim
 stow --target=${HOME} nvim
 stow --target=${HOME} tmux
 stow --target=${HOME} alacritty
+stow --target=${HOME} scripts
 
 ###################### zsh ######################
 # https://github.com/zdharma-continuum/zinit#manual-installation
@@ -72,19 +74,13 @@ nvim +'silent! PlugInstall' +qall
 ###################### tmux ######################
 tmux source ${HOME}/.tmux.conf
 
+##################### default directory ######################
+cd "${HOME}"
+# if not exist, create, if exist, do nothing
+mkdir -p "${HOME}/Code"
+mkdir -p "${HOME}/Code/personal"
+mkdir -p "${HOME}/Code/work"
 
-###################### others ######################
-# https://github.com/junegunn/fzf#using-homebrew
-# To install useful key bindings and fuzzy completion:
-if [[ "$(uname -s)" == "Darwin" ]]; then
-    $(brew --prefix)/opt/fzf/install # config fzf
-else
-    # install fzf
-    git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
-    ~/.fzf/install
-fi
-# p10k configure # config powerlevel10k
 
-############### fonts ##################
-# Fira Code https://github.com/tonsky/FiraCode
-# Meslo Nerd Font https://github.com/romkatv/powerlevel10k
+
+

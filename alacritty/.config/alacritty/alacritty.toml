@@ -1,4 +1,3 @@
-import = ["~/.config/alacritty/local.toml"]
 
 [cursor]
 blink_interval = 500
@@ -22,7 +21,7 @@ style = "Bold Italic"
 style = "Italic"
 
 [font.normal]
-family = "Hack Nerd Font"
+family = "MesloLGS NF"
 style = "Regular"
 
 [[keyboard.bindings]]
@@ -63,3 +62,6 @@ y = 10
 [window.position]
 x = 800
 y = 100
+
+[general]
+import = ["~/.config/alacritty/local.toml"]
