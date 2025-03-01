@@ -20,3 +20,9 @@ stow */
 ```sh
 stow vim # use vim setting only
 ```
+
+# Submodule
+
+```
+git submodule update --init -- personal-dotfiles
+```
