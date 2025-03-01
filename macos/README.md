@@ -6,3 +6,4 @@
 - https://atuin.sh/
 - https://freemacsoft.net/appcleaner/
 - https://bahoom.com/hyperswitch
+- https://www.cursor.com
