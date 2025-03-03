@@ -171,3 +171,5 @@ eval "$(atuin init zsh)"
 bindkey '^r' atuin-search
 bindkey -M vicmd "^R" atuin-search
 bindkey -M viins "^R" atuin-search
+# mise
+eval "$(mise activate zsh)"
