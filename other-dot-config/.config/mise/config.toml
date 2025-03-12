@@ -1,2 +1,5 @@
 [tools]
+helm = "latest"
+k9s = "latest"
+pnpm = "latest"
 terraform = "1.11.0"
