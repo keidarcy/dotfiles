@@ -1,4 +1,5 @@
 [tools]
+dust = "latest"
 helm = "latest"
 k9s = "latest"
 pnpm = "latest"
