@@ -4,6 +4,9 @@
 if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
   source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
 fi
+
+# brew path
+export PATH="/opt/homebrew/bin:$PATH"
 # >>>>>>>HELLO ZSH WORLD<<<<<<<<
 
 # Completing directory stack
@@ -171,5 +174,6 @@ eval "$(atuin init zsh)"
 bindkey '^r' atuin-search
 bindkey -M vicmd "^R" atuin-search
 bindkey -M viins "^R" atuin-search
-# mise
+
+# active mise path
 eval "$(mise activate zsh)"
