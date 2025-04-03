@@ -2,5 +2,7 @@
 dust = "latest"
 helm = "latest"
 k9s = "latest"
+kind = "latest"
 pnpm = "latest"
 terraform = "1.11.0"
+viddy = "latest"
