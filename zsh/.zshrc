@@ -89,8 +89,9 @@ zinit ice wait lucid
 zinit for \
     light-mode zsh-users/zsh-autosuggestions \
     light-mode zdharma-continuum/fast-syntax-highlighting \
-    light-mode romkatv/zsh-prompt-benchmark \
-    light-mode olets/zsh-abbr
+    light-mode romkatv/zsh-prompt-benchmark 
+    # \
+    # light-mode olets/zsh-abbr
     # \
     # light-mode zdharma-continuum/history-search-multi-word
 
@@ -133,9 +134,6 @@ fi
 
 # https://kubernetes.io/docs/tasks/tools/install-kubectl-macos/#optional-kubectl-configurations-and-plugins
 source <(kubectl completion zsh)
-
-# https://zsh-abbr.olets.dev/commands.html#import-aliases
-# abbr -q import-aliases
 
 #region custom
 # custom scripts
