@@ -83,7 +83,7 @@ zinit snippet OMZP::fd/_fd
 # zinit snippet OMZP::git
 # https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins/vi-mode
 zinit snippet OMZP::vi-mode
-zinit snippet https://raw.githubusercontent.com/MichaelAquilina/zsh-you-should-use/f13d39a1ae84219e4ee14e77d31bb774c91f2fe3/you-should-use.plugin.zsh
+# zinit snippet https://raw.githubusercontent.com/MichaelAquilina/zsh-you-should-use/f13d39a1ae84219e4ee14e77d31bb774c91f2fe3/you-should-use.plugin.zsh
 
 zinit ice wait lucid
 zinit for \
