@@ -6,7 +6,8 @@ alias e='nvim'
 # https://github.com/TheR1D/shell_gpt
 alias f='sgpt'
 
-alias k='kubectl'
+# alias kubectl="kubecolor"
+alias k='kubecolor'
 
 # Easier navigation
 alias ~="cd ~"

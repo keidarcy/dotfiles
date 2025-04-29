@@ -17,6 +17,7 @@ setopt no_beep                  # avoid all annoying beep noise
 export DEFAULT_USER="$(whoami)" # hide host and username
 export LC_ALL=en_US.UTF-8       # Fix 'Warning: Failed to set locale category LC_TIME to en_JP.'
 export TZ="Asia/Tokyo"
+export XDG_CONFIG_HOME="$HOME/.config"
 
 # #region history
 HISTFILE=~/.zsh_history
@@ -132,8 +133,6 @@ fi
 
 #endregion zinit
 
-# https://kubernetes.io/docs/tasks/tools/install-kubectl-macos/#optional-kubectl-configurations-and-plugins
-source <(kubectl completion zsh)
 
 #region custom
 # custom scripts
@@ -175,3 +174,8 @@ bindkey -M viins "^R" atuin-search
 
 # active mise path
 eval "$(mise activate zsh)"
+
+# https://kubernetes.io/docs/tasks/tools/install-kubectl-macos/#optional-kubectl-configurations-and-plugins
+source <(kubectl completion zsh)
+compdef kubecolor=kubectl
+

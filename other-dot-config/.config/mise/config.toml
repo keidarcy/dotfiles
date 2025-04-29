@@ -1,9 +1,12 @@
 [tools]
 argocd = "latest"
 dust = "latest"
+eksctl = "latest"
 helm = "latest"
 k9s = "latest"
 kind = "latest"
+kubecolor = "latest"
 pnpm = "latest"
+popeye = "latest"
 terraform = "1.11.0"
 viddy = "latest"
