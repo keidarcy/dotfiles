@@ -1,6 +1,5 @@
 [tools]
 argocd = "latest"
-aws = "latest"
 bat = "latest"
 delta = "latest"
 dust = "latest"
