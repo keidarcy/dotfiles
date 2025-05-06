@@ -77,8 +77,8 @@ VI_MODE_SET_CURSOR=true # for cursor shape
 # zinit ice as"completion" wait lucid
 # zinit snippet OMZP::docker-compose/_docker-compose
 
-zinit ice as"completion" wait lucid
-zinit snippet OMZP::fd/_fd
+# zinit ice as"completion" wait lucid
+# zinit snippet OMZP::fd/_fd
 
 # zinit snippet OMZL::git.zsh
 # zinit snippet OMZP::git
