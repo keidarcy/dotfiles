@@ -27,7 +27,7 @@ if [[ "$(uname -s)" == "Darwin" ]]; then
     
     # TODO: add logic for ci and local
     # if mac ci
-    brew install stow tmux fzf alacritty
+    brew install stow tmux fzf alacritty nvim
     # else local mac
     # brew update
     # brew bundle --file=pkg/Brewfile
@@ -55,6 +55,7 @@ stow --target=${HOME} nvim
 stow --target=${HOME} tmux
 stow --target=${HOME} alacritty
 stow --target=${HOME} scripts
+stow --target=${HOME} hammerspoon
 
 ###################### zsh ######################
 # https://github.com/zdharma-continuum/zinit#manual-installation
