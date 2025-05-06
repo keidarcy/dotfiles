@@ -1,11 +1,12 @@
-## Keyboard
+## Hardware
 
 - https://happyhackingkb.com/manual/studio/ug-us/en/ug/topic/connect_bluetooth.html
+- https://www.logitech.com/assets/70211/2/mx_ergo_s_qsg_ww.pdf
 
 ## Applications
 
-- https://brew.sh/
 - https://arc.net/
+- https://brew.sh/
 - https://www.raycast.com/
 - https://atuin.sh/
 - https://freemacsoft.net/appcleaner/
