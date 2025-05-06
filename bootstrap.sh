@@ -56,6 +56,7 @@ stow --target=${HOME} tmux
 stow --target=${HOME} alacritty
 stow --target=${HOME} scripts
 stow --target=${HOME} hammerspoon
+stow --target=${HOME} other-dot-config
 
 ###################### zsh ######################
 # https://github.com/zdharma-continuum/zinit#manual-installation
