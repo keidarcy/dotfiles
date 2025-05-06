@@ -20,7 +20,13 @@ brew install --cask alacritty
 brew install orbstack
 brew install mise
 brew install stow
+brew install nvim
 ```
+
+```
+xattr -rd com.apple.quarantine /Applications/Alacritty.app
+```
+
 
 ## Fonts
 
