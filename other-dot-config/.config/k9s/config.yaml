@@ -5,15 +5,15 @@ k9s:
   maxConnRetry: 5
   readOnly: false
   noExitOnCtrlC: false
-  featureGates:
-    nodeShell: true
+  # featureGates:
+  #   nodeShell: true
   portForwardAddress: localhost
   ui:
     enableMouse: false
     headless: false
     logoless: false
     crumbsless: false
-    reactive: false
+    reactive: true
     noIcons: false
     defaultsToFullScreen: false
   skipLatestRevCheck: false

@@ -1,0 +1,12 @@
+views:
+  v1/pods:
+    sortColumn: AGE:asc
+    columns:
+      - AGE
+      - NAME
+  v1/nodes:
+    sortColumn: POOL:asc
+    columns:
+      # - AGE
+      - TYPE:.metadata.labels.beta\.kubernetes\.io/instance-type|W
+      - POOL:.metadata.labels.karpenter\.sh/nodepool
