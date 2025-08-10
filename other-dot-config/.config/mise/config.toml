@@ -19,7 +19,12 @@ node = "latest"
 pnpm = "latest"
 popeye = "latest"
 rg = "latest"
+ruby = "3"
 terraform = "1.11.0"
 tokei = "latest"
 uv = "latest"
 viddy = "latest"
+
+[settings]
+idiomatic_version_file_enable_tools = ["ruby"]
+
