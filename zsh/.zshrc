@@ -141,6 +141,7 @@ for file in ~/.config/zsh/*.sh; do [[ -f "$file" ]] && source "$file"; done
 
 #region fzf
 # fzf https://github.com/junegunn/fzf
+source <(fzf --zsh)
 [[ -f "$HOME/.fzf.zsh" ]] && source "$HOME/.fzf.zsh" # enable fzf keybindings tab completion
 export FZF_COMPLETION_TRIGGER='*'
 export FZF_DEFAULT_COMMAND='fd --type f --hidden --follow --exclude .git'
@@ -176,6 +177,8 @@ bindkey -M viins "^R" atuin-search
 eval "$(mise activate zsh)"
 
 # https://kubernetes.io/docs/tasks/tools/install-kubectl-macos/#optional-kubectl-configurations-and-plugins
-source <(kubectl completion zsh)
-compdef kubecolor=kubectl
+# source <(kubectl completion zsh)
+# compdef kubecolor=kubectl
 
+# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
+[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
