@@ -6,3 +6,6 @@ pasteboard_history.json
 scripts/.local/share/
 scripts/.local/state/
 vim/.vim/undodir/
+
+scripts/.local/bin/sgpt
+scripts/.local/pipx/
