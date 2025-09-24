@@ -9,3 +9,4 @@ vim/.vim/undodir/
 
 scripts/.local/bin/sgpt
 scripts/.local/pipx/
+scripts/.local/bin/cursor-agent
