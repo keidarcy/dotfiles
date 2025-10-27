@@ -5,7 +5,7 @@
 [core]
     excludesfile = ~/.gitignore_global
     whitespace = fix,-indent-with-non-tab,trailing-space,cr-at-eol
-    editor = /usr/local/bin/nvim
+    editor = /opt/homebrew/bin/nvim
     autoCRLF = input # unix - input, windows - true
     # https://github.com/dandavison/delta#configuration
     # use `git --no-pager diff` to avoid pager 

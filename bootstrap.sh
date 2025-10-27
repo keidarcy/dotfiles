@@ -54,7 +54,7 @@ stow --target=${HOME} vim
 stow --target=${HOME} nvim
 stow --target=${HOME} tmux
 stow --target=${HOME} alacritty
-stow --target=${HOME} scripts
+stow --target=${HOME} --no-folding scripts
 stow --target=${HOME} hammerspoon
 stow --target=${HOME} other-dot-config
 
