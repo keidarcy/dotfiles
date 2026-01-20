@@ -1,5 +1,17 @@
 ######## functions ############
 
+
+# aws profile switcher
+awsp() {
+   if [ -n "$1" ]; then
+     export AWS_PROFILE="$1"
+   else
+     export AWS_PROFILE=$(aws configure list-profiles | fzf)
+   fi
+   echo "Current AWS Profile: $AWS_PROFILE"
+ }
+
+
 # open a set of tmux
 tnew() {
     tmux new -s "$1" \; split-window -v -p 20 \; split-window -h
