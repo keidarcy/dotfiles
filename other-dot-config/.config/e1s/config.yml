@@ -33,6 +33,9 @@ refresh: -1
 # https://github.com/keidarcy/alacritty-theme/blob/master/images/rose-pine.png
 # theme: rose-pine
 
+# display startup splash screen (AWS load runs before the UI)
+# splash: true
+
 # Customize color theme
 # hex colors example monokai from https://github.com/alacritty/alacritty-theme/blob/master/themes/monokai.toml
 # colors:
