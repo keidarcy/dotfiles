@@ -1,6 +1,7 @@
 [user]
 	name = Xing Yahao
-	email = keidarcy@users.noreply.github.com
+	email = 48758247+keidarcy@users.noreply.github.com
+	signingkey = 232201071F92A94D
 
 [core]
     excludesfile = ~/.gitignore_global
@@ -77,3 +78,7 @@
     autoSetupRemote = true
 [init]
 	defaultBranch = master
+[gpg]
+	program = gpg
+[commit]
+	gpgsign = true

@@ -77,4 +77,3 @@ alias grep='grep --color=auto'
 
 alias when-c='when-changed -r -v -1 . '
 
-alias python='python3'

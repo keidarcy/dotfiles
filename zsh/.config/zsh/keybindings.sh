@@ -29,6 +29,7 @@ open-terminal-config() {
 zle -N open-terminal-config
 bindkey '^g,' open-terminal-config
 bindkey -s ^f "tmux-sessionizer\n"
+bindkey -s ^g "awsp\n"
 bindkey -s ^a^f "tmux-cht\n"
 
 
