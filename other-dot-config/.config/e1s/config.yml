@@ -18,7 +18,7 @@ log-file: "/tmp/e1s.log"
 
 # Refresh rate: Specify the default refresh rate in seconds.
 # Set to -1 to disable auto-refresh.
-refresh: -1
+refresh: 10
 
 # Shell: Specify the interactive shell to use with ecs exec.
 #shell: "/bin/sh"
@@ -63,3 +63,13 @@ refresh: -1
 #   Magenta: mediumpurple
 #   Cyan: lightskyblue
 #   Gray: lightslategray
+#
+
+# Default execution mode for ECS containers
+#exec-mode: ssm
+
+# Customize command for SSM execution mode
+#  optional — defaults to "docker exec -it %s %s"
+#   first %s = container runtime ID
+#   second %s = shell configuration option
+#ssm-custom-command: "sudo docker exec -it %s %s"
